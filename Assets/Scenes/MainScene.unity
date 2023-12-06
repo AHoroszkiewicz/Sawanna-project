@@ -3219,7 +3219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5c78d97af260ae4eb674b45f0b24256, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panelType: 3
+  panelType: 4
 --- !u!1 &1187434584
 GameObject:
   m_ObjectHideFlags: 0
