@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Hyena : Mammal
+public class Antelope : Mammal
 {
     override public void Move()
     {
-        Debug.Log("The Hyena moves");
+        Debug.Log("The Antelope moves");
     }
 }
