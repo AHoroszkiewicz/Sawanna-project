@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Animal : IAging, IMovement
+public abstract class Animal : MonoBehaviour, IAging, IMovement
 {
-    [SerializeField] private int ID
-    [SerializeField] private int Age
+    [SerializeField] private int id;
+    [SerializeField] private int age;
     [SerializeField] private int MovementSpeed { get; set; }
     [SerializeField] private bool IsAlive { get; set; }
     [SerializeField] private AnimalTypes animalType;
@@ -17,7 +17,7 @@ public abstract class Animal : IAging, IMovement
 
     public void AgeUp()
     {
-        Age++;
+        age++;
     }
 
     void Die()
