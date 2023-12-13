@@ -6,9 +6,11 @@ public class AnimalPanel : MonoBehaviour
 {
     private bool isOpen = false;
     [SerializeField] private PanelTypes panelType;
+    [SerializeField] private int animalId = -1;
 
     public bool IsOpen => isOpen;
     public PanelTypes PanelType => panelType;
+    public int AnimalId => animalId;
 
     public void OpenPanel()
     {
@@ -31,5 +33,6 @@ public class AnimalPanel : MonoBehaviour
         Bird = 4,
         Hyena = 5,
         Snake = 6,
+        Options = 7,
     }
 }
