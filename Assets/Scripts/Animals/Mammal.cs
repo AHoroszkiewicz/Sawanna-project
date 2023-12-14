@@ -6,9 +6,11 @@ public abstract class Mammal : Animal, IEating, IDrinking
 {
     [SerializeField] private bool isHungry { get; set; }
     [SerializeField] private int hungerTreshhold { get; set; }
+    [SerializeField] private int feedingSpeed { get; set; }
     [SerializeField] private int hungerLevel { get; set; } // 100 is max 0 is none
     [SerializeField] private bool isThirsty { get; set; }
     [SerializeField] private int thirstThreshold { get; set; }
+    [SerializeField] private int drinkingSpeed { get; set; }
     [SerializeField] private int thirstLevel { get; set; } // 100 is max 0 is none
 
     public Mammal()
@@ -17,6 +19,8 @@ public abstract class Mammal : Animal, IEating, IDrinking
         thirstLevel = 0;
         hungerTreshhold = 50;
         thirstThreshold = 70;
+        drinkingSpeed = 10;
+        feedingSpeed = 10;
         isHungry = false;
         isThirsty = false;
     }
@@ -32,7 +36,7 @@ public abstract class Mammal : Animal, IEating, IDrinking
         Debug.Log("The Mammal drinks");
         if (isThirsty)
         {
-            thirstLevel -= 10;
+            thirstLevel -= drinkingSpeed;
         }
         if (thirstLevel < thirstThreshold)
         {
@@ -43,10 +47,10 @@ public abstract class Mammal : Animal, IEating, IDrinking
     // Changes hunger level
     public void Eat()
     {
-        Debug.Log("The Eats drinks");
+        Debug.Log("The Mammal drinks");
         if (isHungry)
         {
-            hungerLevel -= 10;
+            hungerLevel -= feedingSpeed;
         }
         if (hungerLevel < hungerTreshhold)
         {
