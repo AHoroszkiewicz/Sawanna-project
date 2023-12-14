@@ -8,4 +8,8 @@ public class Hyena : Mammal
     {
         Debug.Log("The Hyena moves");
     }
+    override public void Eat()
+    {
+        Debug.Log("The Hyena eats a carcass");
+    }
 }

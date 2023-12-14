@@ -11,4 +11,8 @@ public class Snake : Animal
     {
         Debug.Log("The snake slithers");
     }
+    public void Bite()
+    {
+        Debug.Log("The snake bites");
+    }
 }

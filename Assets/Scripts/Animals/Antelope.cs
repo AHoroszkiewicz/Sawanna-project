@@ -8,4 +8,8 @@ public class Antelope : Mammal
     {
         Debug.Log("The Antelope moves");
     }
+    override public void Eat()
+    {
+        Debug.Log("The Antelope eats");
+    }
 }
