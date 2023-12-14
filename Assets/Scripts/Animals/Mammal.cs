@@ -4,11 +4,11 @@ using UnityEngine;
 
 public abstract class Mammal : Animal, IEating, IDrinking
 {
-    [SerializeField] private bool isHungry { get; set; }
+    [SerializeField] public bool isHungry => hungerLevel > hungerTreshhold;
     [SerializeField] private int hungerTreshhold { get; set; }
     [SerializeField] private int feedingSpeed { get; set; }
     [SerializeField] private int hungerLevel { get; set; } // 100 is max 0 is none
-    [SerializeField] private bool isThirsty { get; set; }
+    [SerializeField] private bool isThirsty => thirstLevel > thirstThreshold;
     [SerializeField] private int thirstThreshold { get; set; }
     [SerializeField] private int drinkingSpeed { get; set; }
     [SerializeField] private int thirstLevel { get; set; } // 100 is max 0 is none
@@ -21,8 +21,7 @@ public abstract class Mammal : Animal, IEating, IDrinking
         thirstThreshold = 70;
         drinkingSpeed = 10;
         feedingSpeed = 10;
-        isHungry = false;
-        isThirsty = false;
+
     }
 
     override public void Move()
@@ -38,10 +37,7 @@ public abstract class Mammal : Animal, IEating, IDrinking
         {
             thirstLevel -= drinkingSpeed;
         }
-        if (thirstLevel < thirstThreshold)
-        {
-            isThirsty = false;
-        }
+
     }
     
     // Changes hunger level
@@ -52,10 +48,7 @@ public abstract class Mammal : Animal, IEating, IDrinking
         {
             hungerLevel -= feedingSpeed;
         }
-        if (hungerLevel < hungerTreshhold)
-        {
-            isHungry = false;
-        }
+
     }
 }
 
