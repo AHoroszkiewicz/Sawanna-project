@@ -8,10 +8,8 @@ public class Lion : Mammal
     {
         Debug.Log("The Lion moves");
     }
-    override public void Eat()
-    {
-        Debug.Log("The Lion eats");
-    }
+
+    // Lion rests a a Lions Rock
     public void Rest()
     {
         Debug.Log("The Lion rests");
