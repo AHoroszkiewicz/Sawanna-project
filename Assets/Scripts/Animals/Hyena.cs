@@ -8,4 +8,5 @@ public class Hyena : Mammal
     {
         Debug.Log("The Hyena moves");
     }
+
 }

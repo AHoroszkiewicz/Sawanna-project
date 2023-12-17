@@ -6,8 +6,8 @@ public abstract class Animal : MonoBehaviour, IAging, IMovement
 {
     [SerializeField] private int id;
     [SerializeField] private int age;
-    [SerializeField] private int MovementSpeed { get; set; }
-    [SerializeField] private bool IsAlive { get; set; }
+    [SerializeField] private int movementSpeed { get; set; }
+    [SerializeField] private bool isAlive { get; set; }
     [SerializeField] private AnimalTypes animalType;
     public int maxAge;
 
@@ -22,7 +22,7 @@ public abstract class Animal : MonoBehaviour, IAging, IMovement
 
     void Die()
     {
-        IsAlive = false;
+        isAlive = false;
     }
 
     public abstract void Move();
