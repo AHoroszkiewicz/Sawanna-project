@@ -5,10 +5,11 @@ using UnityEngine;
 public abstract class Animal : MonoBehaviour, IAging, IMovement
 {
     [SerializeField] private int id;
-    [SerializeField] private int age;
+    [SerializeField] private int age = 0;
     [SerializeField] private int movementSpeed { get; set; }
-    [SerializeField] private bool isAlive;
+    [SerializeField] private bool isAlive = true;
     [SerializeField] private AnimalTypes animalType;
+    [SerializeField] public Node currentNode;
     public int maxAge;
 
     public int Id { get => id; set => id = value; }
