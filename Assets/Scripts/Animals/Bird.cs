@@ -20,6 +20,11 @@ public class Bird : Animal, IEating
 
     override public void Move()
     {
+        if (currentNode == null)
+        {
+            Debug.Log("currentNode is null");
+            return;
+        }
         Debug.Log("The birb flies");
     }
     public void Eat()

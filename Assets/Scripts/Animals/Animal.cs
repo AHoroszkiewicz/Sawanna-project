@@ -10,7 +10,7 @@ public abstract class Animal : MonoBehaviour, IAging, IMovement
     [SerializeField] private bool isAlive = true;
     [SerializeField] private AnimalTypes animalType;
     [SerializeField] public Node currentNode;
-    public int maxAge;
+    public int maxAge = 100;
 
     public int Id { get => id; set => id = value; }
     public int Age => age;

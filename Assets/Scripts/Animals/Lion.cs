@@ -6,6 +6,11 @@ public class Lion : Mammal
 {
     override public void Move()
     {
+        if (currentNode == null)
+        {
+            Debug.Log("currentNode is null");
+            return;
+        }
         Node nextNode = currentNode.ConnectedNodes[Random.Range(0, currentNode.ConnectedNodes.Count)];
         transform.position = nextNode.transform.position;
         Debug.Log("The Lion moves");
