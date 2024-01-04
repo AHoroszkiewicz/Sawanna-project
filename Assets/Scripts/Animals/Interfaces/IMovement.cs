@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Snakes : Animal
+// Movement interface
+public interface IMovement
 {
-    
+    void Move();
 }
