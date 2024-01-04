@@ -12,22 +12,6 @@ public class Animal : MonoBehaviour
     public int Id => id;
     public int Age => age;
     public AnimalTypes AnimalType => animalType;
-<<<<<<< Updated upstream
-=======
-    public bool IsAlive => isAlive;
-
-    public void AgeUp()
-    {
-        age++;
-    }
-
-    public void Die()
-    {
-        isAlive = false;
-    }
-
-    public abstract void Move();
->>>>>>> Stashed changes
 
     public enum AnimalTypes
     {
