@@ -10,11 +10,13 @@ public abstract class Animal : MonoBehaviour, IAging, IMovement
     [SerializeField] private bool isAlive = true;
     [SerializeField] private AnimalTypes animalType;
     [SerializeField] public Node currentNode;
-    public int maxAge;
+    [SerializeField] public Node previousNode;
+    [SerializeField] public Node nextNode;
+    [SerializeField] public int maxAge = 50;
 
     public int Id { get => id; set => id = value; }
     public int Age => age;
-    public AnimalTypes AnimalType => animalType;
+    public virtual AnimalTypes AnimalType => animalType;
     public bool IsAlive => isAlive; 
 
     public void AgeUp()

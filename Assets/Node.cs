@@ -5,7 +5,8 @@ using UnityEngine;
 public class Node : MonoBehaviour
 {
     [SerializeField] private List<Node> connectedNodes = new List<Node>();
-    [SerializeField] private NodeType nodeType = NodeType.none;
+    [SerializeField] public NodeType nodeType = NodeType.none;
+    public bool isOccupied = false;
 
     public List<Node> ConnectedNodes
     {
@@ -20,5 +21,6 @@ public class Node : MonoBehaviour
         bird = 3,
         hyena = 4,
         snake = 5,
+        intersection = 6,
     }
 }
