@@ -16,7 +16,7 @@ public abstract class Mammal : Animal, IEating, IDrinking
 
     override public void Move()
     {
-        Debug.Log("The Mammal moves");
+        base.Move();
     }
 
     // Changes thirst level

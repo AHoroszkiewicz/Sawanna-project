@@ -4,59 +4,35 @@ using UnityEngine;
 
 public class Lion : Mammal
 {
-    public override AnimalTypes AnimalType => AnimalTypes.lion;
-
-    private void move()
+    override public void Move()
     {
+        if (CurrentNode == null)
+        {
+            Debug.Log("currentNode is null");
+            return;
+        }
+        if (CurrentNode.ConnectedNodes.Count == 0)
+        {
+            Debug.Log("currentNode has no connected nodes");
+            return;
+        }
+        // Look through all connected nodes for a lion or intersection node
+        // TODO: If hungry go hunting, if thirsty go to waterhole // tutaj czy w game controllerze? xd
+        while (nextNode == null || nextNode == previousNode || nextNode.nodeType != Node.NodeType.lion || nextNode.nodeType != Node.NodeType.intersection)
+        {
+            nextNode = currentNode.ConnectedNodes[Random.Range(0, currentNode.ConnectedNodes.Count)];
+        }
+        // TODO: If occupied by antelope, try hunting it. Move if successful, wait if not.
         if (!nextNode.isOccupied)
         {
-            transform.position = nextNode.transform.position;
-            currentNode.isOccupied = false;
-            nextNode.isOccupied = true;
+            base.Move();
             Debug.Log("The Lion moves from " + currentNode + " to " + nextNode);
-            previousNode = currentNode;
-            currentNode = nextNode;
-            nextNode = null;
         }
         else
         {
-            currentNode.isOccupied = true;
             Debug.Log("The Lion waits at " + currentNode + " to enter " + nextNode);
         }
     }
-
-    override public void Move()
-    {
-        if (previousNode == null)
-        {
-            previousNode = currentNode;
-        }
-
-        List<Node> listOfValidNodes = new List<Node>();
-        // Prioritize continuing previous move
-        if (nextNode == null)
-        {
-            // Search connected nodes for next unoccipied lion or intersection nodes
-            foreach (Node node in currentNode.ConnectedNodes)
-            {
-                if ((node.nodeType == Node.NodeType.lion || node.nodeType == Node.NodeType.intersection) && node != previousNode)
-                {
-                    listOfValidNodes.Add(node);
-                }
-            }
-            if (listOfValidNodes.Count > 0)
-            {
-                // if available, select a node at random and move to it
-                nextNode = listOfValidNodes[Random.Range(0, listOfValidNodes.Count)];
-                move();
-            }
-        }
-        else
-        {
-            move();
-        }
-    }
-
     // Lion rests a a Lions Rock
     public void Rest()
     {

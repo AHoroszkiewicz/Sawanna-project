@@ -11,39 +11,24 @@ public class Bird : Animal, IEating
     [SerializeField] private int feedingSpeed = 25; // hunger reduction per round
     [SerializeField] private int hungerLevel = 0; // 100 is max 0 is none
 
-    public override AnimalTypes AnimalType => AnimalTypes.bird;
-
-    private void move()
-    {
-        transform.position = nextNode.transform.position;
-        Debug.Log("The Bird moves from " + currentNode + " to " + nextNode);
-        previousNode = currentNode;
-        currentNode = nextNode;
-        nextNode = null;
-    }
-
     override public void Move()
     {
-        if (previousNode == null)
+        if (CurrentNode == null)
         {
-            previousNode = currentNode;
+            Debug.Log("currentNode is null");
+            return;
         }
-
-        List<Node> listOfValidNodes = new List<Node>();
-        // Search connected nodes for next unoccipied lion or intersection nodes
-        foreach (Node node in currentNode.ConnectedNodes)
+        if (CurrentNode.ConnectedNodes.Count == 0)
         {
-            if ((node.nodeType == Node.NodeType.bird || node.nodeType == Node.NodeType.intersection) && node != previousNode)
-            {
-                listOfValidNodes.Add(node);
-            }
+            Debug.Log("currentNode has no connected nodes");
+            return;
         }
-        if (listOfValidNodes.Count > 0)
+        while (nextNode == null || nextNode == previousNode)
         {
-            // if available, select a node at random and move to it
-            nextNode = listOfValidNodes[Random.Range(0, listOfValidNodes.Count)];
-            move();
+            nextNode = currentNode.ConnectedNodes[Random.Range(0, currentNode.ConnectedNodes.Count)];
         }
+        base.Move();
+        Debug.Log("The Bird flies from " + currentNode + " to " + nextNode);
     }
 
     public void Eat()
@@ -58,7 +43,8 @@ public class Bird : Animal, IEating
     public void MakeNest()
     {
         Debug.Log("The bird makes a nest in a tree");
-        // TODO: check if node is a tree
+        // TODO: check if node has a tree
         // set node to nested
+        // new chicks spawns in nests? dunno
     }
 }

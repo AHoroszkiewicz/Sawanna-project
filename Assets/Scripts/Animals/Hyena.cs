@@ -4,60 +4,34 @@ using UnityEngine;
 
 public class Hyena : Mammal
 {
-    public override AnimalTypes AnimalType => AnimalTypes.hyena;
-
-    private void move()
-    {
-        if (!nextNode.isOccupied)
-        {
-            transform.position = nextNode.transform.position;
-            currentNode.isOccupied = false;
-            nextNode.isOccupied = true;
-            Debug.Log("The Hyena moves from " + currentNode + " to " + nextNode);
-            previousNode = currentNode;
-            currentNode = nextNode;
-            nextNode = null;
-        }
-        else
-        {
-            currentNode.isOccupied = true;
-            Debug.Log("The Hyena waits at " + currentNode + " to enter " + nextNode);
-        }
-    }
-
     override public void Move()
     {
-        if (previousNode == null)
+        if (CurrentNode == null)
         {
-            previousNode = currentNode;
+            Debug.Log("currentNode is null");
+            return;
+        }
+        if (CurrentNode.ConnectedNodes.Count == 0)
+        {
+            Debug.Log("currentNode has no connected nodes");
+            return;
+        }
+        // Look through all connected nodes for a hyena or intersection node
+        // TODO: If thirsty go to waterhole // tutaj pasywnie czy w game controllerze aktywnie? xd
+        // TODO: Go outside the graveyard zone if hungry
+        while (nextNode == null || nextNode == previousNode || nextNode.nodeType != Node.NodeType.hyena || nextNode.nodeType != Node.NodeType.intersection)
+        {
+            nextNode = currentNode.ConnectedNodes[Random.Range(0, currentNode.ConnectedNodes.Count)];
         }
 
-        List<Node> listOfValidNodes = new List<Node>();
-        // Prioritize continuing previous move
-        if (nextNode == null)
+        if (!nextNode.isOccupied)
         {
-            // Search connected nodes for next unoccipied hyena or intersection nodes
-            foreach (Node node in currentNode.ConnectedNodes)
-            {
-                if ((node.nodeType == Node.NodeType.hyena || node.nodeType == Node.NodeType.intersection) && node != previousNode)
-                {
-                    listOfValidNodes.Add(node);
-                }
-            }
-            if (listOfValidNodes.Count > 0)
-            {
-                // if available, select a node at random and move to it
-                nextNode = listOfValidNodes[Random.Range(0, listOfValidNodes.Count)];
-                move();
-            }
-            else
-            {
-                Debug.Log("No nodes available for " + this + " at " + currentNode);
-            }
+            base.Move();
+            Debug.Log("The Hyena moves from " + currentNode + " to " + nextNode);
         }
         else
         {
-            move();
+            Debug.Log("The Hyena waits at " + currentNode + " to enter " + nextNode);
         }
     }
 }
