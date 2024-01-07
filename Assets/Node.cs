@@ -12,6 +12,35 @@ public class Node : MonoBehaviour
         get { return connectedNodes; }
     }
 
+    private void OnDrawGizmos()
+    {
+        foreach (Node node in connectedNodes)
+        {
+            switch (nodeType)
+            {
+                case NodeType.lion:
+                    Gizmos.color = Color.red;
+                    break;
+                case NodeType.antelope:
+                    Gizmos.color = Color.green;
+                    break;
+                case NodeType.bird:
+                    Gizmos.color = Color.blue;
+                    break;
+                case NodeType.hyena:
+                    Gizmos.color = Color.yellow;
+                    break;
+                case NodeType.snake:
+                    Gizmos.color = Color.magenta;
+                    break;
+                default:
+                    Gizmos.color = Color.white;
+                    break;
+            }
+            Gizmos.DrawLine(transform.position, node.transform.position);
+        }
+    }
+
     public enum NodeType
     {
         none = 0,

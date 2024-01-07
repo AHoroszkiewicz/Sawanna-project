@@ -6,16 +6,19 @@ public abstract class Animal : MonoBehaviour, IAging, IMovement
 {
     [SerializeField] private int id;
     [SerializeField] private int age = 0;
-    [SerializeField] private int movementSpeed { get; set; }
+    [SerializeField] private int movementSpeed = 1;
     [SerializeField] private bool isAlive = true;
     [SerializeField] private AnimalTypes animalType;
-    [SerializeField] public Node currentNode;
-    public int maxAge = 100;
+    [SerializeField] private Node currentNode;
+    [SerializeField] private int maxAge = 100;
+    private Node previousNode;
 
     public int Id { get => id; set => id = value; }
     public int Age => age;
     public AnimalTypes AnimalType => animalType;
     public bool IsAlive => isAlive; 
+    public int MaxAge { get => maxAge; set => maxAge = value;}
+    public Node CurrentNode { get => currentNode; set => currentNode = value; }
 
     public void AgeUp()
     {
@@ -27,7 +30,17 @@ public abstract class Animal : MonoBehaviour, IAging, IMovement
         isAlive = false;
     }
 
-    public abstract void Move();
+    virtual public void Move()
+    {
+        Node nextNode = null;
+        while (nextNode == null || nextNode == previousNode)
+        {
+            nextNode = currentNode.ConnectedNodes[Random.Range(0, currentNode.ConnectedNodes.Count)];
+        }
+        transform.position = nextNode.transform.position;
+        previousNode = currentNode;
+        currentNode = nextNode;
+    }
 
     public enum AnimalTypes
     {

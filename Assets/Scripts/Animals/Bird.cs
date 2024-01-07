@@ -20,11 +20,18 @@ public class Bird : Animal, IEating
 
     override public void Move()
     {
-        if (currentNode == null)
+        if (CurrentNode == null)
         {
             Debug.Log("currentNode is null");
             return;
         }
+
+        if (CurrentNode.ConnectedNodes.Count == 0)
+        {
+            Debug.Log("currentNode has no connected nodes");
+            return;
+        }
+        base.Move();
         Debug.Log("The birb flies");
     }
     public void Eat()
