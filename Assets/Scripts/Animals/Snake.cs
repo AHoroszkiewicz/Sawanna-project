@@ -26,12 +26,11 @@ public class Snake : Animal
             return;
         }
         // Look through all connected nodes for a snake or intersection node
-        while (nextNode == null || nextNode == previousNode || nextNode.nodeType != Node.NodeType.snake || nextNode.nodeType != Node.NodeType.intersection)
+        while (nextNode == null || nextNode == previousNode || !(nextNode.nodeType == Node.NodeType.snake || nextNode.nodeType == Node.NodeType.intersection))
         {
             nextNode = currentNode.ConnectedNodes[Random.Range(0, currentNode.ConnectedNodes.Count)];
         }
-        // TODO: If has enough venom and the node is occupied by a mammal, try hunting it. Move if successful, wait if not.
-        // TODO: The hunting part
+
         if (!nextNode.isOccupied)
         {
             base.Move();
@@ -39,6 +38,7 @@ public class Snake : Animal
         }
         else
         {
+            // TODO: If has enough venom and the node is occupied by a mammal, try hunting it. Move if successful, wait if not.
             Debug.Log("The Snake waits at " + currentNode + " to enter " + nextNode);
         }
         venomLevel += venomRegenRate;

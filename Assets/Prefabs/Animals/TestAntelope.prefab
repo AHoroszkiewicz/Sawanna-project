@@ -79,7 +79,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 54.125, y: 40.625}
+  m_Size: {x: 240, y: 240}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -99,7 +99,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 0
   age: 0
+  movementSpeed: 1
   isAlive: 1
   animalType: 2
-  currentNode: {fileID: 0}
   maxAge: 100
+  currentNode: {fileID: 0}
+  previousNode: {fileID: 0}
+  nextNode: {fileID: 0}
+  hungerTreshhold: 80
+  feedingSpeed: 25
+  hungerLevel: 0
+  thirstThreshold: 70
+  drinkingSpeed: 25
+  thirstLevel: 0
