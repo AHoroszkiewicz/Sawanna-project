@@ -23,8 +23,8 @@ public class AnimalOptionController : MonoBehaviour
     public void Initialize(int id, int number)
     {
         currentAnimalId = id;
-        maxAgeSlider.value = animals[id].maxAge;
-        maxAgeTxt.text = "Max Age: " + animals[id].maxAge;
+        maxAgeSlider.value = animals[id].MaxAge;
+        maxAgeTxt.text = "Max Age: " + animals[id].MaxAge;
         switch (animals[id].AnimalType)
         {
             case Animal.AnimalTypes.lion:
@@ -49,7 +49,7 @@ public class AnimalOptionController : MonoBehaviour
 
     public void UpdateMaxAge(int value)
     {
-        animals[currentAnimalId].maxAge = value;
+        animals[currentAnimalId].MaxAge = value;
         maxAgeTxt.text = "Max Age: " + value;
     }
 }
