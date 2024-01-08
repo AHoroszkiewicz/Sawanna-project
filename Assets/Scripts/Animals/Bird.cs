@@ -29,13 +29,13 @@ public class Bird : Animal, IEating
             nextNode = currentNode.ConnectedNodes[Random.Range(0, currentNode.ConnectedNodes.Count)];
         }
 
-        base.Move();
-        Debug.Log("The Bird flies from " + currentNode + " to " + nextNode);
-
         if (nextNode.isOccupied)
         {
             //TODO: if occupied by snake, eat it
         }
+        base.Move();
+        Debug.Log("The Bird flies from " + currentNode + " to " + nextNode);
+
     }
 
     public void Eat()
