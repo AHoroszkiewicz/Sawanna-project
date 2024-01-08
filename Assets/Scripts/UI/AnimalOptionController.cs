@@ -33,15 +33,9 @@ public class AnimalOptionController : MonoBehaviour
     {
         venomRegenObject.SetActive(false);
         currentAnimalId = id;
-<<<<<<< Updated upstream
-        maxAgeSlider.value = animals[id].MaxAge;
-        maxAgeTxt.text = "Max Age: " + animals[id].MaxAge;
-        switch (animals[id].AnimalType)
-=======
         maxAgeSlider.value = gameController.Animals[id].MaxAge;
         maxAgeTxt.text = "Max Age: " + gameController.Animals[id].MaxAge;
         switch (gameController.Animals[id].AnimalType)
->>>>>>> Stashed changes
         {
             case Animal.AnimalTypes.lion:
                 title.text = "Lion "+number;
@@ -68,11 +62,7 @@ public class AnimalOptionController : MonoBehaviour
 
     public void UpdateMaxAge(int value)
     {
-<<<<<<< Updated upstream
-        animals[currentAnimalId].MaxAge = value;
-=======
         gameController.Animals[currentAnimalId].MaxAge = value;
->>>>>>> Stashed changes
         maxAgeTxt.text = "Max Age: " + value;
     }
 
