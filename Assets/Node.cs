@@ -5,17 +5,41 @@ using UnityEngine;
 public class Node : MonoBehaviour
 {
     [SerializeField] private List<Node> connectedNodes = new List<Node>();
-    [SerializeField] private NodeType nodeType = NodeType.none;
-    [SerializeField] private bool isOccupied = false; 
+    [SerializeField] public NodeType nodeType = NodeType.none;
+    public bool isOccupied = false;
 
     public List<Node> ConnectedNodes
     {
         get { return connectedNodes; }
     }
 
-    public bool IsOccupied 
+    private void OnDrawGizmos()
     {
-        get { return isOccupied; }
+        foreach (Node node in connectedNodes)
+        {
+            switch (nodeType)
+            {
+                case NodeType.lion:
+                    Gizmos.color = Color.red;
+                    break;
+                case NodeType.antelope:
+                    Gizmos.color = Color.green;
+                    break;
+                case NodeType.bird:
+                    Gizmos.color = Color.blue;
+                    break;
+                case NodeType.hyena:
+                    Gizmos.color = Color.yellow;
+                    break;
+                case NodeType.snake:
+                    Gizmos.color = Color.magenta;
+                    break;
+                default:
+                    Gizmos.color = Color.white;
+                    break;
+            }
+            Gizmos.DrawLine(transform.position, node.transform.position);
+        }
     }
 
     public enum NodeType
@@ -26,21 +50,6 @@ public class Node : MonoBehaviour
         bird = 3,
         hyena = 4,
         snake = 5,
-    }
-
-    // Sprawdza, czy node jest wolny
-    public bool IsNodeFree()
-    {
-        bool isFree = !isOccupied;
-        Debug.Log($"Node is free: {isFree}");
-        return isFree;
-    }
-
-    // Sprawdza, czy konkretne zwierze moze wejsc na ten node
-    public bool CanAnimalEnter(NodeType animal)
-    {
-        bool canEnter = !isOccupied;
-        Debug.Log($"Can animal enter: {canEnter}");
-        return canEnter;
+        intersection = 6,
     }
 }

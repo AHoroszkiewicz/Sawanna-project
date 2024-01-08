@@ -6,12 +6,33 @@ public class Lion : Mammal
 {
     override public void Move()
     {
-        Node nextNode = currentNode.ConnectedNodes[Random.Range(0, currentNode.ConnectedNodes.Count)];
-        transform.position = nextNode.transform.position;
-        Debug.Log("The Lion moves");
-        currentNode = nextNode;
+        if (CurrentNode == null)
+        {
+            Debug.Log("currentNode is null");
+            return;
+        }
+        if (CurrentNode.ConnectedNodes.Count == 0)
+        {
+            Debug.Log("currentNode has no connected nodes");
+            return;
+        }
+        // Look through all connected nodes for a lion or intersection node
+        // TODO: If hungry go hunting, if thirsty go to waterhole // tutaj czy w game controllerze? xd
+        while (nextNode == null || nextNode == previousNode || nextNode.nodeType != Node.NodeType.lion || nextNode.nodeType != Node.NodeType.intersection)
+        {
+            nextNode = currentNode.ConnectedNodes[Random.Range(0, currentNode.ConnectedNodes.Count)];
+        }
+        // TODO: If occupied by antelope, try hunting it. Move if successful, wait if not.
+        if (!nextNode.isOccupied)
+        {
+            base.Move();
+            Debug.Log("The Lion moves from " + currentNode + " to " + nextNode);
+        }
+        else
+        {
+            Debug.Log("The Lion waits at " + currentNode + " to enter " + nextNode);
+        }
     }
-
     // Lion rests a a Lions Rock
     public void Rest()
     {

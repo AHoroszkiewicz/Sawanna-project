@@ -4,38 +4,47 @@ using UnityEngine;
 
 public class Bird : Animal, IEating
 {
-    [SerializeField] private int altitude { get; set; }
-    [SerializeField] private bool isHungry { get; set; }
-    [SerializeField] private int hungerTreshhold { get; set; }
-    [SerializeField] private int feedingSpeed { get; set; }
-    [SerializeField] private int hungerLevel { get; set; } // 100 is max 0 is none
+    [SerializeField] private int altitude { get; set; } // ???
 
-    public Bird()
-    {
-        hungerLevel = 0;
-        hungerTreshhold = 50;
-        feedingSpeed = 10;
-        isHungry = false;
-    }
+    [SerializeField] public bool isHungry => hungerLevel > hungerTreshhold;
+    [SerializeField] private int hungerTreshhold = 80; // treshhold for hunger 
+    [SerializeField] private int feedingSpeed = 25; // hunger reduction per round
+    [SerializeField] private int hungerLevel = 0; // 100 is max 0 is none
 
     override public void Move()
     {
-        Debug.Log("The birb flies");
+        if (CurrentNode == null)
+        {
+            Debug.Log("currentNode is null");
+            return;
+        }
+        if (CurrentNode.ConnectedNodes.Count == 0)
+        {
+            Debug.Log("currentNode has no connected nodes");
+            return;
+        }
+        while (nextNode == null || nextNode == previousNode)
+        {
+            nextNode = currentNode.ConnectedNodes[Random.Range(0, currentNode.ConnectedNodes.Count)];
+        }
+        base.Move();
+        Debug.Log("The Bird flies from " + currentNode + " to " + nextNode);
     }
+
     public void Eat()
     {
-        Debug.Log("The birb eats a snake");
+        Debug.Log("The bird eats a snake");
         if (isHungry)
         {
             hungerLevel -= feedingSpeed;
         }
-        if (hungerLevel < hungerTreshhold)
-        {
-            isHungry = false;
-        }
     }
+
     public void MakeNest()
     {
-        Debug.Log("The birb makes a nest in a tree");
+        Debug.Log("The bird makes a nest in a tree");
+        // TODO: check if node has a tree
+        // set node to nested
+        // new chicks spawns in nests? dunno
     }
 }
