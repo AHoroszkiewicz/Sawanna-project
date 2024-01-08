@@ -35,7 +35,7 @@ public class GameController : MonoBehaviour
                 if (!animal.IsAlive) continue;
                 animal.Move();
                 animal.AgeUp();
-                if (animal.Age >= animal.maxAge) animal.Die();
+                if (animal.Age >= animal.MaxAge) animal.Die();
             }
 
             yield return new WaitForSeconds(2f);
