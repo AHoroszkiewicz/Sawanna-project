@@ -6,6 +6,7 @@ public class Node : MonoBehaviour
 {
     [SerializeField] private List<Node> connectedNodes = new List<Node>();
     [SerializeField] public NodeType nodeType = NodeType.none;
+    [SerializeField] public List<GameObject> occupyingObjects = new List<GameObject>();
     public bool isOccupied = false;
 
     public List<Node> ConnectedNodes

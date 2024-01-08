@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Android;
 
 public class Bird : Animal, IEating
 {
@@ -27,8 +28,14 @@ public class Bird : Animal, IEating
         {
             nextNode = currentNode.ConnectedNodes[Random.Range(0, currentNode.ConnectedNodes.Count)];
         }
+
         base.Move();
         Debug.Log("The Bird flies from " + currentNode + " to " + nextNode);
+
+        if (nextNode.isOccupied)
+        {
+            //TODO: if occupied by snake, eat it
+        }
     }
 
     public void Eat()
