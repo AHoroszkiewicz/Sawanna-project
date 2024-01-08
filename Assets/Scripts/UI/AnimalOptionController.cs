@@ -1,15 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class AnimalOptionController : MonoBehaviour
 {
-    [SerializeField] public List<Animal> animals;
+    [SerializeField] public GameController gameController;
     [SerializeField] private TextMeshProUGUI title;
-    [SerializeField] private TextMeshProUGUI maxAgeTxt;
     [SerializeField] private Slider maxAgeSlider;
+    [SerializeField] private TextMeshProUGUI maxAgeTxt;
+    [SerializeField] private GameObject venomRegenObject;
+    [SerializeField] private Slider venomRegenSlider;
+    [SerializeField] private TextMeshProUGUI venomRegenTxt;
     private int currentAnimalId;
 
     private void Start()
@@ -18,14 +22,20 @@ public class AnimalOptionController : MonoBehaviour
         {
             UpdateMaxAge((int)value);
         });  
+
+        venomRegenSlider.onValueChanged.AddListener((value) =>
+        {
+            UpdateVenomRegen((int)value);
+        });
     }
 
     public void Initialize(int id, int number)
     {
+        venomRegenObject.SetActive(false);
         currentAnimalId = id;
-        maxAgeSlider.value = animals[id].MaxAge;
-        maxAgeTxt.text = "Max Age: " + animals[id].MaxAge;
-        switch (animals[id].AnimalType)
+        maxAgeSlider.value = gameController.Animals[id].MaxAge;
+        maxAgeTxt.text = "Max Age: " + gameController.Animals[id].MaxAge;
+        switch (gameController.Animals[id].AnimalType)
         {
             case Animal.AnimalTypes.lion:
                 title.text = "Lion "+number;
@@ -40,6 +50,9 @@ public class AnimalOptionController : MonoBehaviour
                 title.text = "Hyena " + number;
                 break;
             case Animal.AnimalTypes.snake:
+                venomRegenObject.SetActive(true);
+                Snake snake = gameController.Animals[id].GetComponent<Snake>();
+                venomRegenSlider.value = snake.VenomRegenRate;
                 title.text = "Snake " + number;
                 break;
             default:
@@ -49,7 +62,17 @@ public class AnimalOptionController : MonoBehaviour
 
     public void UpdateMaxAge(int value)
     {
-        animals[currentAnimalId].MaxAge = value;
+        gameController.Animals[currentAnimalId].MaxAge = value;
         maxAgeTxt.text = "Max Age: " + value;
+    }
+
+    public void UpdateVenomRegen(int value)
+    {
+        foreach (Snake snake in gameController.Snakes)
+        {
+            if (snake.Id != currentAnimalId) continue;
+            snake.VenomRegenRate = value;
+            venomRegenTxt.text = "Venom Regen: " + value;
+        }
     }
 }
