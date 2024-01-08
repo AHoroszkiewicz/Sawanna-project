@@ -38,6 +38,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 3614000853
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Animals
+    uniqueID: 1825636931
     locked: 0

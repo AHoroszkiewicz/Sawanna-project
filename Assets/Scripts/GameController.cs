@@ -14,9 +14,49 @@ public class GameController : MonoBehaviour
     [SerializeField] private Sprite autoRoundsOffSprite;
     [SerializeField] private List<Animal> animals = new List<Animal>();
 
-    public List<Animal> Animals
+    private List<Snake> snakes = new List<Snake>();
+    private List<Lion> lions = new List<Lion>();
+    private List<Antelope> antelopes = new List<Antelope>();
+    private List<Bird> birds = new List<Bird>();
+    private List<Hyena> hyenas = new List<Hyena>();
+
+    public List<Animal> Animals => animals;
+    public List<Snake> Snakes => snakes;
+    public List<Lion> Lions => lions;
+    public List<Antelope> Antelopes => antelopes;
+    public List<Bird> Birds => birds;
+    public List<Hyena> Hyenas => hyenas;
+
+    private void Awake()
     {
-        get { return animals; }
+        PopulateAnimals();
+    }
+
+    private void Start()
+    {
+        foreach (Animal animal in animals)
+        {
+            if (animal is Snake snake)
+            {
+                snakes.Add(snake);
+            }
+            else if (animal is Lion lion)
+            {
+                lions.Add(lion);
+            }
+            else if (animal is Antelope antelope)
+            {
+                antelopes.Add(antelope);
+            }
+            else if (animal is Bird bird)
+            {
+                birds.Add(bird);
+            }
+            else if (animal is Hyena hyena)
+            {
+                hyenas.Add(hyena);
+            }
+        }
     }
 
     public void NextRound()
