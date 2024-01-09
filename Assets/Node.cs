@@ -26,9 +26,6 @@ public class Node : MonoBehaviour
                 case NodeType.antelope:
                     Gizmos.color = Color.green;
                     break;
-                case NodeType.bird:
-                    Gizmos.color = Color.blue;
-                    break;
                 case NodeType.hyena:
                     Gizmos.color = Color.yellow;
                     break;
@@ -48,9 +45,8 @@ public class Node : MonoBehaviour
         none = 0,
         lion = 1,
         antelope = 2,
-        bird = 3,
-        hyena = 4,
-        snake = 5,
-        intersection = 6,
+        hyena = 3,
+        snake = 4,
+        intersection = 5,
     }
 }
