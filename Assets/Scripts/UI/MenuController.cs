@@ -55,91 +55,38 @@ public class MenuController : MonoBehaviour
 
     public void OpenLionOptions(int number)
     {
-        var a = 0;
-        for (int i = 0; i < animals.Count; i++)
-        {
-            if (animals[i].AnimalType == Animal.AnimalTypes.lion && a < number)
-            {
-                a++;
-            }
-            else if(animals[i].AnimalType == Animal.AnimalTypes.lion)
-            {
-                animalOptionController.Initialize(i, number);
-            }
-        }
+        animalOptionController.Initialize(gameController.Lions[number].Id, number);
+
         CloseAllPanels();
         OpenPanelId(6);
     }
 
-    public void OpenDeerOptions(int number)
+    public void OpenAntelopeOptions(int number)
     {
-        var a = 0;
-        for (int i = 0; i < animals.Count; i++)
-        {
-            if (animals[i].AnimalType == Animal.AnimalTypes.deer && a < number)
-            {
-                a++;
-            }
-            else if (animals[i].AnimalType == Animal.AnimalTypes.deer)
-            {
-                animalOptionController.Initialize(i, number);
-            }
-        }
+        animalOptionController.Initialize(gameController.Antelopes[number].Id, number);
+
         CloseAllPanels();
         OpenPanelId(6);
     }
 
     public void OpenBirdOptions(int number)
     {
-        var a = 0;
-        for (int i = 0; i < animals.Count; i++)
-        {
-            if (animals[i].AnimalType == Animal.AnimalTypes.bird && a < number)
-            {
-                a++;
-            }
-            else if (animals[i].AnimalType == Animal.AnimalTypes.bird)
-            {
-                animalOptionController.Initialize(i, number);
-            }
-        }
+        animalOptionController.Initialize(gameController.Birds[number].Id, number);
+
         CloseAllPanels();
         OpenPanelId(6);
     }
 
     public void OpenHyenaOptions(int number)
     {
-        var a = 0;
-        for (int i = 0; i < animals.Count; i++)
-        {
-            if (animals[i].AnimalType == Animal.AnimalTypes.hyena && a < number)
-            {
-                a++;
-            }
-            else if (animals[i].AnimalType == Animal.AnimalTypes.hyena)
-            {
-                animalOptionController.Initialize(i, number);
-            }
-        }
+        animalOptionController.Initialize(gameController.Hyenas[number].Id, number);
+
         CloseAllPanels();
         OpenPanelId(6);
     }
 
     public void OpenSnakeOptions(int number)
     {
-        //var a = 0;
-        //for (int i = 0; i < animals.Count; i++)
-        //{
-        //    if (animals[i].AnimalType == Animal.AnimalTypes.snake && a < number)
-        //    {
-        //        a++;
-        //    }
-        //    else if (animals[i].AnimalType == Animal.AnimalTypes.snake)
-        //    {
-        //        animalOptionController.Initialize(i, number);
-        //    }
-        //}
-
         animalOptionController.Initialize(gameController.Snakes[number].Id, number);
 
         CloseAllPanels();

@@ -26,6 +26,11 @@ public class Hyena : Mammal
 
         if (!nextNode.isOccupied)
         {
+            if (nextNode.hasCarcass)
+            {
+                nextNode.DestroyCarcass();
+                Eat();
+            }
             base.Move();
             Debug.Log("The Hyena moves from " + currentNode + " to " + nextNode);
         }

@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Unity.VisualScripting;
+
 #if UNITY_EDITOR
 using UnityEditor;  
 #endif
@@ -12,6 +14,7 @@ public class GameController : MonoBehaviour
     [SerializeField] private GameObject autoRoundsBtn;
     [SerializeField] private Sprite autoRoundsOnSprite;
     [SerializeField] private Sprite autoRoundsOffSprite;
+    [SerializeField] private Carcass carcassPrefab;
     [SerializeField] private List<Animal> animals = new List<Animal>();
 
     private List<Snake> snakes = new List<Snake>();
@@ -27,8 +30,19 @@ public class GameController : MonoBehaviour
     public List<Bird> Birds => birds;
     public List<Hyena> Hyenas => hyenas;
 
+    public static GameController Instance;
+
     private void Awake()
     {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
         PopulateAnimals();
     }
 
@@ -95,6 +109,15 @@ public class GameController : MonoBehaviour
         if (!isRoundInProgress) NextRound();
         autoRoundsBtn.GetComponent<UnityEngine.UI.Image>().sprite = isAutoRounds ? autoRoundsOnSprite : autoRoundsOffSprite;
     }   
+
+    public void SpawnCarcass(Node node)
+    {
+        Carcass carcass = Instantiate(carcassPrefab, node.transform.position, Quaternion.identity);
+        carcass.transform.SetParent(node.transform);
+        carcass.transform.localScale = carcassPrefab.transform.localScale;
+        node.occupyingObjects.Add(carcass.gameObject);
+        node.hasCarcass = true;
+    }
 
     #region Inspector
     public void PopulateAnimals()
