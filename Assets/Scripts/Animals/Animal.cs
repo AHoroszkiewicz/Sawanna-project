@@ -29,6 +29,8 @@ public abstract class Animal : MonoBehaviour, IAging, IMovement
     public void Die()
     {
         isAlive = false;
+        currentNode.isOccupied = false;
+        GameController.Instance.SpawnCarcass(currentNode);
     }
 
     virtual public void Move()

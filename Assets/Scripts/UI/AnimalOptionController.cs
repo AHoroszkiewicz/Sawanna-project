@@ -33,9 +33,10 @@ public class AnimalOptionController : MonoBehaviour
     {
         venomRegenObject.SetActive(false);
         currentAnimalId = id;
-        maxAgeSlider.value = gameController.Animals[id].MaxAge;
-        maxAgeTxt.text = "Max Age: " + gameController.Animals[id].MaxAge;
-        switch (gameController.Animals[id].AnimalType)
+        Animal currentAnimal = gameController.Animals[id];
+        maxAgeSlider.value = currentAnimal.MaxAge;
+        maxAgeTxt.text = "Max Age: " + currentAnimal.MaxAge;
+        switch (currentAnimal.AnimalType)
         {
             case Animal.AnimalTypes.lion:
                 title.text = "Lion "+number;
@@ -51,7 +52,7 @@ public class AnimalOptionController : MonoBehaviour
                 break;
             case Animal.AnimalTypes.snake:
                 venomRegenObject.SetActive(true);
-                Snake snake = gameController.Animals[id].GetComponent<Snake>();
+                Snake snake = currentAnimal.GetComponent<Snake>();
                 venomRegenSlider.value = snake.VenomRegenRate;
                 title.text = "Snake " + number;
                 break;
