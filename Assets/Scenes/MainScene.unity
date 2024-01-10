@@ -2098,7 +2098,19 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5592945686805882254, guid: 8705ed8732bbeb84d896a9591f0820f8, type: 3}
+      propertyPath: isOccupied
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5592945686805882254, guid: 8705ed8732bbeb84d896a9591f0820f8, type: 3}
       propertyPath: isOccupiedFixed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5592945686805882254, guid: 8705ed8732bbeb84d896a9591f0820f8, type: 3}
+      propertyPath: canChangeOccupancy
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5592945686805882254, guid: 8705ed8732bbeb84d896a9591f0820f8, type: 3}
+      propertyPath: manualOccupiedControl
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8918794411385896546, guid: 8705ed8732bbeb84d896a9591f0820f8, type: 3}

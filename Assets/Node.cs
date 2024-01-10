@@ -49,4 +49,22 @@ public class Node : MonoBehaviour
         snake = 4,
         intersection = 5,
     }
+
+    // New method to add an object to the occupyingObjects list
+    public void AddOccupyingObject(GameObject obj)
+    {
+        if (!occupyingObjects.Contains(obj))
+        {
+            occupyingObjects.Add(obj);
+        }
+    }
+
+    // New method to remove an object from the occupyingObjects list
+    public void RemoveOccupyingObject(GameObject obj)
+    {
+        if (occupyingObjects.Contains(obj))
+        {
+            occupyingObjects.Remove(obj);
+        }
+    }
 }
