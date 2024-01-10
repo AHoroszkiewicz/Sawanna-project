@@ -48,6 +48,7 @@ public class Node : MonoBehaviour
         hyena = 3,
         snake = 4,
         intersection = 5,
+        special = 6,
     }
 
     // New method to add an object to the occupyingObjects list

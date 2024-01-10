@@ -33,15 +33,23 @@ public abstract class Animal : MonoBehaviour, IAging, IMovement
 
     virtual public void Move()
     {
-            currentNode.RemoveOccupyingObject(gameObject);
-            nextNode.AddOccupyingObject(gameObject);
+        currentNode.RemoveOccupyingObject(gameObject);
+        nextNode.AddOccupyingObject(gameObject);
 
+        if (currentNode.nodeType != Node.NodeType.special)
+        {
             currentNode.isOccupied = false;
+        }
+
+        if (nextNode.nodeType != Node.NodeType.special)
+        {
             nextNode.isOccupied = true;
-            transform.position = nextNode.transform.position;
-            previousNode = currentNode;
-            currentNode = nextNode;
-            nextNode = null;
+        }
+
+        transform.position = nextNode.transform.position;
+        previousNode = currentNode;
+        currentNode = nextNode;
+        nextNode = null;
     }
 
     public enum AnimalTypes
