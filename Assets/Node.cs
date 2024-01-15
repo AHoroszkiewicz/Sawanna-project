@@ -69,15 +69,22 @@ public class Node : MonoBehaviour
         if (!occupyingObjects.Contains(obj))
         {
             occupyingObjects.Add(obj);
+            if (nodeType != NodeType.special)
+            {
+                isOccupied = true;
+            }
         }
     }
 
-    // New method to remove an object from the occupyingObjects list
     public void RemoveOccupyingObject(GameObject obj)
     {
         if (occupyingObjects.Contains(obj))
         {
             occupyingObjects.Remove(obj);
+            if (occupyingObjects.Count == 0)
+            {
+                isOccupied = false;
+            }
         }
     }
 }

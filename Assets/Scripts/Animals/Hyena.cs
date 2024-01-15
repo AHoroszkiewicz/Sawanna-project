@@ -19,12 +19,12 @@ public class Hyena : Mammal
         // Look through all connected nodes for a hyena or intersection node
         // TODO: If thirsty go to waterhole // tutaj pasywnie czy w game controllerze aktywnie? xd
         // TODO: Go outside the graveyard zone if hungry
-        while (nextNode == null || nextNode == previousNode || !(nextNode.nodeType == Node.NodeType.hyena || nextNode.nodeType == Node.NodeType.intersection))
+        while (nextNode == null || nextNode == previousNode || !(nextNode.nodeType == Node.NodeType.hyena || nextNode.nodeType == Node.NodeType.intersection || nextNode.nodeType == Node.NodeType.special))
         {
             nextNode = currentNode.ConnectedNodes[Random.Range(0, currentNode.ConnectedNodes.Count)];
         }
 
-        if (!nextNode.isOccupied)
+        if (!nextNode.isOccupied || nextNode.nodeType == Node.NodeType.special)
         {
             if (nextNode.hasCarcass)
             {

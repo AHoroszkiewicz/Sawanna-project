@@ -17,10 +17,11 @@ public class Lion : Mammal
             return;
         }
         // Look through all connected nodes for a lion, intersection, or special node
-        while (nextNode == null || nextNode == previousNode || !(nextNode.nodeType == Node.NodeType.lion || nextNode.nodeType == Node.NodeType.intersection))
+        while (nextNode == null || nextNode == previousNode || !(nextNode.nodeType == Node.NodeType.lion || nextNode.nodeType == Node.NodeType.intersection || nextNode.nodeType == Node.NodeType.special))
         {
             nextNode = currentNode.ConnectedNodes[Random.Range(0, currentNode.ConnectedNodes.Count)];
         }
+
         if (!nextNode.isOccupied || nextNode.nodeType == Node.NodeType.special)
         {
             base.Move();
@@ -29,6 +30,7 @@ public class Lion : Mammal
         else
         {
             Debug.Log("The Lion waits at " + currentNode + " to enter " + nextNode);
+            nextNode = null;
         }
     }
     // Lion rests a a Lions Rock

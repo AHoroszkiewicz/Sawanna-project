@@ -18,12 +18,12 @@ public class Antelope : Mammal
         }
         // Look through all connected nodes for an antelope or intersection node
         // TODO: If thirsty go to waterhole // tutaj pasywnie czy w game controllerze aktywnie? xd
-        while (nextNode == null || nextNode == previousNode || !(nextNode.nodeType == Node.NodeType.antelope || nextNode.nodeType == Node.NodeType.intersection))
+        while (nextNode == null || nextNode == previousNode || !(nextNode.nodeType == Node.NodeType.antelope || nextNode.nodeType == Node.NodeType.intersection || nextNode.nodeType == Node.NodeType.special))
         {
             nextNode = currentNode.ConnectedNodes[Random.Range(0, currentNode.ConnectedNodes.Count)];
         }
 
-        if (!nextNode.isOccupied)
+        if (!nextNode.isOccupied || nextNode.nodeType == Node.NodeType.special)
         {
             base.Move();
             Debug.Log("The Antelope moves from " + currentNode + " to " + nextNode);
@@ -31,6 +31,7 @@ public class Antelope : Mammal
         else
         {
             Debug.Log("The Antelope waits at " + currentNode + " to enter " + nextNode);
+            nextNode = null;
         }
     }
 }
