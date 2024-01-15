@@ -36,16 +36,6 @@ public abstract class Animal : MonoBehaviour, IAging, IMovement
         currentNode.RemoveOccupyingObject(gameObject);
         nextNode.AddOccupyingObject(gameObject);
 
-        if (currentNode.nodeType != Node.NodeType.special)
-        {
-            currentNode.isOccupied = false;
-        }
-
-        if (nextNode.nodeType != Node.NodeType.special)
-        {
-            nextNode.isOccupied = true;
-        }
-
         transform.position = nextNode.transform.position;
         previousNode = currentNode;
         currentNode = nextNode;
