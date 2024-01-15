@@ -8,6 +8,7 @@ public class Node : MonoBehaviour
     [SerializeField] public NodeType nodeType = NodeType.none;
     [SerializeField] public List<GameObject> occupyingObjects = new List<GameObject>();
     public bool isOccupied = false;
+    public bool hasCarcass = false;
 
     public List<Node> ConnectedNodes
     {
@@ -37,6 +38,17 @@ public class Node : MonoBehaviour
                     break;
             }
             Gizmos.DrawLine(transform.position, node.transform.position);
+        }
+    }
+
+    public void DestroyCarcass()
+    {
+        if (hasCarcass)
+        {
+            var carcass = occupyingObjects.Find(x => x.GetComponent<Carcass>() != null);
+            hasCarcass = false;
+            occupyingObjects.Remove(carcass);
+            carcass.GetComponent<Carcass>().DestroyCarcass();
         }
     }
 
