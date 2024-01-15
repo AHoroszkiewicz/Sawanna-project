@@ -6,6 +6,7 @@ public class Node : MonoBehaviour
 {
     [SerializeField] private List<Node> connectedNodes = new List<Node>();
     [SerializeField] public NodeType nodeType = NodeType.none;
+    [SerializeField] public List<GameObject> occupyingObjects = new List<GameObject>();
     public bool isOccupied = false;
 
     public List<Node> ConnectedNodes
@@ -24,9 +25,6 @@ public class Node : MonoBehaviour
                     break;
                 case NodeType.antelope:
                     Gizmos.color = Color.green;
-                    break;
-                case NodeType.bird:
-                    Gizmos.color = Color.blue;
                     break;
                 case NodeType.hyena:
                     Gizmos.color = Color.yellow;
@@ -47,9 +45,27 @@ public class Node : MonoBehaviour
         none = 0,
         lion = 1,
         antelope = 2,
-        bird = 3,
-        hyena = 4,
-        snake = 5,
-        intersection = 6,
+        hyena = 3,
+        snake = 4,
+        intersection = 5,
+        special = 6,
+    }
+
+    // New method to add an object to the occupyingObjects list
+    public void AddOccupyingObject(GameObject obj)
+    {
+        if (!occupyingObjects.Contains(obj))
+        {
+            occupyingObjects.Add(obj);
+        }
+    }
+
+    // New method to remove an object from the occupyingObjects list
+    public void RemoveOccupyingObject(GameObject obj)
+    {
+        if (occupyingObjects.Contains(obj))
+        {
+            occupyingObjects.Remove(obj);
+        }
     }
 }

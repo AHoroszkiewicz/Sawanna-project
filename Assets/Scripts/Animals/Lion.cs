@@ -16,14 +16,12 @@ public class Lion : Mammal
             Debug.Log("currentNode has no connected nodes");
             return;
         }
-        // Look through all connected nodes for a lion or intersection node
-        // TODO: If hungry go hunting, if thirsty go to waterhole // tutaj czy w game controllerze? xd
-        while (nextNode == null || nextNode == previousNode || nextNode.nodeType != Node.NodeType.lion || nextNode.nodeType != Node.NodeType.intersection)
+        // Look through all connected nodes for a lion, intersection, or special node
+        while (nextNode == null || nextNode == previousNode || !(nextNode.nodeType == Node.NodeType.lion || nextNode.nodeType == Node.NodeType.intersection || nextNode.nodeType == Node.NodeType.special))
         {
             nextNode = currentNode.ConnectedNodes[Random.Range(0, currentNode.ConnectedNodes.Count)];
         }
-        // TODO: If occupied by antelope, try hunting it. Move if successful, wait if not.
-        if (!nextNode.isOccupied)
+        if (!nextNode.isOccupied || nextNode.nodeType == Node.NodeType.special)
         {
             base.Move();
             Debug.Log("The Lion moves from " + currentNode + " to " + nextNode);

@@ -1,36 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &80657793096797670
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5184343664048013903}
-  m_Layer: 0
-  m_Name: BirdNode6
-  m_TagString: Untagged
-  m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5184343664048013903
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 80657793096797670}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 800, y: 213, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5415969399109251047}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &283144132136485624
 GameObject:
   m_ObjectHideFlags: 0
@@ -40,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 587070821353632401}
+  - component: {fileID: 5415734665492863911}
   m_Layer: 0
   m_Name: AntelopeNode5
   m_TagString: Untagged
@@ -62,37 +32,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4864760843423432961}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &370978226572661928
-GameObject:
+--- !u!114 &5415734665492863911
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3781524760049393124}
-  m_Layer: 0
-  m_Name: HyenaNode4
-  m_TagString: Untagged
-  m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3781524760049393124
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 370978226572661928}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 793, y: 383, z: -7.999267}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 6492288305921459776}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_GameObject: {fileID: 283144132136485624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes:
+  - {fileID: 2924005249247936161}
+  - {fileID: 1143723296659578091}
+  nodeType: 2
+  occupyingObjects: []
+  isOccupied: 0
 --- !u!1 &385636595817925808
 GameObject:
   m_ObjectHideFlags: 0
@@ -102,6 +59,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3524876302261822869}
+  - component: {fileID: 2819309800499541011}
   m_Layer: 0
   m_Name: AntelopeNode16
   m_TagString: Untagged
@@ -118,12 +76,30 @@ Transform:
   m_GameObject: {fileID: 385636595817925808}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 75, y: 382, z: 0}
+  m_LocalPosition: {x: 42, y: 383, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4864760843423432961}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2819309800499541011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 385636595817925808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes:
+  - {fileID: 8518620888039413226}
+  - {fileID: 3838791374908412845}
+  nodeType: 2
+  occupyingObjects: []
+  isOccupied: 0
 --- !u!1 &536583914246241122
 GameObject:
   m_ObjectHideFlags: 0
@@ -133,6 +109,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4646215883600414646}
+  - component: {fileID: 6273226829669553153}
   m_Layer: 0
   m_Name: SnakeNode9
   m_TagString: Untagged
@@ -155,6 +132,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6819687953782351822}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6273226829669553153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536583914246241122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes:
+  - {fileID: 2044320786824607859}
+  - {fileID: 7081222479573860680}
+  - {fileID: 2014609956123008931}
+  nodeType: 4
+  occupyingObjects: []
+  isOccupied: 0
 --- !u!1 &545787020287737590
 GameObject:
   m_ObjectHideFlags: 0
@@ -164,6 +160,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4797403130533155172}
+  - component: {fileID: 2871829698492293692}
   m_Layer: 0
   m_Name: AntelopeNode3
   m_TagString: Untagged
@@ -186,6 +183,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4864760843423432961}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2871829698492293692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545787020287737590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes:
+  - {fileID: 8002231262397722365}
+  - {fileID: 2924005249247936161}
+  nodeType: 2
+  occupyingObjects: []
+  isOccupied: 0
 --- !u!1 &621889964988015179
 GameObject:
   m_ObjectHideFlags: 0
@@ -195,8 +210,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5436286533717956212}
+  - component: {fileID: 2926409327756492121}
   m_Layer: 0
-  m_Name: HyenaNode12
+  m_Name: HyenaNode7
   m_TagString: Untagged
   m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -217,6 +233,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6492288305921459776}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2926409327756492121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 621889964988015179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes:
+  - {fileID: 573755029209817455}
+  - {fileID: 3110602008813980085}
+  nodeType: 3
+  occupyingObjects: []
+  isOccupied: 0
 --- !u!1 &673421945451260132
 GameObject:
   m_ObjectHideFlags: 0
@@ -257,6 +291,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6944804826219636742}
+  - component: {fileID: 3775107194758269728}
   m_Layer: 0
   m_Name: LionNode4
   m_TagString: Untagged
@@ -279,6 +314,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 473129867494433902}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3775107194758269728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 679476021746800133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes:
+  - {fileID: 3994703276188296369}
+  - {fileID: 5662356925215139558}
+  - {fileID: 5592945686805882254}
+  nodeType: 1
+  occupyingObjects: []
+  isOccupied: 0
 --- !u!1 &715146328447487934
 GameObject:
   m_ObjectHideFlags: 0
@@ -350,6 +404,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6891884480324878975}
+  - component: {fileID: 1154644521006228017}
   m_Layer: 0
   m_Name: AntelopeNode10
   m_TagString: Untagged
@@ -372,6 +427,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4864760843423432961}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1154644521006228017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 825197370178181726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes:
+  - {fileID: 2606680678251552607}
+  - {fileID: 5067101613723561376}
+  - {fileID: 1014244421065033460}
+  nodeType: 2
+  occupyingObjects: []
+  isOccupied: 0
 --- !u!1 &888942150584636546
 GameObject:
   m_ObjectHideFlags: 0
@@ -412,6 +486,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6560145168681919608}
+  - component: {fileID: 2514286809338571278}
   m_Layer: 0
   m_Name: SnakeNode6
   m_TagString: Untagged
@@ -434,7 +509,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6819687953782351822}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1223007437445985246
+--- !u!114 &2514286809338571278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 969551319748025905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes:
+  - {fileID: 2648190689037775222}
+  - {fileID: 31180885338917859}
+  nodeType: 4
+  occupyingObjects: []
+  isOccupied: 0
+--- !u!1 &1049285524937877471
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -442,28 +535,28 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3544891106343236279}
+  - component: {fileID: 7618798252883777036}
   m_Layer: 0
-  m_Name: BirdNode8
+  m_Name: Waterhole
   m_TagString: Untagged
-  m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3544891106343236279
+--- !u!4 &7618798252883777036
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1223007437445985246}
+  m_GameObject: {fileID: 1049285524937877471}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 593, y: 410, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5415969399109251047}
+  m_Father: {fileID: 5415368451911343260}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1259411717502431550
 GameObject:
@@ -505,6 +598,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6133435074830014187}
+  - component: {fileID: 7383785121042431712}
   m_Layer: 0
   m_Name: SnakeNode11
   m_TagString: Untagged
@@ -527,6 +621,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6819687953782351822}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7383785121042431712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399969493181412413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes:
+  - {fileID: 3195584644629475448}
+  - {fileID: 7081222479573860680}
+  - {fileID: 9116439139103470712}
+  nodeType: 4
+  occupyingObjects: []
+  isOccupied: 0
 --- !u!1 &1457918785427595502
 GameObject:
   m_ObjectHideFlags: 0
@@ -567,6 +680,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6028808134893803619}
+  - component: {fileID: 3838791374908412845}
   m_Layer: 0
   m_Name: AntelopeNode17
   m_TagString: Untagged
@@ -589,6 +703,80 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4864760843423432961}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3838791374908412845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1476769854293094312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes:
+  - {fileID: 8688645697722471494}
+  - {fileID: 2819309800499541011}
+  - {fileID: 766693660193916793}
+  nodeType: 2
+  occupyingObjects: []
+  isOccupied: 0
+--- !u!1 &1498272901769375144
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3340907961465527358}
+  - component: {fileID: 5592945686805882254}
+  m_Layer: 0
+  m_Name: LionSpecialNode
+  m_TagString: Untagged
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3340907961465527358
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498272901769375144}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 577.7, y: 146.1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 473129867494433902}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5592945686805882254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498272901769375144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes:
+  - {fileID: 6377169845942458062}
+  - {fileID: 4984964035284549573}
+  - {fileID: 3994703276188296369}
+  - {fileID: 3775107194758269728}
+  - {fileID: 3682257246884074698}
+  - {fileID: 5662356925215139558}
+  - {fileID: 6953321999375752226}
+  nodeType: 1
+  occupyingObjects: []
+  isOccupied: 0
 --- !u!1 &1678734706499425409
 GameObject:
   m_ObjectHideFlags: 0
@@ -598,6 +786,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3039922961495185173}
+  - component: {fileID: 6580286303303089014}
   m_Layer: 0
   m_Name: LionNode11
   m_TagString: Untagged
@@ -620,6 +809,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 473129867494433902}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6580286303303089014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1678734706499425409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes:
+  - {fileID: 3682257246884074698}
+  - {fileID: 527312265130256457}
+  - {fileID: 6953321999375752226}
+  nodeType: 1
+  occupyingObjects: []
+  isOccupied: 0
 --- !u!1 &1736217082666830773
 GameObject:
   m_ObjectHideFlags: 0
@@ -635,7 +843,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4864760843423432961
 Transform:
   m_ObjectHideFlags: 0
@@ -678,6 +886,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2844964313386782606}
+  - component: {fileID: 7468725269228305389}
   m_Layer: 0
   m_Name: SnakeNode1
   m_TagString: Untagged
@@ -700,6 +909,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6819687953782351822}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7468725269228305389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749206448783677115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes:
+  - {fileID: 2440801268945969247}
+  - {fileID: 9116439139103470712}
+  nodeType: 4
+  occupyingObjects: []
+  isOccupied: 0
 --- !u!1 &1761428367517829577
 GameObject:
   m_ObjectHideFlags: 0
@@ -709,6 +936,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5450346906612664269}
+  - component: {fileID: 201127282485991003}
   m_Layer: 0
   m_Name: LionNode8
   m_TagString: Untagged
@@ -731,6 +959,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 473129867494433902}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &201127282485991003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1761428367517829577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes:
+  - {fileID: 2132834781198129875}
+  - {fileID: 8410188607854005949}
+  nodeType: 1
+  occupyingObjects: []
+  isOccupied: 0
 --- !u!1 &1834036437299877807
 GameObject:
   m_ObjectHideFlags: 0
@@ -868,6 +1114,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5163971433225778968}
+  - component: {fileID: 5067101613723561376}
   m_Layer: 0
   m_Name: AntelopeNode11
   m_TagString: Untagged
@@ -890,6 +1137,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4864760843423432961}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5067101613723561376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2029580972811690133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes:
+  - {fileID: 2606680678251552607}
+  - {fileID: 1154644521006228017}
+  - {fileID: 2893648114199024936}
+  nodeType: 2
+  occupyingObjects: []
+  isOccupied: 0
 --- !u!1 &2032469066218628932
 GameObject:
   m_ObjectHideFlags: 0
@@ -899,6 +1165,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7590148690912858195}
+  - component: {fileID: 2132834781198129875}
   m_Layer: 0
   m_Name: LionNode7
   m_TagString: Untagged
@@ -921,6 +1188,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 473129867494433902}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2132834781198129875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2032469066218628932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes:
+  - {fileID: 6377169845942458062}
+  - {fileID: 3682257246884074698}
+  - {fileID: 201127282485991003}
+  - {fileID: 8091564404136375168}
+  nodeType: 1
+  occupyingObjects: []
+  isOccupied: 0
 --- !u!1 &2171021390748640029
 GameObject:
   m_ObjectHideFlags: 0
@@ -930,6 +1217,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6049264329232484268}
+  - component: {fileID: 4984964035284549573}
   m_Layer: 0
   m_Name: LionNode2
   m_TagString: Untagged
@@ -952,6 +1240,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 473129867494433902}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4984964035284549573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2171021390748640029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes:
+  - {fileID: 5662356925215139558}
+  - {fileID: 6953321999375752226}
+  - {fileID: 5592945686805882254}
+  nodeType: 1
+  occupyingObjects: []
+  isOccupied: 0
 --- !u!1 &2375957513814597986
 GameObject:
   m_ObjectHideFlags: 0
@@ -961,6 +1268,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6988474254865661060}
+  - component: {fileID: 2924005249247936161}
   m_Layer: 0
   m_Name: AntelopeNode4
   m_TagString: Untagged
@@ -983,6 +1291,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4864760843423432961}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2924005249247936161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2375957513814597986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes:
+  - {fileID: 2871829698492293692}
+  - {fileID: 5415734665492863911}
+  nodeType: 2
+  occupyingObjects: []
+  isOccupied: 0
 --- !u!1 &2395180674281035028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1049,68 +1375,6 @@ Transform:
   - {fileID: 3258373708273843904}
   m_Father: {fileID: 5415368451911343260}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2905303803938837824
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3381949716525350580}
-  m_Layer: 0
-  m_Name: BirdNode1
-  m_TagString: Untagged
-  m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3381949716525350580
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2905303803938837824}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 55, y: 169, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5415969399109251047}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2990127949527241911
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 823478971603976169}
-  m_Layer: 0
-  m_Name: HyenaNode1
-  m_TagString: Untagged
-  m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &823478971603976169
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2990127949527241911}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 770, y: 439, z: -7.999267}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 6492288305921459776}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3246538223659286742
 GameObject:
   m_ObjectHideFlags: 0
@@ -1153,7 +1417,7 @@ Transform:
   - {fileID: 3039922961495185173}
   - {fileID: 8344536038949953475}
   - {fileID: 4544520229910479284}
-  - {fileID: 2181860529800502602}
+  - {fileID: 3340907961465527358}
   m_Father: {fileID: 1218955814500192710}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3315079716389549881
@@ -1165,6 +1429,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3785856920988261279}
+  - component: {fileID: 7081222479573860680}
   m_Layer: 0
   m_Name: SnakeNode10
   m_TagString: Untagged
@@ -1187,37 +1452,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6819687953782351822}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &3341140827702113783
-GameObject:
+--- !u!114 &7081222479573860680
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5579754048472077742}
-  m_Layer: 0
-  m_Name: BirdNode9
-  m_TagString: Untagged
-  m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5579754048472077742
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3341140827702113783}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 424, y: 349, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5415969399109251047}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_GameObject: {fileID: 3315079716389549881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes:
+  - {fileID: 6273226829669553153}
+  - {fileID: 7383785121042431712}
+  - {fileID: 2014609956123008931}
+  nodeType: 4
+  occupyingObjects: []
+  isOccupied: 0
 --- !u!1 &3411400342362783672
 GameObject:
   m_ObjectHideFlags: 0
@@ -1227,8 +1480,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2200490941630253269}
+  - component: {fileID: 7061678366552986428}
   m_Layer: 0
-  m_Name: HyenaNode2
+  m_Name: HyenaSpecialNode
   m_TagString: Untagged
   m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -1243,12 +1497,30 @@ Transform:
   m_GameObject: {fileID: 3411400342362783672}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 869, y: 433, z: -7.999267}
+  m_LocalPosition: {x: 777.1, y: 410, z: -7.999267}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6492288305921459776}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7061678366552986428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3411400342362783672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes:
+  - {fileID: 3687010324026463002}
+  - {fileID: 8075952591869861174}
+  nodeType: 3
+  occupyingObjects: []
+  isOccupied: 0
 --- !u!1 &3440000669672589396
 GameObject:
   m_ObjectHideFlags: 0
@@ -1279,50 +1551,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7837262737850011880}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &3586475387589151884
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5415969399109251047}
-  m_Layer: 0
-  m_Name: Bird
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5415969399109251047
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3586475387589151884}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 3381949716525350580}
-  - {fileID: 8951024675232047337}
-  - {fileID: 2900050705517887494}
-  - {fileID: 4598543900689939292}
-  - {fileID: 2720313109284279011}
-  - {fileID: 5184343664048013903}
-  - {fileID: 5707355742092577053}
-  - {fileID: 3544891106343236279}
-  - {fileID: 5579754048472077742}
-  - {fileID: 8800898284197522451}
-  - {fileID: 97212630111185619}
-  - {fileID: 1657804655561045836}
-  - {fileID: 356382668740241891}
-  m_Father: {fileID: 1218955814500192710}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3646751627000862629
 GameObject:
@@ -1429,6 +1657,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4510028001903650422}
+  - component: {fileID: 2606680678251552607}
   m_Layer: 0
   m_Name: AntelopeNode9
   m_TagString: Untagged
@@ -1451,6 +1680,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4864760843423432961}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2606680678251552607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3865575183061703304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes:
+  - {fileID: 7650636415121625122}
+  - {fileID: 1154644521006228017}
+  - {fileID: 5067101613723561376}
+  nodeType: 2
+  occupyingObjects: []
+  isOccupied: 0
 --- !u!1 &3883003947463851853
 GameObject:
   m_ObjectHideFlags: 0
@@ -1460,8 +1708,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2844568455225365560}
+  - component: {fileID: 419664550652172910}
   m_Layer: 0
-  m_Name: HyenaNode7
+  m_Name: HyenaNode2
   m_TagString: Untagged
   m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -1482,6 +1731,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6492288305921459776}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &419664550652172910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3883003947463851853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes:
+  - {fileID: 3687010324026463002}
+  - {fileID: 1593826005254372052}
+  nodeType: 3
+  occupyingObjects: []
+  isOccupied: 0
 --- !u!1 &3945140323023911182
 GameObject:
   m_ObjectHideFlags: 0
@@ -1491,6 +1758,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1289351729332183816}
+  - component: {fileID: 2014609956123008931}
   m_Layer: 0
   m_Name: SnakeNode12
   m_TagString: Untagged
@@ -1513,6 +1781,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6819687953782351822}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2014609956123008931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3945140323023911182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes:
+  - {fileID: 6273226829669553153}
+  - {fileID: 7081222479573860680}
+  - {fileID: 7942973488467674132}
+  nodeType: 4
+  occupyingObjects: []
+  isOccupied: 0
 --- !u!1 &3991239897210772887
 GameObject:
   m_ObjectHideFlags: 0
@@ -1577,37 +1864,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7944153852314511301}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &4102894565401750129
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5088773425226647273}
-  m_Layer: 0
-  m_Name: HyenaNode13
-  m_TagString: Untagged
-  m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5088773425226647273
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4102894565401750129}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 695, y: 423, z: -7.999267}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 6492288305921459776}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4195332789491753005
 GameObject:
@@ -1680,8 +1936,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4420177595314522903}
+  - component: {fileID: 8075952591869861174}
   m_Layer: 0
-  m_Name: HyenaNode14
+  m_Name: HyenaNode10
   m_TagString: Untagged
   m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -1702,6 +1959,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6492288305921459776}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8075952591869861174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4222169239078549709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes:
+  - {fileID: 7061678366552986428}
+  - {fileID: 1883071420057269177}
+  nodeType: 3
+  occupyingObjects: []
+  isOccupied: 0
 --- !u!1 &4222613369346677590
 GameObject:
   m_ObjectHideFlags: 0
@@ -1752,7 +2027,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6492288305921459776
 Transform:
   m_ObjectHideFlags: 0
@@ -1766,10 +2041,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 823478971603976169}
-  - {fileID: 2200490941630253269}
-  - {fileID: 2084537876053649359}
-  - {fileID: 3781524760049393124}
   - {fileID: 5310027205661445363}
   - {fileID: 2844568455225365560}
   - {fileID: 6301797859899128193}
@@ -1777,11 +2048,11 @@ Transform:
   - {fileID: 5248474117076170282}
   - {fileID: 3370428315377582118}
   - {fileID: 5436286533717956212}
-  - {fileID: 5088773425226647273}
-  - {fileID: 4420177595314522903}
-  - {fileID: 4494773984110724535}
   - {fileID: 4618936293644864607}
+  - {fileID: 4494773984110724535}
+  - {fileID: 4420177595314522903}
   - {fileID: 8233060915325788459}
+  - {fileID: 2200490941630253269}
   m_Father: {fileID: 1218955814500192710}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4469784321337618825
@@ -1824,6 +2095,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3517704544963500530}
+  - component: {fileID: 9116439139103470712}
   m_Layer: 0
   m_Name: SnakeNode15
   m_TagString: Untagged
@@ -1846,37 +2118,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6819687953782351822}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &4544769133306054872
-GameObject:
+--- !u!114 &9116439139103470712
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2720313109284279011}
-  m_Layer: 0
-  m_Name: BirdNode5
-  m_TagString: Untagged
-  m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2720313109284279011
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4544769133306054872}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 626, y: 32, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5415969399109251047}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_GameObject: {fileID: 4525415233151899760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes:
+  - {fileID: 7468725269228305389}
+  - {fileID: 7383785121042431712}
+  - {fileID: 7609596812423048492}
+  nodeType: 4
+  occupyingObjects: []
+  isOccupied: 0
 --- !u!1 &4557643682546268989
 GameObject:
   m_ObjectHideFlags: 0
@@ -1886,6 +2146,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8344536038949953475}
+  - component: {fileID: 6953321999375752226}
   m_Layer: 0
   m_Name: LionNode12
   m_TagString: Untagged
@@ -1908,6 +2169,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 473129867494433902}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6953321999375752226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4557643682546268989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes:
+  - {fileID: 4984964035284549573}
+  - {fileID: 3682257246884074698}
+  - {fileID: 6580286303303089014}
+  - {fileID: 5592945686805882254}
+  nodeType: 1
+  occupyingObjects: []
+  isOccupied: 0
 --- !u!1 &4580363421447971320
 GameObject:
   m_ObjectHideFlags: 0
@@ -1979,6 +2260,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6868554071597337151}
+  - component: {fileID: 31180885338917859}
   m_Layer: 0
   m_Name: SnakeNode7
   m_TagString: Untagged
@@ -2001,6 +2283,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6819687953782351822}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &31180885338917859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4599333799159659109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes:
+  - {fileID: 2514286809338571278}
+  - {fileID: 2044320786824607859}
+  nodeType: 4
+  occupyingObjects: []
+  isOccupied: 0
 --- !u!1 &4609500441850726291
 GameObject:
   m_ObjectHideFlags: 0
@@ -2010,6 +2310,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1697055099672956582}
+  - component: {fileID: 8688645697722471494}
   m_Layer: 0
   m_Name: AntelopeNode1
   m_TagString: Untagged
@@ -2032,6 +2333,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4864760843423432961}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8688645697722471494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4609500441850726291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes:
+  - {fileID: 8002231262397722365}
+  - {fileID: 3838791374908412845}
+  - {fileID: 766693660193916793}
+  nodeType: 2
+  occupyingObjects: []
+  isOccupied: 0
 --- !u!1 &4662993801653516729
 GameObject:
   m_ObjectHideFlags: 0
@@ -2041,6 +2361,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 370338872390381489}
+  - component: {fileID: 7942973488467674132}
   m_Layer: 0
   m_Name: SnakeNode13
   m_TagString: Untagged
@@ -2057,12 +2378,30 @@ Transform:
   m_GameObject: {fileID: 4662993801653516729}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 160, y: 437, z: 0}
+  m_LocalPosition: {x: 157, y: 461, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6819687953782351822}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7942973488467674132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4662993801653516729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes:
+  - {fileID: 2014609956123008931}
+  - {fileID: 7609596812423048492}
+  nodeType: 4
+  occupyingObjects: []
+  isOccupied: 0
 --- !u!1 &5119176204284111271
 GameObject:
   m_ObjectHideFlags: 0
@@ -2072,6 +2411,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1215943139813044905}
+  - component: {fileID: 2893648114199024936}
   m_Layer: 0
   m_Name: AntelopeNode13
   m_TagString: Untagged
@@ -2094,6 +2434,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4864760843423432961}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2893648114199024936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5119176204284111271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes:
+  - {fileID: 5067101613723561376}
+  - {fileID: 1014244421065033460}
+  - {fileID: 8919217455752492015}
+  nodeType: 2
+  occupyingObjects: []
+  isOccupied: 0
 --- !u!1 &5126223578924590806
 GameObject:
   m_ObjectHideFlags: 0
@@ -2124,37 +2483,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7382369089038634064}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &5213652441172179769
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2181860529800502602}
-  m_Layer: 0
-  m_Name: LionNodeToWater2
-  m_TagString: Untagged
-  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2181860529800502602
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5213652441172179769}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 306, y: 293, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 473129867494433902}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5276045414196564396
 GameObject:
@@ -2196,6 +2524,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1032111743424665817}
+  - component: {fileID: 6377169845942458062}
   m_Layer: 0
   m_Name: LionNode1
   m_TagString: Untagged
@@ -2218,6 +2547,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 473129867494433902}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6377169845942458062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5285984818174843106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes:
+  - {fileID: 3994703276188296369}
+  - {fileID: 2132834781198129875}
+  - {fileID: 8091564404136375168}
+  - {fileID: 5592945686805882254}
+  nodeType: 1
+  occupyingObjects: []
+  isOccupied: 0
 --- !u!1 &5314412169391813030
 GameObject:
   m_ObjectHideFlags: 0
@@ -2244,13 +2593,12 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.022, y: 0.022, z: 0.022}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 473129867494433902}
   - {fileID: 4864760843423432961}
   - {fileID: 6819687953782351822}
-  - {fileID: 5415969399109251047}
   - {fileID: 6492288305921459776}
   - {fileID: 5415368451911343260}
   m_Father: {fileID: 0}
@@ -2264,8 +2612,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5310027205661445363}
+  - component: {fileID: 3687010324026463002}
   m_Layer: 0
-  m_Name: HyenaNode5
+  m_Name: HyenaNode1
   m_TagString: Untagged
   m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -2286,6 +2635,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6492288305921459776}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3687010324026463002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5353745862647312202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes:
+  - {fileID: 7061678366552986428}
+  - {fileID: 419664550652172910}
+  nodeType: 3
+  occupyingObjects: []
+  isOccupied: 0
 --- !u!1 &5388665294271764340
 GameObject:
   m_ObjectHideFlags: 0
@@ -2295,8 +2662,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5248474117076170282}
+  - component: {fileID: 4312884341239483648}
   m_Layer: 0
-  m_Name: HyenaNode10
+  m_Name: HyenaNode5
   m_TagString: Untagged
   m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -2311,12 +2679,30 @@ Transform:
   m_GameObject: {fileID: 5388665294271764340}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 57, y: 365, z: -7.999267}
+  m_LocalPosition: {x: 45, y: 365, z: -7.999267}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6492288305921459776}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4312884341239483648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5388665294271764340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes:
+  - {fileID: 573755029209817455}
+  - {fileID: 6217985109132697608}
+  nodeType: 3
+  occupyingObjects: []
+  isOccupied: 0
 --- !u!1 &5486007844309595643
 GameObject:
   m_ObjectHideFlags: 0
@@ -2326,6 +2712,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1505150137523218033}
+  - component: {fileID: 2648190689037775222}
   m_Layer: 0
   m_Name: SnakeNode5
   m_TagString: Untagged
@@ -2348,37 +2735,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6819687953782351822}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &5486598875302735108
-GameObject:
+--- !u!114 &2648190689037775222
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5707355742092577053}
-  m_Layer: 0
-  m_Name: BirdNode7
-  m_TagString: Untagged
-  m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5707355742092577053
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5486598875302735108}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 709, y: 298, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5415969399109251047}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_GameObject: {fileID: 5486007844309595643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes:
+  - {fileID: 8245707565292941149}
+  - {fileID: 2514286809338571278}
+  nodeType: 4
+  occupyingObjects: []
+  isOccupied: 0
 --- !u!1 &5602164520465072570
 GameObject:
   m_ObjectHideFlags: 0
@@ -2388,6 +2762,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6293402252615473664}
+  - component: {fileID: 8518620888039413226}
   m_Layer: 0
   m_Name: AntelopeNode15
   m_TagString: Untagged
@@ -2404,12 +2779,30 @@ Transform:
   m_GameObject: {fileID: 5602164520465072570}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 103, y: 430, z: 0}
+  m_LocalPosition: {x: 82, y: 439, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4864760843423432961}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8518620888039413226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5602164520465072570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes:
+  - {fileID: 8919217455752492015}
+  - {fileID: 2819309800499541011}
+  nodeType: 2
+  occupyingObjects: []
+  isOccupied: 0
 --- !u!1 &5619149687403495526
 GameObject:
   m_ObjectHideFlags: 0
@@ -2419,6 +2812,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1997835212142940059}
+  - component: {fileID: 6769961569004859799}
   m_Layer: 0
   m_Name: AntelopeNode7
   m_TagString: Untagged
@@ -2441,6 +2835,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4864760843423432961}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6769961569004859799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5619149687403495526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes:
+  - {fileID: 1143723296659578091}
+  - {fileID: 7650636415121625122}
+  nodeType: 2
+  occupyingObjects: []
+  isOccupied: 0
 --- !u!1 &5654136747088964938
 GameObject:
   m_ObjectHideFlags: 0
@@ -2450,8 +2862,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4544520229910479284}
+  - component: {fileID: 8091564404136375168}
   m_Layer: 0
-  m_Name: LionNodeToWater1
+  m_Name: LionNodeToWater
   m_TagString: Untagged
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -2466,12 +2879,30 @@ Transform:
   m_GameObject: {fileID: 5654136747088964938}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 332.2, y: 268.7, z: 0}
+  m_LocalPosition: {x: 321, y: 290, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 473129867494433902}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8091564404136375168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5654136747088964938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes:
+  - {fileID: 6377169845942458062}
+  - {fileID: 201127282485991003}
+  nodeType: 1
+  occupyingObjects: []
+  isOccupied: 0
 --- !u!1 &5743747582932252574
 GameObject:
   m_ObjectHideFlags: 0
@@ -2481,6 +2912,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7936699331479858037}
+  - component: {fileID: 7650636415121625122}
   m_Layer: 0
   m_Name: AntelopeNode8
   m_TagString: Untagged
@@ -2503,37 +2935,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4864760843423432961}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &5758511113827080878
-GameObject:
+--- !u!114 &7650636415121625122
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 356382668740241891}
-  m_Layer: 0
-  m_Name: BirdNodeToWater
-  m_TagString: Untagged
-  m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &356382668740241891
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5758511113827080878}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 193, y: 267, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5415969399109251047}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_GameObject: {fileID: 5743747582932252574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes:
+  - {fileID: 6769961569004859799}
+  - {fileID: 2606680678251552607}
+  nodeType: 2
+  occupyingObjects: []
+  isOccupied: 0
 --- !u!1 &5890972356398465460
 GameObject:
   m_ObjectHideFlags: 0
@@ -2543,6 +2962,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8233060915325788459}
+  - component: {fileID: 6217985109132697608}
   m_Layer: 0
   m_Name: HyenaNodeToWater
   m_TagString: Untagged
@@ -2559,12 +2979,30 @@ Transform:
   m_GameObject: {fileID: 5890972356398465460}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 184, y: 447, z: -7.999267}
+  m_LocalPosition: {x: 183, y: 458, z: -7.999267}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6492288305921459776}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6217985109132697608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5890972356398465460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes:
+  - {fileID: 4477319580915805935}
+  - {fileID: 4312884341239483648}
+  nodeType: 3
+  occupyingObjects: []
+  isOccupied: 0
 --- !u!1 &5918432467029627760
 GameObject:
   m_ObjectHideFlags: 0
@@ -2574,6 +3012,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5059762567271376353}
+  - component: {fileID: 8002231262397722365}
   m_Layer: 0
   m_Name: AntelopeNode2
   m_TagString: Untagged
@@ -2596,6 +3035,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4864760843423432961}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8002231262397722365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5918432467029627760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes:
+  - {fileID: 8688645697722471494}
+  - {fileID: 2871829698492293692}
+  - {fileID: 1014244421065033460}
+  - {fileID: 766693660193916793}
+  nodeType: 2
+  occupyingObjects: []
+  isOccupied: 0
 --- !u!1 &6009001387514630557
 GameObject:
   m_ObjectHideFlags: 0
@@ -2605,6 +3064,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5979543205149450413}
+  - component: {fileID: 1014244421065033460}
   m_Layer: 0
   m_Name: AntelopeNode12
   m_TagString: Untagged
@@ -2627,37 +3087,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4864760843423432961}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &6329352417601054205
-GameObject:
+--- !u!114 &1014244421065033460
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8800898284197522451}
-  m_Layer: 0
-  m_Name: BirdNode10
-  m_TagString: Untagged
-  m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8800898284197522451
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6329352417601054205}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 242, y: 453, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5415969399109251047}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_GameObject: {fileID: 6009001387514630557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes:
+  - {fileID: 8002231262397722365}
+  - {fileID: 1154644521006228017}
+  - {fileID: 2893648114199024936}
+  - {fileID: 766693660193916793}
+  nodeType: 2
+  occupyingObjects: []
+  isOccupied: 0
 --- !u!1 &6335048008668384617
 GameObject:
   m_ObjectHideFlags: 0
@@ -2702,6 +3151,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3442616399508065587}
+  - component: {fileID: 1143723296659578091}
   m_Layer: 0
   m_Name: AntelopeNode6
   m_TagString: Untagged
@@ -2724,99 +3174,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4864760843423432961}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &6378337920349640551
-GameObject:
+--- !u!114 &1143723296659578091
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4598543900689939292}
-  m_Layer: 0
-  m_Name: BirdNode4
-  m_TagString: Untagged
-  m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4598543900689939292
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6378337920349640551}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 333, y: 47, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5415969399109251047}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &6431551867008450944
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 97212630111185619}
-  m_Layer: 0
-  m_Name: BirdNode11
-  m_TagString: Untagged
-  m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &97212630111185619
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6431551867008450944}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 30, y: 359, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5415969399109251047}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &6433234583319315563
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2084537876053649359}
-  m_Layer: 0
-  m_Name: HyenaNode3
-  m_TagString: Untagged
-  m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2084537876053649359
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6433234583319315563}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 859, y: 363, z: -7.999267}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 6492288305921459776}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_GameObject: {fileID: 6356399045309157949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes:
+  - {fileID: 5415734665492863911}
+  - {fileID: 6769961569004859799}
+  nodeType: 2
+  occupyingObjects: []
+  isOccupied: 0
 --- !u!1 &6604315770581379066
 GameObject:
   m_ObjectHideFlags: 0
@@ -2862,6 +3237,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2985526907405441172}
+  - component: {fileID: 3682257246884074698}
   m_Layer: 0
   m_Name: LionNode5
   m_TagString: Untagged
@@ -2884,6 +3260,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 473129867494433902}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3682257246884074698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6622700711158253427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes:
+  - {fileID: 2132834781198129875}
+  - {fileID: 6580286303303089014}
+  - {fileID: 6953321999375752226}
+  - {fileID: 5592945686805882254}
+  nodeType: 1
+  occupyingObjects: []
+  isOccupied: 0
 --- !u!1 &6669965957505882384
 GameObject:
   m_ObjectHideFlags: 0
@@ -2958,6 +3354,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8511633082515575390}
+  - component: {fileID: 5662356925215139558}
   m_Layer: 0
   m_Name: LionNode6
   m_TagString: Untagged
@@ -2980,6 +3377,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 473129867494433902}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5662356925215139558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6938676407944497419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes:
+  - {fileID: 4984964035284549573}
+  - {fileID: 3775107194758269728}
+  - {fileID: 5592945686805882254}
+  nodeType: 1
+  occupyingObjects: []
+  isOccupied: 0
 --- !u!1 &6965983616286614390
 GameObject:
   m_ObjectHideFlags: 0
@@ -2989,8 +3405,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8911123004412154733}
+  - component: {fileID: 4477319580915805935}
   m_Layer: 0
-  m_Name: HyenaNode9
+  m_Name: HyenaNode4
   m_TagString: Untagged
   m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -3011,37 +3428,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6492288305921459776}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &7028859199582111715
-GameObject:
+--- !u!114 &4477319580915805935
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2900050705517887494}
-  m_Layer: 0
-  m_Name: BirdNode3
-  m_TagString: Untagged
-  m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2900050705517887494
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7028859199582111715}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 259, y: 147, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5415969399109251047}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_GameObject: {fileID: 6965983616286614390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes:
+  - {fileID: 1593826005254372052}
+  - {fileID: 6217985109132697608}
+  nodeType: 3
+  occupyingObjects: []
+  isOccupied: 0
 --- !u!1 &7140727691184823716
 GameObject:
   m_ObjectHideFlags: 0
@@ -3051,6 +3455,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8717176266065291612}
+  - component: {fileID: 766693660193916793}
   m_Layer: 0
   m_Name: AntelopeNodeToWater
   m_TagString: Untagged
@@ -3073,6 +3478,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4864760843423432961}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &766693660193916793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7140727691184823716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes:
+  - {fileID: 8688645697722471494}
+  - {fileID: 8002231262397722365}
+  - {fileID: 1014244421065033460}
+  - {fileID: 3838791374908412845}
+  nodeType: 2
+  occupyingObjects: []
+  isOccupied: 0
 --- !u!1 &7374805387324460160
 GameObject:
   m_ObjectHideFlags: 0
@@ -3082,6 +3507,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5866037826466003954}
+  - component: {fileID: 3195584644629475448}
   m_Layer: 0
   m_Name: SnakeNode3
   m_TagString: Untagged
@@ -3104,6 +3530,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6819687953782351822}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3195584644629475448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7374805387324460160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes:
+  - {fileID: 2440801268945969247}
+  - {fileID: 8245707565292941149}
+  - {fileID: 7383785121042431712}
+  nodeType: 4
+  occupyingObjects: []
+  isOccupied: 0
 --- !u!1 &7449523349874589908
 GameObject:
   m_ObjectHideFlags: 0
@@ -3144,6 +3589,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8650841093816774412}
+  - component: {fileID: 527312265130256457}
   m_Layer: 0
   m_Name: LionNode10
   m_TagString: Untagged
@@ -3166,6 +3612,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 473129867494433902}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &527312265130256457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7457606504959444046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes:
+  - {fileID: 8410188607854005949}
+  - {fileID: 6580286303303089014}
+  nodeType: 1
+  occupyingObjects: []
+  isOccupied: 0
 --- !u!1 &7565436755603689017
 GameObject:
   m_ObjectHideFlags: 0
@@ -3175,8 +3639,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3370428315377582118}
+  - component: {fileID: 573755029209817455}
   m_Layer: 0
-  m_Name: HyenaNode11
+  m_Name: HyenaNode6
   m_TagString: Untagged
   m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -3197,37 +3662,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6492288305921459776}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &7565752222391962693
-GameObject:
+--- !u!114 &573755029209817455
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8951024675232047337}
-  m_Layer: 0
-  m_Name: BirdNode2
-  m_TagString: Untagged
-  m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8951024675232047337
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7565752222391962693}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 125, y: 64, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5415969399109251047}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_GameObject: {fileID: 7565436755603689017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes:
+  - {fileID: 1593826005254372052}
+  - {fileID: 4312884341239483648}
+  - {fileID: 2926409327756492121}
+  nodeType: 3
+  occupyingObjects: []
+  isOccupied: 0
 --- !u!1 &7572727622870540081
 GameObject:
   m_ObjectHideFlags: 0
@@ -3237,6 +3690,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6396757309619881224}
+  - component: {fileID: 2440801268945969247}
   m_Layer: 0
   m_Name: SnakeNode2
   m_TagString: Untagged
@@ -3259,6 +3713,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6819687953782351822}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2440801268945969247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7572727622870540081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes:
+  - {fileID: 7468725269228305389}
+  - {fileID: 3195584644629475448}
+  nodeType: 4
+  occupyingObjects: []
+  isOccupied: 0
 --- !u!1 &7582268028268115721
 GameObject:
   m_ObjectHideFlags: 0
@@ -3268,6 +3740,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3398507832657249718}
+  - component: {fileID: 2044320786824607859}
   m_Layer: 0
   m_Name: SnakeNode8
   m_TagString: Untagged
@@ -3290,6 +3763,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6819687953782351822}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2044320786824607859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7582268028268115721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes:
+  - {fileID: 31180885338917859}
+  - {fileID: 6273226829669553153}
+  nodeType: 4
+  occupyingObjects: []
+  isOccupied: 0
 --- !u!1 &7838834758564649837
 GameObject:
   m_ObjectHideFlags: 0
@@ -3445,37 +3936,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7944153852314511301}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &8058110248803738344
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1657804655561045836}
-  m_Layer: 0
-  m_Name: BirdNode12
-  m_TagString: Untagged
-  m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1657804655561045836
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8058110248803738344}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 176, y: 235, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5415969399109251047}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8069119303891781027
 GameObject:
   m_ObjectHideFlags: 0
@@ -3485,8 +3945,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4494773984110724535}
+  - component: {fileID: 1883071420057269177}
   m_Layer: 0
-  m_Name: HyenaNode15
+  m_Name: HyenaNode9
   m_TagString: Untagged
   m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -3501,12 +3962,30 @@ Transform:
   m_GameObject: {fileID: 8069119303891781027}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 650, y: 39, z: -7.999267}
+  m_LocalPosition: {x: 650, y: 35, z: -7.999267}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6492288305921459776}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1883071420057269177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8069119303891781027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes:
+  - {fileID: 8075952591869861174}
+  - {fileID: 3110602008813980085}
+  nodeType: 3
+  occupyingObjects: []
+  isOccupied: 0
 --- !u!1 &8171021872662851325
 GameObject:
   m_ObjectHideFlags: 0
@@ -3516,6 +3995,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4313648319548629651}
+  - component: {fileID: 8410188607854005949}
   m_Layer: 0
   m_Name: LionNode9
   m_TagString: Untagged
@@ -3538,6 +4018,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 473129867494433902}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8410188607854005949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8171021872662851325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes:
+  - {fileID: 201127282485991003}
+  - {fileID: 527312265130256457}
+  nodeType: 1
+  occupyingObjects: []
+  isOccupied: 0
 --- !u!1 &8288451357817192654
 GameObject:
   m_ObjectHideFlags: 0
@@ -3547,6 +4045,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7445291710097960804}
+  - component: {fileID: 8919217455752492015}
   m_Layer: 0
   m_Name: AntelopeNode14
   m_TagString: Untagged
@@ -3569,6 +4068,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4864760843423432961}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8919217455752492015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8288451357817192654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes:
+  - {fileID: 2893648114199024936}
+  - {fileID: 8518620888039413226}
+  nodeType: 2
+  occupyingObjects: []
+  isOccupied: 0
 --- !u!1 &8353396538202561830
 GameObject:
   m_ObjectHideFlags: 0
@@ -3609,8 +4126,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6301797859899128193}
+  - component: {fileID: 1593826005254372052}
   m_Layer: 0
-  m_Name: HyenaNode8
+  m_Name: HyenaNode3
   m_TagString: Untagged
   m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -3631,6 +4149,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6492288305921459776}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1593826005254372052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8407714386413229503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes:
+  - {fileID: 419664550652172910}
+  - {fileID: 4477319580915805935}
+  - {fileID: 573755029209817455}
+  nodeType: 3
+  occupyingObjects: []
+  isOccupied: 0
 --- !u!1 &8464433160945880290
 GameObject:
   m_ObjectHideFlags: 0
@@ -3671,6 +4208,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7199924697751751670}
+  - component: {fileID: 7609596812423048492}
   m_Layer: 0
   m_Name: SnakeNode14
   m_TagString: Untagged
@@ -3693,6 +4231,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6819687953782351822}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7609596812423048492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8492962590534239561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes:
+  - {fileID: 7942973488467674132}
+  - {fileID: 9116439139103470712}
+  nodeType: 4
+  occupyingObjects: []
+  isOccupied: 0
 --- !u!1 &8583824718173756849
 GameObject:
   m_ObjectHideFlags: 0
@@ -3733,6 +4289,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2880346864482545168}
+  - component: {fileID: 8245707565292941149}
   m_Layer: 0
   m_Name: SnakeNode4
   m_TagString: Untagged
@@ -3755,6 +4312,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6819687953782351822}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8245707565292941149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8641159557568031268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes:
+  - {fileID: 3195584644629475448}
+  - {fileID: 2648190689037775222}
+  nodeType: 4
+  occupyingObjects: []
+  isOccupied: 0
 --- !u!1 &8742749029812383698
 GameObject:
   m_ObjectHideFlags: 0
@@ -3795,8 +4370,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4618936293644864607}
+  - component: {fileID: 3110602008813980085}
   m_Layer: 0
-  m_Name: HyenaNode16
+  m_Name: HyenaNode8
   m_TagString: Untagged
   m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -3817,6 +4393,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6492288305921459776}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3110602008813980085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8787297109505919017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes:
+  - {fileID: 2926409327756492121}
+  - {fileID: 1883071420057269177}
+  nodeType: 3
+  occupyingObjects: []
+  isOccupied: 0
 --- !u!1 &8881994841945212567
 GameObject:
   m_ObjectHideFlags: 0
@@ -3866,7 +4460,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6819687953782351822
 Transform:
   m_ObjectHideFlags: 0
@@ -3937,6 +4531,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4275277899228627768}
+  - component: {fileID: 3994703276188296369}
   m_Layer: 0
   m_Name: LionNode3
   m_TagString: Untagged
@@ -3959,6 +4554,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 473129867494433902}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3994703276188296369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9100811985880141975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes:
+  - {fileID: 6377169845942458062}
+  - {fileID: 3775107194758269728}
+  - {fileID: 5592945686805882254}
+  nodeType: 1
+  occupyingObjects: []
+  isOccupied: 0
 --- !u!1 &9129638476041636049
 GameObject:
   m_ObjectHideFlags: 0
@@ -3974,7 +4588,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5415368451911343260
 Transform:
   m_ObjectHideFlags: 0
@@ -3997,5 +4611,6 @@ Transform:
   - {fileID: 7382369089038634064}
   - {fileID: 7837262737850011880}
   - {fileID: 7944153852314511301}
+  - {fileID: 7618798252883777036}
   m_Father: {fileID: 1218955814500192710}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

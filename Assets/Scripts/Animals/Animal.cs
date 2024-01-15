@@ -17,8 +17,8 @@ public abstract class Animal : MonoBehaviour, IAging, IMovement
     public int Id { get => id; set => id = value; }
     public int Age => age;
     public virtual AnimalTypes AnimalType => animalType;
-    public bool IsAlive => isAlive; 
-    public int MaxAge { get => maxAge; set => maxAge = value;}
+    public bool IsAlive => isAlive;
+    public int MaxAge { get => maxAge; set => maxAge = value; }
     public Node CurrentNode { get => currentNode; set => currentNode = value; }
 
     public void AgeUp()
@@ -33,8 +33,19 @@ public abstract class Animal : MonoBehaviour, IAging, IMovement
 
     virtual public void Move()
     {
-        currentNode.isOccupied = false;
-        nextNode.isOccupied = true;
+        currentNode.RemoveOccupyingObject(gameObject);
+        nextNode.AddOccupyingObject(gameObject);
+
+        if (currentNode.nodeType != Node.NodeType.special)
+        {
+            currentNode.isOccupied = false;
+        }
+
+        if (nextNode.nodeType != Node.NodeType.special)
+        {
+            nextNode.isOccupied = true;
+        }
+
         transform.position = nextNode.transform.position;
         previousNode = currentNode;
         currentNode = nextNode;
