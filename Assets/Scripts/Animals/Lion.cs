@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Lion : Mammal
 {
+    private List<Node> pathToWaterhole;
+    private bool isMovingToWaterhole = false;
+
     override public void Move()
     {
         if (CurrentNode == null)
@@ -16,23 +19,90 @@ public class Lion : Mammal
             Debug.Log("currentNode has no connected nodes");
             return;
         }
-        // Look through all connected nodes for a lion, intersection, or special node
-        while (nextNode == null || nextNode == previousNode || !(nextNode.nodeType == Node.NodeType.lion || nextNode.nodeType == Node.NodeType.intersection || nextNode.nodeType == Node.NodeType.special))
+
+        // Jeœli lew jest spragniony i nie jest ju¿ w drodze do wêz³a "Waterhole", szuka najbli¿szego wêz³a "Waterhole"
+        if (isThirsty && !isMovingToWaterhole)
         {
-            nextNode = currentNode.ConnectedNodes[Random.Range(0, currentNode.ConnectedNodes.Count)];
+            pathToWaterhole = currentNode.GetPathToNearestWaterhole();
+            if (pathToWaterhole == null)
+            {
+                Debug.Log("Nie znaleziono wêz³a 'Waterhole'");
+                return;
+            }
+            isMovingToWaterhole = true;
         }
 
-        if (!nextNode.isOccupied || nextNode.nodeType == Node.NodeType.special)
+        if (isMovingToWaterhole)
         {
-            base.Move();
-            Debug.Log("The Lion moves from " + currentNode + " to " + nextNode);
+            if (pathToWaterhole.Count > 0)
+            {
+                nextNode = pathToWaterhole[0];
+                pathToWaterhole.RemoveAt(0);
+                if (pathToWaterhole.Count == 0)
+                {
+                    isMovingToWaterhole = false;
+                }
+            }
+            else
+            {
+                isMovingToWaterhole = false;
+            }
         }
         else
         {
-            Debug.Log("The Lion waits at " + currentNode + " to enter " + nextNode);
-            nextNode = null;
+            if (CurrentNode == null)
+            {
+                Debug.Log("currentNode is null");
+                return;
+            }
+            if (CurrentNode.ConnectedNodes.Count == 0)
+            {
+                Debug.Log("currentNode has no connected nodes");
+                return;
+            }
+
+            // Stwórz now¹ listê wêz³ów, która nie zawiera wêz³ów "Waterhole"
+            List<Node> nonWaterholeNodes = new List<Node>();
+            foreach (Node node in currentNode.ConnectedNodes)
+            {
+                if (node.nodeType != Node.NodeType.waterhole)
+                {
+                    nonWaterholeNodes.Add(node);
+                }
+            }
+
+            // Jeœli wszystkie po³¹czone wêz³y to wêz³y "Waterhole", u¿yj oryginalnej listy
+            if (nonWaterholeNodes.Count == 0)
+            {
+                nonWaterholeNodes = currentNode.ConnectedNodes;
+            }
+
+            // Wybierz nextNode z listy nonWaterholeNodes
+            while (nextNode == null || nextNode == previousNode || !(nextNode.nodeType == Node.NodeType.lion || nextNode.nodeType == Node.NodeType.intersection || nextNode.nodeType == Node.NodeType.special))
+            {
+                nextNode = nonWaterholeNodes[Random.Range(0, nonWaterholeNodes.Count)];
+            }
+        }
+
+        if (nextNode != null)
+        {
+            if ((!nextNode.isOccupied && (nextNode.nodeType != Node.NodeType.special || nextNode.nodeType == Node.NodeType.special)) || (nextNode.nodeType == Node.NodeType.waterhole && isThirsty))
+            {
+                base.Move();
+                Debug.Log("The Lion moves from " + currentNode + " to " + nextNode);
+            }
+            else
+            {
+                Debug.Log("The Lion waits at " + currentNode + " to enter " + nextNode);
+                nextNode = null;
+            }
+        }
+        else
+        {
+            Debug.Log("nextNode is null");
         }
     }
+
     // Lion rests a a Lions Rock
     public void Rest()
     {

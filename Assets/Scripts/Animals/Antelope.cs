@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Antelope : Mammal
 {
+    private List<Node> pathToWaterhole;
+    private bool isMovingToWaterhole = false;
+
     override public void Move()
     {
         if (CurrentNode == null)
@@ -16,22 +19,83 @@ public class Antelope : Mammal
             Debug.Log("currentNode has no connected nodes");
             return;
         }
-        // Look through all connected nodes for an antelope or intersection node
-        // TODO: If thirsty go to waterhole // tutaj pasywnie czy w game controllerze aktywnie? xd
-        while (nextNode == null || nextNode == previousNode || !(nextNode.nodeType == Node.NodeType.antelope || nextNode.nodeType == Node.NodeType.intersection || nextNode.nodeType == Node.NodeType.special))
+
+        if (isThirsty && !isMovingToWaterhole)
         {
-            nextNode = currentNode.ConnectedNodes[Random.Range(0, currentNode.ConnectedNodes.Count)];
+            pathToWaterhole = currentNode.GetPathToNearestWaterhole();
+            if (pathToWaterhole == null)
+            {
+                Debug.Log("Nie znaleziono wêz³a 'Waterhole'");
+                return;
+            }
+            isMovingToWaterhole = true;
         }
 
-        if (!nextNode.isOccupied || nextNode.nodeType == Node.NodeType.special)
+        if (isMovingToWaterhole)
         {
-            base.Move();
-            Debug.Log("The Antelope moves from " + currentNode + " to " + nextNode);
+            if (pathToWaterhole.Count > 0)
+            {
+                nextNode = pathToWaterhole[0];
+                pathToWaterhole.RemoveAt(0);
+                if (pathToWaterhole.Count == 0)
+                {
+                    isMovingToWaterhole = false;
+                }
+            }
+            else
+            {
+                isMovingToWaterhole = false;
+            }
         }
         else
         {
-            Debug.Log("The Antelope waits at " + currentNode + " to enter " + nextNode);
-            nextNode = null;
+            if (CurrentNode == null)
+            {
+                Debug.Log("currentNode is null");
+                return;
+            }
+            if (CurrentNode.ConnectedNodes.Count == 0)
+            {
+                Debug.Log("currentNode has no connected nodes");
+                return;
+            }
+
+            List<Node> nonSpecialNodes = new List<Node>();
+            foreach (Node node in currentNode.ConnectedNodes)
+            {
+                if (node.nodeType != Node.NodeType.special)
+                {
+                    nonSpecialNodes.Add(node);
+                }
+            }
+
+            if (nonSpecialNodes.Count == 0)
+            {
+                nonSpecialNodes = currentNode.ConnectedNodes;
+            }
+
+            while (nextNode == null || nextNode == previousNode || !(nextNode.nodeType == Node.NodeType.antelope || nextNode.nodeType == Node.NodeType.intersection))
+            {
+                nextNode = nonSpecialNodes[Random.Range(0, nonSpecialNodes.Count)];
+            }
+        }
+
+        if (nextNode != null)
+        {
+            if (!nextNode.isOccupied || (nextNode.nodeType == Node.NodeType.waterhole && isThirsty))
+            {
+                base.Move();
+                Debug.Log("The Antelope moves from " + currentNode + " to " + nextNode);
+            }
+            else
+            {
+                Debug.Log("The Antelope waits at " + currentNode + " to enter " + nextNode);
+                nextNode = null;
+            }
+        }
+        else
+        {
+            Debug.Log("nextNode is null");
         }
     }
 }

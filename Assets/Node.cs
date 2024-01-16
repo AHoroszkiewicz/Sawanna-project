@@ -61,6 +61,7 @@ public class Node : MonoBehaviour
         snake = 4,
         intersection = 5,
         special = 6,
+        waterhole = 7,
     }
 
     // New method to add an object to the occupyingObjects list
@@ -86,5 +87,43 @@ public class Node : MonoBehaviour
                 isOccupied = false;
             }
         }
+    }
+
+    public List<Node> GetPathToNearestWaterhole()
+    {
+        Queue<Node> queue = new Queue<Node>();
+        HashSet<Node> visited = new HashSet<Node>();
+        Dictionary<Node, Node> previousNode = new Dictionary<Node, Node>();
+
+        queue.Enqueue(this);
+        visited.Add(this);
+
+        while (queue.Count > 0)
+        {
+            Node currentNode = queue.Dequeue();
+            if (currentNode.nodeType == NodeType.waterhole && currentNode.name == "Waterhole")
+            {
+                List<Node> path = new List<Node>();
+                Node node = currentNode;
+                while (node != this)
+                {
+                    path.Insert(0, node);
+                    node = previousNode[node];
+                }
+                return path;
+            }
+
+            foreach (Node connectedNode in currentNode.ConnectedNodes)
+            {
+                if (!visited.Contains(connectedNode))
+                {
+                    queue.Enqueue(connectedNode);
+                    visited.Add(connectedNode);
+                    previousNode[connectedNode] = currentNode;
+                }
+            }
+        }
+
+        return null; // Zwraca null, jeœli nie znaleziono wêz³a "Waterhole"
     }
 }

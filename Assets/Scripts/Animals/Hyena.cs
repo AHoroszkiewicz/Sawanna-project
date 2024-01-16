@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Hyena : Mammal
 {
+    private List<Node> pathToWaterhole;
+    private bool isMovingToWaterhole = false;
+
     override public void Move()
     {
         if (CurrentNode == null)
@@ -16,29 +19,69 @@ public class Hyena : Mammal
             Debug.Log("currentNode has no connected nodes");
             return;
         }
-        // Look through all connected nodes for a hyena or intersection node
-        // TODO: If thirsty go to waterhole // tutaj pasywnie czy w game controllerze aktywnie? xd
-        // TODO: Go outside the graveyard zone if hungry
-        while (nextNode == null || nextNode == previousNode || !(nextNode.nodeType == Node.NodeType.hyena || nextNode.nodeType == Node.NodeType.intersection || nextNode.nodeType == Node.NodeType.special))
+
+        if (isThirsty && !isMovingToWaterhole)
         {
-            nextNode = currentNode.ConnectedNodes[Random.Range(0, currentNode.ConnectedNodes.Count)];
+            pathToWaterhole = currentNode.GetPathToNearestWaterhole();
+            if (pathToWaterhole == null)
+            {
+                Debug.Log("Nie znaleziono wêz³a 'Waterhole'");
+                return;
+            }
+            isMovingToWaterhole = true;
         }
 
-        if (!nextNode.isOccupied || nextNode.nodeType == Node.NodeType.special)
+        if (isMovingToWaterhole)
         {
-            if (nextNode.hasCarcass)
+            if (pathToWaterhole.Count > 0)
             {
-                nextNode.DestroyCarcass();
-                Eat();
+                nextNode = pathToWaterhole[0];
+                pathToWaterhole.RemoveAt(0);
+                if (pathToWaterhole.Count == 0)
+                {
+                    isMovingToWaterhole = false;
+                }
             }
-            base.Move();
-            Debug.Log("The Hyena moves from " + currentNode + " to " + nextNode);
+            else
+            {
+                isMovingToWaterhole = false;
+            }
         }
         else
         {
-            //TODO:  If occupied by a carcas, eat it. Move if successful, wait if not.
-            nextNode = null;
-            Debug.Log("The Hyena waits at " + currentNode + " to enter " + nextNode);
+            if (CurrentNode == null)
+            {
+                Debug.Log("currentNode is null");
+                return;
+            }
+            if (CurrentNode.ConnectedNodes.Count == 0)
+            {
+                Debug.Log("currentNode has no connected nodes");
+                return;
+            }
+
+            while (nextNode == null || nextNode == previousNode || !(nextNode.nodeType == Node.NodeType.hyena || nextNode.nodeType == Node.NodeType.intersection || nextNode.nodeType == Node.NodeType.special))
+            {
+                nextNode = currentNode.ConnectedNodes[Random.Range(0, currentNode.ConnectedNodes.Count)];
+            }
+        }
+
+        if (nextNode != null)
+        {
+            if (!nextNode.isOccupied || nextNode.nodeType == Node.NodeType.special || (nextNode.nodeType == Node.NodeType.waterhole && isThirsty))
+            {
+                base.Move();
+                Debug.Log("The Hyena moves from " + currentNode + " to " + nextNode);
+            }
+            else
+            {
+                Debug.Log("The Hyena waits at " + currentNode + " to enter " + nextNode);
+                nextNode = null;
+            }
+        }
+        else
+        {
+            Debug.Log("nextNode is null");
         }
     }
 }
