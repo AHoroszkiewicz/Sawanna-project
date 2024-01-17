@@ -267,7 +267,6 @@ MonoBehaviour:
   autoRoundsOnSprite: {fileID: -634886668, guid: 2676ff5c94fc9f1489d59bf570d079e3, type: 3}
   autoRoundsOffSprite: {fileID: -1299560944, guid: 2676ff5c94fc9f1489d59bf570d079e3, type: 3}
   carcassPrefab: {fileID: 81811260711974152, guid: a14027a2559a8614ba25c4a141a5edb7, type: 3}
-  testCarcassNode: {fileID: 1475946143}
   animals:
   - {fileID: 1082266654}
   - {fileID: 1541717705}

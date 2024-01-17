@@ -11,6 +11,10 @@ public class AnimalOptionController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI title;
     [SerializeField] private Slider maxAgeSlider;
     [SerializeField] private TextMeshProUGUI maxAgeTxt;
+    [SerializeField] private Slider speedSlider;
+    [SerializeField] private TextMeshProUGUI speedTxt;
+    [SerializeField] private Slider respawnSlider;
+    [SerializeField] private TextMeshProUGUI respawnTxt;
     [SerializeField] private GameObject venomRegenObject;
     [SerializeField] private Slider venomRegenSlider;
     [SerializeField] private TextMeshProUGUI venomRegenTxt;
@@ -27,6 +31,16 @@ public class AnimalOptionController : MonoBehaviour
         {
             UpdateVenomRegen((int)value);
         });
+
+        speedSlider.onValueChanged.AddListener((value) =>
+        {
+            UpdateSpeed((int)value);
+        });
+
+        respawnSlider.onValueChanged.AddListener((value) =>
+        {
+            UpdateRespawn((int)value);
+        });
     }
 
     public void Initialize(int id, int number)
@@ -36,6 +50,10 @@ public class AnimalOptionController : MonoBehaviour
         Animal currentAnimal = gameController.Animals[id];
         maxAgeSlider.value = currentAnimal.MaxAge;
         maxAgeTxt.text = "Max Age: " + currentAnimal.MaxAge;
+        speedSlider.value = currentAnimal.MovementSpeed;
+        speedTxt.text = "Speed: " + currentAnimal.MovementSpeed;
+        respawnSlider.value = currentAnimal.RespawnRate;
+        respawnTxt.text = "RespawnRate: " + currentAnimal.RespawnRate;
         switch (currentAnimal.AnimalType)
         {
             case Animal.AnimalTypes.lion:
@@ -75,5 +93,17 @@ public class AnimalOptionController : MonoBehaviour
             snake.VenomRegenRate = value;
             venomRegenTxt.text = "Venom Regen: " + value;
         }
+    }
+
+    public void UpdateSpeed(int value)
+    {
+        gameController.Animals[currentAnimalId].MovementSpeed = value;
+        speedTxt.text = "Speed: " + value;
+    }
+
+    public void UpdateRespawn(int value)
+    {
+        gameController.Animals[currentAnimalId].RespawnRate = value;
+        respawnTxt.text = "RespawnRate: " + value;
     }
 }
