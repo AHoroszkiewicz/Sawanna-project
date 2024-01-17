@@ -40,11 +40,8 @@ public abstract class Animal : MonoBehaviour, IAging, IMovement
 
     virtual public void Move()
     {
-        currentNode.occupyingObjects.Remove(gameObject);
-        currentNode.isOccupied = false;
-
-        nextNode.occupyingObjects.Add(gameObject);
-        nextNode.isOccupied = true;
+        currentNode.RemoveOccupyingObject(gameObject);
+        nextNode.AddOccupyingObject(gameObject);
 
         transform.position = nextNode.transform.position;
         previousNode = currentNode;

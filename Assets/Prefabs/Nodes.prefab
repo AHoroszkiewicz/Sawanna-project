@@ -553,6 +553,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7618798252883777036}
+  - component: {fileID: 7646831974051998837}
   m_Layer: 0
   m_Name: Waterhole
   m_TagString: Untagged
@@ -569,12 +570,38 @@ Transform:
   m_GameObject: {fileID: 1049285524937877471}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 204, y: 362, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5415368451911343260}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7646831974051998837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1049285524937877471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes:
+  - {fileID: 8091564404136375168}
+  - {fileID: 201127282485991003}
+  - {fileID: 7814504385612158562}
+  - {fileID: 8919217455752492015}
+  - {fileID: 1014244421065033460}
+  - {fileID: 766693660193916793}
+  - {fileID: 4477319580915805935}
+  - {fileID: 6217985109132697608}
+  - {fileID: 4312884341239483648}
+  nodeType: 7
+  occupyingObjects: []
+  isOccupied: 0
+  hasCarcass: 0
 --- !u!1 &1259411717502431550
 GameObject:
   m_ObjectHideFlags: 0
@@ -652,6 +679,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   connectedNodes:
   - {fileID: 7468725269228305389}
+  - {fileID: 2440801268945969247}
   - {fileID: 3195584644629475448}
   - {fileID: 8245707565292941149}
   - {fileID: 7081222479573860680}
@@ -846,8 +874,13 @@ MonoBehaviour:
   - {fileID: 3682257246884074698}
   - {fileID: 5662356925215139558}
   - {fileID: 6953321999375752226}
-  nodeType: 1
-  occupyingObjects: []
+  nodeType: 6
+  occupyingObjects:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   isOccupied: 0
   hasCarcass: 0
 --- !u!1 &1678734706499425409
@@ -918,7 +951,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4864760843423432961
 Transform:
   m_ObjectHideFlags: 0
@@ -1034,7 +1067,7 @@ Transform:
   m_GameObject: {fileID: 1761428367517829577}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 262, y: 208, z: 0}
+  m_LocalPosition: {x: 221, y: 264, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1055,6 +1088,7 @@ MonoBehaviour:
   connectedNodes:
   - {fileID: 2132834781198129875}
   - {fileID: 8410188607854005949}
+  - {fileID: 7646831974051998837}
   nodeType: 1
   occupyingObjects: []
   isOccupied: 0
@@ -1338,6 +1372,8 @@ MonoBehaviour:
   - {fileID: 6377169845942458062}
   - {fileID: 3682257246884074698}
   - {fileID: 201127282485991003}
+  - {fileID: 8410188607854005949}
+  - {fileID: 527312265130256457}
   - {fileID: 8091564404136375168}
   nodeType: 1
   occupyingObjects: []
@@ -1613,6 +1649,7 @@ MonoBehaviour:
   - {fileID: 8919217455752492015}
   - {fileID: 8518620888039413226}
   - {fileID: 2819309800499541011}
+  - {fileID: 7646831974051998837}
   nodeType: 2
   occupyingObjects: []
   isOccupied: 0
@@ -1683,7 +1720,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &473129867494433902
 Transform:
   m_ObjectHideFlags: 0
@@ -1811,6 +1848,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   connectedNodes:
+  - {fileID: 2044320786824607859}
   - {fileID: 6273226829669553153}
   - {fileID: 7383785121042431712}
   - {fileID: 2014609956123008931}
@@ -1864,9 +1902,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   connectedNodes:
   - {fileID: 3687010324026463002}
+  - {fileID: 6421969360275824788}
   - {fileID: 8075952591869861174}
-  nodeType: 3
-  occupyingObjects: []
+  - {fileID: 8361791921894649439}
+  nodeType: 6
+  occupyingObjects:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   isOccupied: 0
   hasCarcass: 0
 --- !u!1 &3440000669672589396
@@ -3284,6 +3329,7 @@ MonoBehaviour:
   - {fileID: 6380565666902940729}
   - {fileID: 573755029209817455}
   - {fileID: 6217985109132697608}
+  - {fileID: 7646831974051998837}
   nodeType: 3
   occupyingObjects: []
   isOccupied: 0
@@ -3491,6 +3537,7 @@ MonoBehaviour:
   connectedNodes:
   - {fileID: 6377169845942458062}
   - {fileID: 201127282485991003}
+  - {fileID: 7646831974051998837}
   nodeType: 1
   occupyingObjects: []
   isOccupied: 0
@@ -3699,6 +3746,7 @@ MonoBehaviour:
   - {fileID: 4477319580915805935}
   - {fileID: 4312884341239483648}
   - {fileID: 38013376268469249}
+  - {fileID: 7646831974051998837}
   nodeType: 3
   occupyingObjects: []
   isOccupied: 0
@@ -3806,6 +3854,7 @@ MonoBehaviour:
   - {fileID: 1154644521006228017}
   - {fileID: 2893648114199024936}
   - {fileID: 766693660193916793}
+  - {fileID: 7646831974051998837}
   nodeType: 2
   occupyingObjects: []
   isOccupied: 0
@@ -4152,6 +4201,7 @@ MonoBehaviour:
   - {fileID: 2917482725486646030}
   - {fileID: 38013376268469249}
   - {fileID: 6217985109132697608}
+  - {fileID: 7646831974051998837}
   nodeType: 3
   occupyingObjects: []
   isOccupied: 0
@@ -4206,6 +4256,7 @@ MonoBehaviour:
   - {fileID: 1014244421065033460}
   - {fileID: 2819309800499541011}
   - {fileID: 3838791374908412845}
+  - {fileID: 7646831974051998837}
   nodeType: 2
   occupyingObjects: []
   isOccupied: 0
@@ -4338,8 +4389,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   connectedNodes:
+  - {fileID: 2132834781198129875}
   - {fileID: 8410188607854005949}
-  - {fileID: 3866508694047981648}
   - {fileID: 6580286303303089014}
   nodeType: 1
   occupyingObjects: []
@@ -4444,6 +4495,7 @@ MonoBehaviour:
   connectedNodes:
   - {fileID: 7468725269228305389}
   - {fileID: 3195584644629475448}
+  - {fileID: 7383785121042431712}
   nodeType: 4
   occupyingObjects: []
   isOccupied: 0
@@ -4495,6 +4547,7 @@ MonoBehaviour:
   connectedNodes:
   - {fileID: 31180885338917859}
   - {fileID: 6273226829669553153}
+  - {fileID: 7081222479573860680}
   nodeType: 4
   occupyingObjects: []
   isOccupied: 0
@@ -4959,8 +5012,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   connectedNodes:
+  - {fileID: 2132834781198129875}
   - {fileID: 201127282485991003}
-  - {fileID: 3866508694047981648}
   - {fileID: 527312265130256457}
   nodeType: 1
   occupyingObjects: []
@@ -5014,6 +5067,7 @@ MonoBehaviour:
   - {fileID: 2893648114199024936}
   - {fileID: 8518620888039413226}
   - {fileID: 7814504385612158562}
+  - {fileID: 7646831974051998837}
   nodeType: 2
   occupyingObjects: []
   isOccupied: 0
@@ -5398,7 +5452,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6819687953782351822
 Transform:
   m_ObjectHideFlags: 0
@@ -5531,7 +5585,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5415368451911343260
 Transform:
   m_ObjectHideFlags: 0
