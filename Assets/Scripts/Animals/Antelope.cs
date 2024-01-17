@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Antelope : Mammal
 {
+    public override AnimalTypes AnimalType => AnimalTypes.deer;
+
     override public void Move()
     {
         if (CurrentNode == null)
@@ -16,21 +18,25 @@ public class Antelope : Mammal
             Debug.Log("currentNode has no connected nodes");
             return;
         }
+
+        Eat(); // Start each round with grazing
+
         // Look through all connected nodes for an antelope or intersection node
-        // TODO: If thirsty go to waterhole // tutaj pasywnie czy w game controllerze aktywnie? xd
+        // TODO: If thirsty go to waterhole
         while (nextNode == null || nextNode == previousNode || !(nextNode.nodeType == Node.NodeType.antelope || nextNode.nodeType == Node.NodeType.intersection))
         {
             nextNode = currentNode.ConnectedNodes[Random.Range(0, currentNode.ConnectedNodes.Count)];
+            // Debug.Log("Antelope searching for next node"); // debug
         }
 
         if (!nextNode.isOccupied)
         {
+            Debug.Log("The Antelope " + Id + " moves from " + currentNode + " to " + nextNode);
             base.Move();
-            Debug.Log("The Antelope moves from " + currentNode + " to " + nextNode);
         }
         else
         {
-            Debug.Log("The Antelope waits at " + currentNode + " to enter " + nextNode);
+            Debug.Log("The Antelope " + Id + " waits at " + currentNode + " to enter " + nextNode);
         }
     }
 }

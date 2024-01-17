@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Lion : Mammal
 {
+    [SerializeField] private int huntingSuccessRate = 50; // 0-100
+    public override AnimalTypes AnimalType => AnimalTypes.lion;
+
     override public void Move()
     {
         if (CurrentNode == null)
@@ -17,25 +20,40 @@ public class Lion : Mammal
             return;
         }
         // Look through all connected nodes for a lion or intersection node
-        // TODO: If hungry go hunting, if thirsty go to waterhole // tutaj czy w game controllerze? xd
+        // TODO: if thirsty go to waterhole
         while (nextNode == null || nextNode == previousNode || !(nextNode.nodeType == Node.NodeType.lion || nextNode.nodeType == Node.NodeType.intersection))
         {
             nextNode = currentNode.ConnectedNodes[Random.Range(0, currentNode.ConnectedNodes.Count)];
+            // Debug.Log("Lion searching for next node"); // debug
         }
         if (!nextNode.isOccupied)
         {
+            Debug.Log("The Lion " + Id + " moves from " + currentNode + " to " + nextNode);
             base.Move();
-            Debug.Log("The Lion moves from " + currentNode + " to " + nextNode);
         }
         else
         {
-            // TODO: If occupied by antelope, try hunting it. Move if successful, wait if not.
-            Debug.Log("The Lion waits at " + currentNode + " to enter " + nextNode);
+            var antelope = nextNode.occupyingObjects.Find(x => x.GetComponent<Antelope>() != null);
+            if (antelope != null)
+            {
+                if (Random.Range(0, 100) > huntingSuccessRate)
+                {
+                    Debug.Log("The Lion " + Id + " hunts successfuly at " + nextNode + ". Antelope " + antelope.GetComponent<Antelope>().Id + " dies.");
+                    antelope.GetComponent<Antelope>().Die();
+                    base.Move();
+                    Eat();
+                    return;
+                } else {
+                    Debug.Log("The Lion " + Id + " failed to hunt at " + nextNode);
+                    return;
+                }
+            }
+            Debug.Log("The Lion " + Id + " waits at " + currentNode + " to enter " + nextNode + ". Occupied by: " + nextNode.occupyingObjects[0]);
         }
     }
     // Lion rests a a Lions Rock
     public void Rest()
     {
-        Debug.Log("The Lion rests");
+        Debug.Log("The Lion " + Id + "rests");
     }
 }

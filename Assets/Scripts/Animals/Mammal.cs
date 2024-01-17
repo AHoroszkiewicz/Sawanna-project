@@ -33,7 +33,7 @@ public abstract class Mammal : Animal, IEating, IDrinking
     // Changes hunger level
     public void Eat()
     {
-        Debug.Log("The " + AnimalType + " eats");
+        // Debug.Log("The " + AnimalType + " eats");
         if (isHungry)
         {
             hungerLevel -= feedingSpeed;
