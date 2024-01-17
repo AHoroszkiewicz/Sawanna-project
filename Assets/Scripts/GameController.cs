@@ -86,8 +86,11 @@ public class GameController : MonoBehaviour
             Debug.Log("Next Round");
             foreach (Animal animal in animals)
             {
-                if (!animal.IsAlive) continue;
-                animal.Move();
+                for (int i = 0; i < animal.MovementSpeed; i++)
+                {
+                    if (!animal.IsAlive) continue;
+                    animal.Move();
+                }
                 animal.AgeUp();
                 if (animal.Age >= animal.MaxAge) animal.Die();
                 yield return new WaitForSeconds(0.1f);  

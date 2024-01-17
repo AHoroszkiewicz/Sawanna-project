@@ -31,16 +31,21 @@ public class Bird : Animal, IEating
 
         if (nextNode.isOccupied)
         {
-            //TODO: if occupied by snake, eat it
+            var snake = nextNode.occupyingObjects.Find(x => x.GetComponent<Snake>() != null);
+            if (snake != null)
+            {
+                Debug.Log("The Bird " + Id + " eats a Snake " + snake.GetComponent<Snake>().Id + " at " + nextNode + ". Snake " + snake.GetComponent<Snake>().Id + " dies.");
+                snake.GetComponent<Snake>().Die();
+                Eat();
+            }
         }
-        base.Move();
         Debug.Log("The Bird flies from " + currentNode + " to " + nextNode);
-
+        base.Move();
     }
 
     public void Eat()
     {
-        Debug.Log("The bird eats a snake");
+        // Debug.Log("The bird eats a snake");
         if (isHungry)
         {
             hungerLevel -= feedingSpeed;

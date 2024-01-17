@@ -31,15 +31,24 @@ public class Snake : Animal
             nextNode = currentNode.ConnectedNodes[Random.Range(0, currentNode.ConnectedNodes.Count)];
         }
 
-        if (!nextNode.isOccupied)
+        if (nextNode.isOccupied && venomLevel > 5)
         {
-            base.Move();
-            Debug.Log("The Snake slithers from " + currentNode + " to " + nextNode);
+            var mammal = nextNode.occupyingObjects.Find(x => x.GetComponent<Mammal>() != null);
+            if (mammal != null)
+            {
+                Debug.Log("The Snake " + Id + " bites a Mammal " + mammal + " at " + nextNode + ". Mammal " + mammal.GetComponent<Mammal>().Id + " dies.");
+                mammal.GetComponent<Mammal>().Die();
+                venomLevel -= venomPerBite;
+            }
+        }
+        else if (nextNode.isOccupied)
+        {
+            Debug.Log("The Snake waits at " + currentNode + " to enter " + nextNode);
         }
         else
         {
-            // TODO: If has enough venom and the node is occupied by a mammal, try hunting it. Move if successful, wait if not.
-            Debug.Log("The Snake waits at " + currentNode + " to enter " + nextNode);
+            Debug.Log("The Snake " + Id + " slithers from " + currentNode + " to " + nextNode);
+            base.Move();
         }
         venomLevel += venomRegenRate;
     }

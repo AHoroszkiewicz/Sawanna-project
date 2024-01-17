@@ -13,13 +13,16 @@ public abstract class Animal : MonoBehaviour, IAging, IMovement
     [SerializeField] public Node currentNode;
     [SerializeField] public Node previousNode;
     [SerializeField] public Node nextNode = null;
+    [SerializeField] private int respawnRate = 3;
 
     public int Id { get => id; set => id = value; }
     public int Age => age;
     public virtual AnimalTypes AnimalType => animalType;
-    public bool IsAlive => isAlive;
-    public int MaxAge { get => maxAge; set => maxAge = value; }
+    public bool IsAlive => isAlive; 
+    public int MaxAge { get => maxAge; set => maxAge = value;}
     public Node CurrentNode { get => currentNode; set => currentNode = value; }
+    public int MovementSpeed { get => movementSpeed; set => movementSpeed = value; }
+    public int RespawnRate { get => respawnRate; set => respawnRate = value; }  
 
     public void AgeUp()
     {
@@ -29,12 +32,19 @@ public abstract class Animal : MonoBehaviour, IAging, IMovement
     public void Die()
     {
         isAlive = false;
+        currentNode.isOccupied = false;
+        currentNode.occupyingObjects.Remove(gameObject);
+        GameController.Instance.SpawnCarcass(currentNode);
+        Destroy(this.gameObject);
     }
 
     virtual public void Move()
     {
-        currentNode.RemoveOccupyingObject(gameObject);
-        nextNode.AddOccupyingObject(gameObject);
+        currentNode.occupyingObjects.Remove(gameObject);
+        currentNode.isOccupied = false;
+
+        nextNode.occupyingObjects.Add(gameObject);
+        nextNode.isOccupied = true;
 
         transform.position = nextNode.transform.position;
         previousNode = currentNode;

@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Lion : Mammal
 {
-    private List<Node> pathToWaterhole;
-    private bool isMovingToWaterhole = false;
+    [SerializeField] private int huntingSuccessRate = 50; // 0-100
+    public override AnimalTypes AnimalType => AnimalTypes.lion;
 
     override public void Move()
     {
@@ -19,93 +19,41 @@ public class Lion : Mammal
             Debug.Log("currentNode has no connected nodes");
             return;
         }
-
-        // Jeœli lew jest spragniony i nie jest ju¿ w drodze do wêz³a "Waterhole", szuka najbli¿szego wêz³a "Waterhole"
-        if (isThirsty && !isMovingToWaterhole)
+        // Look through all connected nodes for a lion or intersection node
+        // TODO: if thirsty go to waterhole
+        while (nextNode == null || nextNode == previousNode || !(nextNode.nodeType == Node.NodeType.lion || nextNode.nodeType == Node.NodeType.intersection))
         {
-            pathToWaterhole = currentNode.GetPathToNearestWaterhole();
-            if (pathToWaterhole == null)
-            {
-                Debug.Log("Nie znaleziono wêz³a 'Waterhole'");
-                return;
-            }
-            isMovingToWaterhole = true;
+            nextNode = currentNode.ConnectedNodes[Random.Range(0, currentNode.ConnectedNodes.Count)];
+            // Debug.Log("Lion searching for next node"); // debug
         }
-
-        if (isMovingToWaterhole)
+        if (!nextNode.isOccupied)
         {
-            if (pathToWaterhole.Count > 0)
-            {
-                nextNode = pathToWaterhole[0];
-                pathToWaterhole.RemoveAt(0);
-                if (pathToWaterhole.Count == 0)
-                {
-                    isMovingToWaterhole = false;
-                }
-            }
-            else
-            {
-                isMovingToWaterhole = false;
-            }
+            Debug.Log("The Lion " + Id + " moves from " + currentNode + " to " + nextNode);
+            base.Move();
         }
         else
         {
-            if (CurrentNode == null)
+            var antelope = nextNode.occupyingObjects.Find(x => x.GetComponent<Antelope>() != null);
+            if (antelope != null)
             {
-                Debug.Log("currentNode is null");
-                return;
-            }
-            if (CurrentNode.ConnectedNodes.Count == 0)
-            {
-                Debug.Log("currentNode has no connected nodes");
-                return;
-            }
-
-            // Stwórz now¹ listê wêz³ów, która nie zawiera wêz³ów "Waterhole"
-            List<Node> nonWaterholeNodes = new List<Node>();
-            foreach (Node node in currentNode.ConnectedNodes)
-            {
-                if (node.nodeType != Node.NodeType.waterhole)
+                if (Random.Range(0, 100) > huntingSuccessRate)
                 {
-                    nonWaterholeNodes.Add(node);
+                    Debug.Log("The Lion " + Id + " hunts successfuly at " + nextNode + ". Antelope " + antelope.GetComponent<Antelope>().Id + " dies.");
+                    antelope.GetComponent<Antelope>().Die();
+                    base.Move();
+                    Eat();
+                    return;
+                } else {
+                    Debug.Log("The Lion " + Id + " failed to hunt at " + nextNode);
+                    return;
                 }
             }
-
-            // Jeœli wszystkie po³¹czone wêz³y to wêz³y "Waterhole", u¿yj oryginalnej listy
-            if (nonWaterholeNodes.Count == 0)
-            {
-                nonWaterholeNodes = currentNode.ConnectedNodes;
-            }
-
-            // Wybierz nextNode z listy nonWaterholeNodes
-            while (nextNode == null || nextNode == previousNode || !(nextNode.nodeType == Node.NodeType.lion || nextNode.nodeType == Node.NodeType.intersection || nextNode.nodeType == Node.NodeType.special))
-            {
-                nextNode = nonWaterholeNodes[Random.Range(0, nonWaterholeNodes.Count)];
-            }
-        }
-
-        if (nextNode != null)
-        {
-            if ((!nextNode.isOccupied && (nextNode.nodeType != Node.NodeType.special || nextNode.nodeType == Node.NodeType.special)) || (nextNode.nodeType == Node.NodeType.waterhole && isThirsty))
-            {
-                base.Move();
-                Debug.Log("The Lion moves from " + currentNode + " to " + nextNode);
-            }
-            else
-            {
-                Debug.Log("The Lion waits at " + currentNode + " to enter " + nextNode);
-                nextNode = null;
-            }
-        }
-        else
-        {
-            Debug.Log("nextNode is null");
+            Debug.Log("The Lion " + Id + " waits at " + currentNode + " to enter " + nextNode + ". Occupied by: " + nextNode.occupyingObjects[0]);
         }
     }
-
     // Lion rests a a Lions Rock
     public void Rest()
     {
-        Debug.Log("The Lion rests");
+        Debug.Log("The Lion " + Id + "rests");
     }
 }
