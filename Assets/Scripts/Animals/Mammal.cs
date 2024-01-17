@@ -9,7 +9,7 @@ public abstract class Mammal : Animal, IEating, IDrinking
     [SerializeField] private int feedingSpeed = 25; // hunger reduction per round
     [SerializeField] private int hungerLevel = 0; // 100 is max 0 is none
 
-    [SerializeField] private bool isThirsty => thirstLevel > thirstThreshold;
+    [SerializeField] public bool isThirsty => thirstLevel > thirstThreshold;
     [SerializeField] private int thirstThreshold = 70; 
     [SerializeField] private int drinkingSpeed = 25; // thirst reduction per round
     [SerializeField] private int thirstLevel = 0; // 100 is max 0 is none

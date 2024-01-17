@@ -12,7 +12,7 @@ public class Snake : Animal
     public int VenomPerBite => venomPerBite;
     public int VenomRegenRate { get => venomRegenRate; set => venomRegenRate = value;}
 
-    override public void Move()
+    public override void Move()
     {
         if (CurrentNode == null)
         {
@@ -52,6 +52,7 @@ public class Snake : Animal
         }
         venomLevel += venomRegenRate;
     }
+
 
     public void Bite()
     {
