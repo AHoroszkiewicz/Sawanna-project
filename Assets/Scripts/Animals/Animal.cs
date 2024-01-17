@@ -16,6 +16,7 @@ public abstract class Animal : MonoBehaviour, IAging, IMovement
 
     public int Id { get => id; set => id = value; }
     public int Age => age;
+    public int MovementSpeed => movementSpeed;
     public virtual AnimalTypes AnimalType => animalType;
     public bool IsAlive => isAlive; 
     public int MaxAge { get => maxAge; set => maxAge = value;}
@@ -30,13 +31,19 @@ public abstract class Animal : MonoBehaviour, IAging, IMovement
     {
         isAlive = false;
         currentNode.isOccupied = false;
+        currentNode.occupyingObjects.Remove(gameObject);
         GameController.Instance.SpawnCarcass(currentNode);
+        Destroy(this.gameObject);
     }
 
     virtual public void Move()
     {
+        currentNode.occupyingObjects.Remove(gameObject);
         currentNode.isOccupied = false;
+
+        nextNode.occupyingObjects.Add(gameObject);
         nextNode.isOccupied = true;
+
         transform.position = nextNode.transform.position;
         previousNode = currentNode;
         currentNode = nextNode;

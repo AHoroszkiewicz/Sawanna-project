@@ -17,7 +17,7 @@ public class Hyena : Mammal
             return;
         }
         // Look through all connected nodes for a hyena or intersection node
-        // TODO: If thirsty go to waterhole // tutaj pasywnie czy w game controllerze aktywnie? xd
+        // TODO: If thirsty go to waterhole // tutaj
         // TODO: Go outside the graveyard zone if hungry
         while (nextNode == null || nextNode == previousNode || !(nextNode.nodeType == Node.NodeType.hyena || nextNode.nodeType == Node.NodeType.intersection))
         {
@@ -31,12 +31,11 @@ public class Hyena : Mammal
                 nextNode.DestroyCarcass();
                 Eat();
             }
-            base.Move();
             Debug.Log("The Hyena moves from " + currentNode + " to " + nextNode);
+            base.Move();
         }
         else
         {
-            //TODO:  If occupied by a carcas, eat it. Move if successful, wait if not.
             nextNode = null;
             Debug.Log("The Hyena waits at " + currentNode + " to enter " + nextNode);
         }
