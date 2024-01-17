@@ -17,7 +17,6 @@ public abstract class Animal : MonoBehaviour, IAging, IMovement
 
     public int Id { get => id; set => id = value; }
     public int Age => age;
-    public int MovementSpeed => movementSpeed;
     public virtual AnimalTypes AnimalType => animalType;
     public bool IsAlive => isAlive; 
     public int MaxAge { get => maxAge; set => maxAge = value;}
