@@ -13,14 +13,16 @@ public abstract class Animal : MonoBehaviour, IAging, IMovement
     [SerializeField] public Node currentNode;
     [SerializeField] public Node previousNode;
     [SerializeField] public Node nextNode = null;
+    [SerializeField] private int respawnRate = 3;
 
     public int Id { get => id; set => id = value; }
     public int Age => age;
-    public int MovementSpeed => movementSpeed;
     public virtual AnimalTypes AnimalType => animalType;
     public bool IsAlive => isAlive; 
     public int MaxAge { get => maxAge; set => maxAge = value;}
     public Node CurrentNode { get => currentNode; set => currentNode = value; }
+    public int MovementSpeed { get => movementSpeed; set => movementSpeed = value; }
+    public int RespawnRate { get => respawnRate; set => respawnRate = value; }  
 
     public void AgeUp()
     {
