@@ -88,10 +88,16 @@ public class GameController : MonoBehaviour
             {
                 for (int i = 0; i < animal.MovementSpeed; i++)
                 {
-                    if (!animal.IsAlive) continue;
+                    if (!animal.IsAlive) 
+                    { 
+                        animal.Respawn();
+                        continue;
+                    } 
                     animal.Move();
                 }
                 animal.AgeUp();
+                animal.HungerUp();
+                animal.ThirstUp();
                 if (animal.Age >= animal.MaxAge) animal.Die();
                 yield return new WaitForSeconds(0.1f);  
             }

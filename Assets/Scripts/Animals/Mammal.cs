@@ -19,6 +19,25 @@ public abstract class Mammal : Animal, IEating, IDrinking
         base.Move();
     }
 
+    override public void HungerUp()
+    {
+        base.HungerUp();
+        hungerLevel++;
+    }
+
+    override public void ThirstUp()
+    {
+        base.ThirstUp();
+        thirstLevel++;
+    }
+
+    override public void Respawn()
+    {
+        base.Respawn();
+        hungerLevel = 0;
+        thirstLevel = 0;
+    }
+
     // Changes thirst level
     public void Drink()
     {

@@ -12,6 +12,18 @@ public class Bird : Animal, IEating
     [SerializeField] private int feedingSpeed = 25; // hunger reduction per round
     [SerializeField] private int hungerLevel = 0; // 100 is max 0 is none
 
+    public override void Respawn()
+    {
+        base.Respawn();
+        hungerLevel = 0;
+    }
+
+    override public void HungerUp()
+    {
+        base.HungerUp();
+        hungerLevel++;
+    }
+
     override public void Move()
     {
         if (CurrentNode == null)
