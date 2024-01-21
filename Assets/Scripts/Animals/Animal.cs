@@ -14,6 +14,8 @@ public abstract class Animal : MonoBehaviour, IAging, IMovement
     [SerializeField] public Node previousNode;
     [SerializeField] public Node nextNode = null;
     [SerializeField] private int respawnRate = 3;
+    [SerializeField] private int respawnCooldown = 0;
+    [SerializeField] private Node spawningNode;
 
     public int Id { get => id; set => id = value; }
     public int Age => age;
@@ -22,7 +24,12 @@ public abstract class Animal : MonoBehaviour, IAging, IMovement
     public int MaxAge { get => maxAge; set => maxAge = value;}
     public Node CurrentNode { get => currentNode; set => currentNode = value; }
     public int MovementSpeed { get => movementSpeed; set => movementSpeed = value; }
-    public int RespawnRate { get => respawnRate; set => respawnRate = value; }  
+    public int RespawnRate { get => respawnRate; set => respawnRate = value; }
+
+    private void Start()
+    {
+        spawningNode = currentNode;
+    }
 
     virtual public void AgeUp()
     {
@@ -35,7 +42,24 @@ public abstract class Animal : MonoBehaviour, IAging, IMovement
         currentNode.isOccupied = false;
         currentNode.occupyingObjects.Remove(gameObject);
         GameController.Instance.SpawnCarcass(currentNode);
-        Destroy(this.gameObject);
+        //Destroy(this.gameObject);
+        gameObject.SetActive(false);
+    }
+
+    virtual public void Respawn()
+    {
+        if (respawnCooldown < respawnRate)
+        {
+            respawnCooldown++;
+            return;
+        }
+        respawnCooldown = 0;
+        isAlive = true;
+        age = 0;
+        currentNode = spawningNode;
+        currentNode.AddOccupyingObject(gameObject);
+        transform.position = spawningNode.transform.position;
+        gameObject.SetActive(true);
     }
 
     virtual public void Move()
