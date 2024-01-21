@@ -9,6 +9,13 @@ public class Hyena : Mammal
 
     override public void Move()
     {
+        // If at waterhole drink and do nothing.
+        if (IsDrinking)
+        {
+            Drink();
+            return;
+        }
+
         if (CurrentNode == null)
         {
             Debug.Log("currentNode is null");
@@ -32,7 +39,6 @@ public class Hyena : Mammal
         }
 
         // Look through all connected nodes for a hyena or intersection node
-        // TODO: If thirsty go to waterhole // tutaj
         // TODO: Go outside the graveyard zone if hungry
         if (isMovingToWaterhole)
         {
@@ -40,14 +46,12 @@ public class Hyena : Mammal
             {
                 nextNode = pathToWaterhole[0];
                 pathToWaterhole.RemoveAt(0);
-                if (pathToWaterhole.Count == 0)
-                {
-                    isMovingToWaterhole = false;
-                }
+
             }
-            else
+            if (pathToWaterhole.Count == 0)
             {
                 isMovingToWaterhole = false;
+                Drink(); // Drink at waterhole
             }
         }
         else

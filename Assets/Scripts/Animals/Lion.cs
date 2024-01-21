@@ -12,6 +12,13 @@ public class Lion : Mammal
 
     override public void Move()
     {
+        // If at waterhole drink and do nothing.
+        if (IsDrinking)
+        {
+            Drink();
+            return;
+        }
+
         if (CurrentNode == null)
         {
             Debug.Log("currentNode is null");
@@ -40,14 +47,12 @@ public class Lion : Mammal
             {
                 nextNode = pathToWaterhole[0];
                 pathToWaterhole.RemoveAt(0);
-                if (pathToWaterhole.Count == 0)
-                {
-                    isMovingToWaterhole = false;
-                }
+
             }
-            else
+            if (pathToWaterhole.Count == 0)
             {
                 isMovingToWaterhole = false;
+                Drink(); // Drink at waterhole
             }
         }
         else

@@ -24,7 +24,7 @@ public abstract class Animal : MonoBehaviour, IAging, IMovement
     public int MovementSpeed { get => movementSpeed; set => movementSpeed = value; }
     public int RespawnRate { get => respawnRate; set => respawnRate = value; }  
 
-    public void AgeUp()
+    virtual public void AgeUp()
     {
         age++;
     }

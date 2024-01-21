@@ -10,6 +10,13 @@ public class Antelope : Mammal
 
     override public void Move()
     {
+        // If at waterhole drink and do nothing.
+        if (IsDrinking)
+        {
+            Drink();
+            return;
+        }
+
         if (CurrentNode == null)
         {
             Debug.Log("currentNode is null");
@@ -26,30 +33,24 @@ public class Antelope : Mammal
             pathToWaterhole = currentNode.GetPathToNearestWaterhole();
             if (pathToWaterhole == null)
             {
-                Debug.Log("Nie znaleziono w?z?a 'Waterhole'");
+                Debug.Log("Waterhole node not found");
                 return;
             }
             isMovingToWaterhole = true;
         }
 
-        Eat(); // Start each round with grazing
-
-        // Look through all connected nodes for an antelope or intersection node
-        // TODO: If thirsty go to waterhole
         if (isMovingToWaterhole)
         {
             if (pathToWaterhole.Count > 0)
             {
                 nextNode = pathToWaterhole[0];
                 pathToWaterhole.RemoveAt(0);
-                if (pathToWaterhole.Count == 0)
-                {
-                    isMovingToWaterhole = false;
-                }
+               
             }
-            else
+            if (pathToWaterhole.Count == 0)
             {
                 isMovingToWaterhole = false;
+                Drink(); // Drink at waterhole
             }
         }
         else
@@ -78,12 +79,16 @@ public class Antelope : Mammal
             {
                 nonSpecialNodes = currentNode.ConnectedNodes;
             }
+            // Look through all connected nodes
             while (nextNode == null || nextNode == previousNode || !(nextNode.nodeType == Node.NodeType.antelope || nextNode.nodeType == Node.NodeType.intersection))
             {
                 nextNode = currentNode.ConnectedNodes[Random.Range(0, currentNode.ConnectedNodes.Count)];
                 // Debug.Log("Antelope searching for next node"); // debug
             }
         }
+
+        Eat(); // Graze at current node before moving
+
         if (nextNode != null)
         {
             if (!nextNode.isOccupied || (nextNode.nodeType == Node.NodeType.waterhole && isThirsty))
