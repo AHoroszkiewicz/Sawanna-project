@@ -12,13 +12,13 @@ public class Snake : Animal
     public int VenomPerBite => venomPerBite;
     public int VenomRegenRate { get => venomRegenRate; set => venomRegenRate = value;}
 
-    override public void Respawn()
+    public override void AgeUp()
     {
-        base.Respawn();
-        venomLevel = 100;
+        base.AgeUp();
+        venomLevel += venomRegenRate;
     }
 
-    override public void Move()
+    public override void Move()
     {
         if (CurrentNode == null)
         {
@@ -56,7 +56,6 @@ public class Snake : Animal
             Debug.Log("The Snake " + Id + " slithers from " + currentNode + " to " + nextNode);
             base.Move();
         }
-        venomLevel += venomRegenRate;
     }
 
 

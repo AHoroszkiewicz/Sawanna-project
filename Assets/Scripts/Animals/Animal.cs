@@ -31,7 +31,7 @@ public abstract class Animal : MonoBehaviour, IAging, IMovement
         spawningNode = currentNode;
     }
 
-    public void AgeUp()
+    virtual public void AgeUp()
     {
         age++;
     }

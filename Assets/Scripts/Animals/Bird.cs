@@ -53,6 +53,12 @@ public class Bird : Animal, IEating
         }
         Debug.Log("The Bird flies from " + currentNode + " to " + nextNode);
         base.Move();
+
+        // 1 in a 10 chance to make a nest on a current node
+        if (Random.Range(0, 10) == 0)
+        {
+            MakeNest();
+        }
     }
 
     public void Eat()
@@ -66,9 +72,6 @@ public class Bird : Animal, IEating
 
     public void MakeNest()
     {
-        Debug.Log("The bird makes a nest in a tree");
-        // TODO: check if node has a tree
-        // set node to nested
-        // new chicks spawns in nests? dunno
+        Debug.Log("The bird makes a hidden nest on a tree at "  + currentNode);
     }
 }
