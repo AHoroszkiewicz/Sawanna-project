@@ -51,7 +51,10 @@ public class Hyena : Mammal
             if (pathToWaterhole.Count == 0)
             {
                 isMovingToWaterhole = false;
-                Drink(); // Drink at waterhole
+                if (isThirsty)
+                {
+                    Drink(); // Drink at waterhole
+                }
             }
         }
         else

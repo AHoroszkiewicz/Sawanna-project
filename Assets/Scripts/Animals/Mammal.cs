@@ -6,12 +6,12 @@ public abstract class Mammal : Animal, IEating, IDrinking
 {
     [SerializeField] public bool isHungry => hungerLevel > hungerTreshhold;
     [SerializeField] private int hungerTreshhold = 80;
-    [SerializeField] private int feedingSpeed = 25; // hunger reduction per round
+    [SerializeField] private int feedingSpeed = 50; // hunger reduction per round
     [SerializeField] private int hungerLevel = 0; // 100 is max 0 is none
 
     [SerializeField] public bool isThirsty => thirstLevel > thirstThreshold;
     [SerializeField] private int thirstThreshold = 70; 
-    [SerializeField] private int drinkingSpeed = 25; // thirst reduction per round
+    [SerializeField] private int drinkingSpeed = 50; // thirst reduction per round
     [SerializeField] private int thirstLevel = 0; // 100 is max 0 is none
     [SerializeField] private bool isDrinking = false;
 
@@ -34,7 +34,7 @@ public abstract class Mammal : Animal, IEating, IDrinking
     {
         isDrinking = true;
         thirstLevel -= drinkingSpeed;
-        if (thirstLevel < 10)
+        if (thirstLevel < 0)
         {
             isDrinking = false;
         }
