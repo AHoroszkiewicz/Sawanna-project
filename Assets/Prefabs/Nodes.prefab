@@ -48,6 +48,7 @@ MonoBehaviour:
   - {fileID: 2924005249247936161}
   - {fileID: 1370029854410102464}
   - {fileID: 1143723296659578091}
+  - {fileID: 5857775880115928673}
   nodeType: 2
   occupyingObjects: []
   isOccupied: 0
@@ -154,6 +155,10 @@ MonoBehaviour:
   - {fileID: 8348228285579400261}
   - {fileID: 7081222479573860680}
   - {fileID: 2014609956123008931}
+  - {fileID: 7249479448434893031}
+  - {fileID: 4789053428234615721}
+  - {fileID: 5286017744388180245}
+  - {fileID: 9099631256043923369}
   nodeType: 4
   occupyingObjects: []
   isOccupied: 0
@@ -206,6 +211,9 @@ MonoBehaviour:
   - {fileID: 8002231262397722365}
   - {fileID: 5559151370231729635}
   - {fileID: 2924005249247936161}
+  - {fileID: 6980235028159328402}
+  - {fileID: 8631464907527264049}
+  - {fileID: 1144796370732576114}
   nodeType: 2
   occupyingObjects: []
   isOccupied: 0
@@ -259,6 +267,11 @@ MonoBehaviour:
   - {fileID: 573755029209817455}
   - {fileID: 7729256478177519762}
   - {fileID: 3110602008813980085}
+  - {fileID: 6980235028159328402}
+  - {fileID: 6486539520402208324}
+  - {fileID: 8631464907527264049}
+  - {fileID: 2125170143087219325}
+  - {fileID: 2293588419548427833}
   nodeType: 3
   occupyingObjects: []
   isOccupied: 0
@@ -311,6 +324,8 @@ MonoBehaviour:
   - {fileID: 3994703276188296369}
   - {fileID: 5662356925215139558}
   - {fileID: 5592945686805882254}
+  - {fileID: 7718210909212021731}
+  - {fileID: 7249479448434893031}
   nodeType: 1
   occupyingObjects: []
   isOccupied: 0
@@ -359,8 +374,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  connectedNodes: []
-  nodeType: 0
+  connectedNodes:
+  - {fileID: 656207815834973403}
+  - {fileID: 7609596812423048492}
+  - {fileID: 9116439139103470712}
+  - {fileID: 4312884341239483648}
+  - {fileID: 6380565666902940729}
+  - {fileID: 573755029209817455}
+  nodeType: 5
   occupyingObjects: []
   isOccupied: 0
   hasCarcass: 0
@@ -408,8 +429,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  connectedNodes: []
-  nodeType: 0
+  connectedNodes:
+  - {fileID: 6421969360275824788}
+  - {fileID: 419664550652172910}
+  - {fileID: 1593826005254372052}
+  - {fileID: 2917482725486646030}
+  - {fileID: 2044320786824607859}
+  - {fileID: 6273226829669553153}
+  - {fileID: 7081222479573860680}
+  - {fileID: 2014609956123008931}
+  nodeType: 5
   occupyingObjects: []
   isOccupied: 0
   hasCarcass: 0
@@ -461,6 +490,9 @@ MonoBehaviour:
   - {fileID: 2606680678251552607}
   - {fileID: 5067101613723561376}
   - {fileID: 1014244421065033460}
+  - {fileID: 7786218524161460090}
+  - {fileID: 4789053428234615721}
+  - {fileID: 9099631256043923369}
   nodeType: 2
   occupyingObjects: []
   isOccupied: 0
@@ -516,6 +548,12 @@ MonoBehaviour:
   - {fileID: 3110602008813980085}
   - {fileID: 1883071420057269177}
   - {fileID: 884288562861516419}
+  - {fileID: 1370029854410102464}
+  - {fileID: 5415734665492863911}
+  - {fileID: 1143723296659578091}
+  - {fileID: 8245707565292941149}
+  - {fileID: 2648190689037775222}
+  - {fileID: 2474027209664675221}
   nodeType: 5
   occupyingObjects: []
   isOccupied: 0
@@ -569,6 +607,7 @@ MonoBehaviour:
   - {fileID: 2474027209664675221}
   - {fileID: 5113731546639730791}
   - {fileID: 31180885338917859}
+  - {fileID: 870966531437373239}
   nodeType: 4
   occupyingObjects: []
   isOccupied: 0
@@ -682,6 +721,9 @@ MonoBehaviour:
   - {fileID: 8245707565292941149}
   - {fileID: 7081222479573860680}
   - {fileID: 9116439139103470712}
+  - {fileID: 6486539520402208324}
+  - {fileID: 2293588419548427833}
+  - {fileID: 1144796370732576114}
   nodeType: 4
   occupyingObjects: []
   isOccupied: 0
@@ -730,8 +772,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  connectedNodes: []
-  nodeType: 0
+  connectedNodes:
+  - {fileID: 527312265130256457}
+  - {fileID: 6580286303303089014}
+  - {fileID: 6953321999375752226}
+  - {fileID: 2440801268945969247}
+  - {fileID: 3195584644629475448}
+  - {fileID: 8245707565292941149}
+  - {fileID: 2926409327756492121}
+  - {fileID: 7729256478177519762}
+  - {fileID: 3110602008813980085}
+  nodeType: 5
   occupyingObjects: []
   isOccupied: 0
   hasCarcass: 0
@@ -783,6 +834,9 @@ MonoBehaviour:
   - {fileID: 8688645697722471494}
   - {fileID: 2819309800499541011}
   - {fileID: 766693660193916793}
+  - {fileID: 6486539520402208324}
+  - {fileID: 7963672418519616661}
+  - {fileID: 2973162118843368759}
   nodeType: 2
   occupyingObjects: []
   isOccupied: 0
@@ -834,6 +888,7 @@ MonoBehaviour:
   connectedNodes:
   - {fileID: 2924005249247936161}
   - {fileID: 5415734665492863911}
+  - {fileID: 5857775880115928673}
   nodeType: 2
   occupyingObjects: []
   isOccupied: 0
@@ -948,6 +1003,9 @@ MonoBehaviour:
   - {fileID: 3866508694047981648}
   - {fileID: 527312265130256457}
   - {fileID: 6953321999375752226}
+  - {fileID: 6980235028159328402}
+  - {fileID: 8631464907527264049}
+  - {fileID: 2125170143087219325}
   nodeType: 1
   occupyingObjects: []
   isOccupied: 0
@@ -1053,6 +1111,11 @@ MonoBehaviour:
   - {fileID: 2440801268945969247}
   - {fileID: 7383785121042431712}
   - {fileID: 9116439139103470712}
+  - {fileID: 6486539520402208324}
+  - {fileID: 2293588419548427833}
+  - {fileID: 7963672418519616661}
+  - {fileID: 1144796370732576114}
+  - {fileID: 2973162118843368759}
   nodeType: 4
   occupyingObjects: []
   isOccupied: 0
@@ -1105,6 +1168,7 @@ MonoBehaviour:
   - {fileID: 2132834781198129875}
   - {fileID: 8410188607854005949}
   - {fileID: 7646831974051998837}
+  - {fileID: 6486539520402208324}
   nodeType: 1
   occupyingObjects: []
   isOccupied: 0
@@ -1153,8 +1217,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  connectedNodes: []
-  nodeType: 0
+  connectedNodes:
+  - {fileID: 6377169845942458062}
+  - {fileID: 3994703276188296369}
+  - {fileID: 3775107194758269728}
+  - {fileID: 8348228285579400261}
+  - {fileID: 6273226829669553153}
+  - {fileID: 7081222479573860680}
+  - {fileID: 6421969360275824788}
+  - {fileID: 419664550652172910}
+  - {fileID: 2917482725486646030}
+  nodeType: 5
   occupyingObjects: []
   isOccupied: 0
   hasCarcass: 0
@@ -1205,6 +1278,7 @@ MonoBehaviour:
   connectedNodes:
   - {fileID: 2648190689037775222}
   - {fileID: 2514286809338571278}
+  - {fileID: 5857775880115928673}
   nodeType: 4
   occupyingObjects: []
   isOccupied: 0
@@ -1291,6 +1365,8 @@ MonoBehaviour:
   - {fileID: 2606680678251552607}
   - {fileID: 1154644521006228017}
   - {fileID: 2893648114199024936}
+  - {fileID: 4789053428234615721}
+  - {fileID: 9099631256043923369}
   nodeType: 2
   occupyingObjects: []
   isOccupied: 0
@@ -1397,6 +1473,7 @@ MonoBehaviour:
   connectedNodes:
   - {fileID: 7942973488467674132}
   - {fileID: 7609596812423048492}
+  - {fileID: 3478150742556637413}
   nodeType: 4
   occupyingObjects: []
   isOccupied: 0
@@ -1504,6 +1581,7 @@ MonoBehaviour:
   - {fileID: 5559151370231729635}
   - {fileID: 1370029854410102464}
   - {fileID: 5415734665492863911}
+  - {fileID: 8631464907527264049}
   nodeType: 2
   occupyingObjects: []
   isOccupied: 0
@@ -1552,8 +1630,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  connectedNodes: []
-  nodeType: 0
+  connectedNodes:
+  - {fileID: 6377169845942458062}
+  - {fileID: 3994703276188296369}
+  - {fileID: 8091564404136375168}
+  - {fileID: 6421969360275824788}
+  - {fileID: 2917482725486646030}
+  - {fileID: 573755029209817455}
+  - {fileID: 2606680678251552607}
+  - {fileID: 1154644521006228017}
+  - {fileID: 1014244421065033460}
+  nodeType: 5
   occupyingObjects: []
   isOccupied: 0
   hasCarcass: 0
@@ -1691,6 +1778,9 @@ MonoBehaviour:
   connectedNodes:
   - {fileID: 8075952591869861174}
   - {fileID: 7061678366552986428}
+  - {fileID: 7718210909212021731}
+  - {fileID: 870966531437373239}
+  - {fileID: 666309346846320385}
   nodeType: 3
   occupyingObjects: []
   isOccupied: 0
@@ -1791,6 +1881,7 @@ MonoBehaviour:
   - {fileID: 8075952591869861174}
   - {fileID: 7718210909212021731}
   - {fileID: 5857775880115928673}
+  - {fileID: 870966531437373239}
   nodeType: 3
   occupyingObjects: []
   isOccupied: 0
@@ -1844,6 +1935,9 @@ MonoBehaviour:
   - {fileID: 6273226829669553153}
   - {fileID: 7383785121042431712}
   - {fileID: 2014609956123008931}
+  - {fileID: 7249479448434893031}
+  - {fileID: 4789053428234615721}
+  - {fileID: 5286017744388180245}
   nodeType: 4
   occupyingObjects: []
   isOccupied: 0
@@ -1950,8 +2044,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  connectedNodes: []
-  nodeType: 0
+  connectedNodes:
+  - {fileID: 6421969360275824788}
+  - {fileID: 8075952591869861174}
+  - {fileID: 8361791921894649439}
+  - {fileID: 5113731546639730791}
+  - {fileID: 31180885338917859}
+  - {fileID: 2044320786824607859}
+  nodeType: 5
   occupyingObjects: []
   isOccupied: 0
   hasCarcass: 0
@@ -2003,6 +2103,10 @@ MonoBehaviour:
   - {fileID: 4312884341239483648}
   - {fileID: 573755029209817455}
   - {fileID: 2926409327756492121}
+  - {fileID: 6486539520402208324}
+  - {fileID: 2293588419548427833}
+  - {fileID: 7963672418519616661}
+  - {fileID: 3478150742556637413}
   nodeType: 3
   occupyingObjects: []
   isOccupied: 0
@@ -2051,8 +2155,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  connectedNodes: []
-  nodeType: 0
+  connectedNodes:
+  - {fileID: 884288562861516419}
+  - {fileID: 8075952591869861174}
+  - {fileID: 8361791921894649439}
+  - {fileID: 6769961569004859799}
+  - {fileID: 5422460459561004814}
+  - {fileID: 7650636415121625122}
+  - {fileID: 2514286809338571278}
+  - {fileID: 5113731546639730791}
+  - {fileID: 31180885338917859}
+  nodeType: 5
   occupyingObjects: []
   isOccupied: 0
   hasCarcass: 0
@@ -2138,6 +2251,8 @@ MonoBehaviour:
   - {fileID: 7650636415121625122}
   - {fileID: 1154644521006228017}
   - {fileID: 5067101613723561376}
+  - {fileID: 7786218524161460090}
+  - {fileID: 9099631256043923369}
   nodeType: 2
   occupyingObjects: []
   isOccupied: 0
@@ -2190,6 +2305,9 @@ MonoBehaviour:
   - {fileID: 3687010324026463002}
   - {fileID: 6421969360275824788}
   - {fileID: 1593826005254372052}
+  - {fileID: 7249479448434893031}
+  - {fileID: 4789053428234615721}
+  - {fileID: 5286017744388180245}
   nodeType: 3
   occupyingObjects: []
   isOccupied: 0
@@ -2242,6 +2360,8 @@ MonoBehaviour:
   - {fileID: 6273226829669553153}
   - {fileID: 7081222479573860680}
   - {fileID: 7942973488467674132}
+  - {fileID: 4789053428234615721}
+  - {fileID: 5286017744388180245}
   nodeType: 4
   occupyingObjects: []
   isOccupied: 0
@@ -2290,8 +2410,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  connectedNodes: []
-  nodeType: 0
+  connectedNodes:
+  - {fileID: 2044320786824607859}
+  - {fileID: 8348228285579400261}
+  - {fileID: 6273226829669553153}
+  - {fileID: 2606680678251552607}
+  - {fileID: 1154644521006228017}
+  - {fileID: 5067101613723561376}
+  nodeType: 5
   occupyingObjects: []
   isOccupied: 0
   hasCarcass: 0
@@ -2339,8 +2465,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  connectedNodes: []
-  nodeType: 0
+  connectedNodes:
+  - {fileID: 6380565666902940729}
+  - {fileID: 573755029209817455}
+  - {fileID: 2926409327756492121}
+  - {fileID: 7729256478177519762}
+  - {fileID: 7468725269228305389}
+  - {fileID: 7383785121042431712}
+  - {fileID: 9116439139103470712}
+  - {fileID: 8410188607854005949}
+  - {fileID: 3866508694047981648}
+  - {fileID: 527312265130256457}
+  nodeType: 5
   occupyingObjects: []
   isOccupied: 0
   hasCarcass: 0
@@ -2393,6 +2529,9 @@ MonoBehaviour:
   - {fileID: 1883071420057269177}
   - {fileID: 884288562861516419}
   - {fileID: 8361791921894649439}
+  - {fileID: 7718210909212021731}
+  - {fileID: 870966531437373239}
+  - {fileID: 666309346846320385}
   nodeType: 3
   occupyingObjects: []
   isOccupied: 0
@@ -2525,8 +2664,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  connectedNodes: []
-  nodeType: 0
+  connectedNodes:
+  - {fileID: 8410188607854005949}
+  - {fileID: 3866508694047981648}
+  - {fileID: 527312265130256457}
+  - {fileID: 6580286303303089014}
+  - {fileID: 2926409327756492121}
+  - {fileID: 7729256478177519762}
+  - {fileID: 3110602008813980085}
+  - {fileID: 8688645697722471494}
+  - {fileID: 8002231262397722365}
+  - {fileID: 2871829698492293692}
+  - {fileID: 5559151370231729635}
+  nodeType: 5
   occupyingObjects: []
   isOccupied: 0
   hasCarcass: 0
@@ -2578,6 +2728,12 @@ MonoBehaviour:
   - {fileID: 7468725269228305389}
   - {fileID: 7383785121042431712}
   - {fileID: 7609596812423048492}
+  - {fileID: 6486539520402208324}
+  - {fileID: 2293588419548427833}
+  - {fileID: 7963672418519616661}
+  - {fileID: 3478150742556637413}
+  - {fileID: 1144796370732576114}
+  - {fileID: 2973162118843368759}
   nodeType: 4
   occupyingObjects: []
   isOccupied: 0
@@ -2632,6 +2788,7 @@ MonoBehaviour:
   - {fileID: 6580286303303089014}
   - {fileID: 5592945686805882254}
   - {fileID: 5857775880115928673}
+  - {fileID: 2125170143087219325}
   nodeType: 1
   occupyingObjects: []
   isOccupied: 0
@@ -2680,8 +2837,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  connectedNodes: []
-  nodeType: 0
+  connectedNodes:
+  - {fileID: 1143723296659578091}
+  - {fileID: 6769961569004859799}
+  - {fileID: 5422460459561004814}
+  - {fileID: 884288562861516419}
+  - {fileID: 8075952591869861174}
+  - {fileID: 8361791921894649439}
+  - {fileID: 4984964035284549573}
+  - {fileID: 3775107194758269728}
+  - {fileID: 5662356925215139558}
+  nodeType: 5
   occupyingObjects: []
   isOccupied: 0
   hasCarcass: 0
@@ -2734,6 +2900,8 @@ MonoBehaviour:
   - {fileID: 5113731546639730791}
   - {fileID: 2044320786824607859}
   - {fileID: 8348228285579400261}
+  - {fileID: 870966531437373239}
+  - {fileID: 666309346846320385}
   nodeType: 4
   occupyingObjects: []
   isOccupied: 0
@@ -2788,6 +2956,10 @@ MonoBehaviour:
   - {fileID: 4477319580915805935}
   - {fileID: 573755029209817455}
   - {fileID: 7729256478177519762}
+  - {fileID: 7786218524161460090}
+  - {fileID: 7249479448434893031}
+  - {fileID: 4789053428234615721}
+  - {fileID: 5286017744388180245}
   nodeType: 3
   occupyingObjects: []
   isOccupied: 0
@@ -2840,6 +3012,11 @@ MonoBehaviour:
   - {fileID: 8002231262397722365}
   - {fileID: 3838791374908412845}
   - {fileID: 766693660193916793}
+  - {fileID: 6980235028159328402}
+  - {fileID: 6486539520402208324}
+  - {fileID: 7963672418519616661}
+  - {fileID: 1144796370732576114}
+  - {fileID: 2973162118843368759}
   nodeType: 2
   occupyingObjects: []
   isOccupied: 0
@@ -2892,6 +3069,10 @@ MonoBehaviour:
   - {fileID: 7061678366552986428}
   - {fileID: 3687010324026463002}
   - {fileID: 419664550652172910}
+  - {fileID: 7786218524161460090}
+  - {fileID: 7249479448434893031}
+  - {fileID: 5286017744388180245}
+  - {fileID: 666309346846320385}
   nodeType: 3
   occupyingObjects: []
   isOccupied: 0
@@ -2995,6 +3176,7 @@ MonoBehaviour:
   - {fileID: 5067101613723561376}
   - {fileID: 1014244421065033460}
   - {fileID: 8919217455752492015}
+  - {fileID: 4789053428234615721}
   nodeType: 2
   occupyingObjects: []
   isOccupied: 0
@@ -3047,6 +3229,8 @@ MonoBehaviour:
   - {fileID: 8002231262397722365}
   - {fileID: 2871829698492293692}
   - {fileID: 2924005249247936161}
+  - {fileID: 6980235028159328402}
+  - {fileID: 1144796370732576114}
   nodeType: 2
   occupyingObjects: []
   isOccupied: 0
@@ -3100,6 +3284,8 @@ MonoBehaviour:
   - {fileID: 2132834781198129875}
   - {fileID: 8091564404136375168}
   - {fileID: 5592945686805882254}
+  - {fileID: 7786218524161460090}
+  - {fileID: 7249479448434893031}
   nodeType: 1
   occupyingObjects: []
   isOccupied: 0
@@ -3241,6 +3427,8 @@ MonoBehaviour:
   - {fileID: 573755029209817455}
   - {fileID: 6217985109132697608}
   - {fileID: 7646831974051998837}
+  - {fileID: 7963672418519616661}
+  - {fileID: 3478150742556637413}
   nodeType: 3
   occupyingObjects: []
   isOccupied: 0
@@ -3293,6 +3481,7 @@ MonoBehaviour:
   - {fileID: 8245707565292941149}
   - {fileID: 2474027209664675221}
   - {fileID: 2514286809338571278}
+  - {fileID: 5857775880115928673}
   nodeType: 4
   occupyingObjects: []
   isOccupied: 0
@@ -3397,6 +3586,8 @@ MonoBehaviour:
   - {fileID: 1143723296659578091}
   - {fileID: 5422460459561004814}
   - {fileID: 7650636415121625122}
+  - {fileID: 7718210909212021731}
+  - {fileID: 870966531437373239}
   nodeType: 2
   occupyingObjects: []
   isOccupied: 0
@@ -3449,6 +3640,7 @@ MonoBehaviour:
   - {fileID: 6377169845942458062}
   - {fileID: 201127282485991003}
   - {fileID: 7646831974051998837}
+  - {fileID: 7786218524161460090}
   nodeType: 1
   occupyingObjects: []
   isOccupied: 0
@@ -3502,6 +3694,9 @@ MonoBehaviour:
   - {fileID: 8410188607854005949}
   - {fileID: 527312265130256457}
   - {fileID: 6580286303303089014}
+  - {fileID: 6980235028159328402}
+  - {fileID: 8631464907527264049}
+  - {fileID: 2293588419548427833}
   nodeType: 1
   occupyingObjects: []
   isOccupied: 0
@@ -3553,6 +3748,8 @@ MonoBehaviour:
   connectedNodes:
   - {fileID: 31180885338917859}
   - {fileID: 6273226829669553153}
+  - {fileID: 7249479448434893031}
+  - {fileID: 9099631256043923369}
   nodeType: 4
   occupyingObjects: []
   isOccupied: 0
@@ -3605,6 +3802,7 @@ MonoBehaviour:
   - {fileID: 6769961569004859799}
   - {fileID: 5422460459561004814}
   - {fileID: 2606680678251552607}
+  - {fileID: 870966531437373239}
   nodeType: 2
   occupyingObjects: []
   isOccupied: 0
@@ -3712,6 +3910,11 @@ MonoBehaviour:
   - {fileID: 2871829698492293692}
   - {fileID: 1014244421065033460}
   - {fileID: 766693660193916793}
+  - {fileID: 6980235028159328402}
+  - {fileID: 6486539520402208324}
+  - {fileID: 8631464907527264049}
+  - {fileID: 1144796370732576114}
+  - {fileID: 2973162118843368759}
   nodeType: 2
   occupyingObjects: []
   isOccupied: 0
@@ -3766,6 +3969,8 @@ MonoBehaviour:
   - {fileID: 2893648114199024936}
   - {fileID: 766693660193916793}
   - {fileID: 7646831974051998837}
+  - {fileID: 7786218524161460090}
+  - {fileID: 4789053428234615721}
   nodeType: 2
   occupyingObjects: []
   isOccupied: 0
@@ -3852,6 +4057,8 @@ MonoBehaviour:
   - {fileID: 5415734665492863911}
   - {fileID: 6769961569004859799}
   - {fileID: 5422460459561004814}
+  - {fileID: 7718210909212021731}
+  - {fileID: 5857775880115928673}
   nodeType: 2
   occupyingObjects: []
   isOccupied: 0
@@ -4068,6 +4275,9 @@ MonoBehaviour:
   - {fileID: 2819309800499541011}
   - {fileID: 3838791374908412845}
   - {fileID: 7646831974051998837}
+  - {fileID: 6486539520402208324}
+  - {fileID: 7963672418519616661}
+  - {fileID: 2973162118843368759}
   nodeType: 2
   occupyingObjects: []
   isOccupied: 0
@@ -4120,6 +4330,9 @@ MonoBehaviour:
   - {fileID: 2440801268945969247}
   - {fileID: 8245707565292941149}
   - {fileID: 7383785121042431712}
+  - {fileID: 8631464907527264049}
+  - {fileID: 2125170143087219325}
+  - {fileID: 1144796370732576114}
   nodeType: 4
   occupyingObjects: []
   isOccupied: 0
@@ -4168,8 +4381,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  connectedNodes: []
-  nodeType: 0
+  connectedNodes:
+  - {fileID: 7468725269228305389}
+  - {fileID: 2440801268945969247}
+  - {fileID: 3195584644629475448}
+  - {fileID: 7383785121042431712}
+  - {fileID: 9116439139103470712}
+  - {fileID: 8688645697722471494}
+  - {fileID: 8002231262397722365}
+  - {fileID: 2871829698492293692}
+  - {fileID: 5559151370231729635}
+  nodeType: 5
   occupyingObjects: []
   isOccupied: 0
   hasCarcass: 0
@@ -4221,6 +4443,11 @@ MonoBehaviour:
   - {fileID: 2132834781198129875}
   - {fileID: 8410188607854005949}
   - {fileID: 6580286303303089014}
+  - {fileID: 6980235028159328402}
+  - {fileID: 6486539520402208324}
+  - {fileID: 8631464907527264049}
+  - {fileID: 2125170143087219325}
+  - {fileID: 2293588419548427833}
   nodeType: 1
   occupyingObjects: []
   isOccupied: 0
@@ -4273,6 +4500,11 @@ MonoBehaviour:
   - {fileID: 2917482725486646030}
   - {fileID: 4312884341239483648}
   - {fileID: 2926409327756492121}
+  - {fileID: 7786218524161460090}
+  - {fileID: 6486539520402208324}
+  - {fileID: 2293588419548427833}
+  - {fileID: 7963672418519616661}
+  - {fileID: 3478150742556637413}
   nodeType: 3
   occupyingObjects: []
   isOccupied: 0
@@ -4325,6 +4557,10 @@ MonoBehaviour:
   - {fileID: 7468725269228305389}
   - {fileID: 3195584644629475448}
   - {fileID: 7383785121042431712}
+  - {fileID: 6486539520402208324}
+  - {fileID: 8631464907527264049}
+  - {fileID: 2125170143087219325}
+  - {fileID: 1144796370732576114}
   nodeType: 4
   occupyingObjects: []
   isOccupied: 0
@@ -4377,6 +4613,9 @@ MonoBehaviour:
   - {fileID: 31180885338917859}
   - {fileID: 6273226829669553153}
   - {fileID: 7081222479573860680}
+  - {fileID: 5286017744388180245}
+  - {fileID: 666309346846320385}
+  - {fileID: 9099631256043923369}
   nodeType: 4
   occupyingObjects: []
   isOccupied: 0
@@ -4428,6 +4667,8 @@ MonoBehaviour:
   connectedNodes:
   - {fileID: 2514286809338571278}
   - {fileID: 31180885338917859}
+  - {fileID: 870966531437373239}
+  - {fileID: 666309346846320385}
   nodeType: 4
   occupyingObjects: []
   isOccupied: 0
@@ -4480,6 +4721,8 @@ MonoBehaviour:
   - {fileID: 1143723296659578091}
   - {fileID: 6769961569004859799}
   - {fileID: 7650636415121625122}
+  - {fileID: 7718210909212021731}
+  - {fileID: 870966531437373239}
   nodeType: 2
   occupyingObjects: []
   isOccupied: 0
@@ -4528,8 +4771,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  connectedNodes: []
-  nodeType: 0
+  connectedNodes:
+  - {fileID: 7468725269228305389}
+  - {fileID: 7609596812423048492}
+  - {fileID: 9116439139103470712}
+  - {fileID: 8688645697722471494}
+  - {fileID: 3838791374908412845}
+  - {fileID: 766693660193916793}
+  - {fileID: 4312884341239483648}
+  - {fileID: 6380565666902940729}
+  - {fileID: 573755029209817455}
+  nodeType: 5
   occupyingObjects: []
   isOccupied: 0
   hasCarcass: 0
@@ -4629,8 +4881,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  connectedNodes: []
-  nodeType: 0
+  connectedNodes:
+  - {fileID: 8688645697722471494}
+  - {fileID: 8002231262397722365}
+  - {fileID: 3838791374908412845}
+  - {fileID: 766693660193916793}
+  - {fileID: 7468725269228305389}
+  - {fileID: 7609596812423048492}
+  - {fileID: 9116439139103470712}
+  nodeType: 5
   occupyingObjects: []
   isOccupied: 0
   hasCarcass: 0
@@ -4682,6 +4941,7 @@ MonoBehaviour:
   - {fileID: 3110602008813980085}
   - {fileID: 884288562861516419}
   - {fileID: 8075952591869861174}
+  - {fileID: 5857775880115928673}
   nodeType: 3
   occupyingObjects: []
   isOccupied: 0
@@ -4735,6 +4995,11 @@ MonoBehaviour:
   - {fileID: 573755029209817455}
   - {fileID: 2926409327756492121}
   - {fileID: 3110602008813980085}
+  - {fileID: 6980235028159328402}
+  - {fileID: 6486539520402208324}
+  - {fileID: 8631464907527264049}
+  - {fileID: 2125170143087219325}
+  - {fileID: 2293588419548427833}
   nodeType: 3
   occupyingObjects: []
   isOccupied: 0
@@ -4787,6 +5052,10 @@ MonoBehaviour:
   - {fileID: 2132834781198129875}
   - {fileID: 201127282485991003}
   - {fileID: 527312265130256457}
+  - {fileID: 6980235028159328402}
+  - {fileID: 6486539520402208324}
+  - {fileID: 8631464907527264049}
+  - {fileID: 2293588419548427833}
   nodeType: 1
   occupyingObjects: []
   isOccupied: 0
@@ -4893,6 +5162,8 @@ MonoBehaviour:
   - {fileID: 2917482725486646030}
   - {fileID: 4477319580915805935}
   - {fileID: 38013376268469249}
+  - {fileID: 4789053428234615721}
+  - {fileID: 5286017744388180245}
   nodeType: 3
   occupyingObjects: []
   isOccupied: 0
@@ -4941,8 +5212,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  connectedNodes: []
-  nodeType: 0
+  connectedNodes:
+  - {fileID: 1154644521006228017}
+  - {fileID: 5067101613723561376}
+  - {fileID: 1014244421065033460}
+  - {fileID: 2893648114199024936}
+  - {fileID: 6273226829669553153}
+  - {fileID: 7081222479573860680}
+  - {fileID: 2014609956123008931}
+  - {fileID: 419664550652172910}
+  - {fileID: 1593826005254372052}
+  - {fileID: 2917482725486646030}
+  nodeType: 5
   occupyingObjects: []
   isOccupied: 0
   hasCarcass: 0
@@ -4993,6 +5274,9 @@ MonoBehaviour:
   connectedNodes:
   - {fileID: 7942973488467674132}
   - {fileID: 9116439139103470712}
+  - {fileID: 7963672418519616661}
+  - {fileID: 3478150742556637413}
+  - {fileID: 2973162118843368759}
   nodeType: 4
   occupyingObjects: []
   isOccupied: 0
@@ -5045,6 +5329,9 @@ MonoBehaviour:
   - {fileID: 3195584644629475448}
   - {fileID: 2648190689037775222}
   - {fileID: 7383785121042431712}
+  - {fileID: 5857775880115928673}
+  - {fileID: 8631464907527264049}
+  - {fileID: 2125170143087219325}
   nodeType: 4
   occupyingObjects: []
   isOccupied: 0
@@ -5093,8 +5380,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  connectedNodes: []
-  nodeType: 0
+  connectedNodes:
+  - {fileID: 8410188607854005949}
+  - {fileID: 3866508694047981648}
+  - {fileID: 527312265130256457}
+  - {fileID: 6580286303303089014}
+  - {fileID: 8002231262397722365}
+  - {fileID: 2871829698492293692}
+  - {fileID: 2924005249247936161}
+  - {fileID: 2926409327756492121}
+  - {fileID: 7729256478177519762}
+  - {fileID: 3110602008813980085}
+  - {fileID: 2440801268945969247}
+  - {fileID: 3195584644629475448}
+  - {fileID: 8245707565292941149}
+  nodeType: 5
   occupyingObjects: []
   isOccupied: 0
   hasCarcass: 0
@@ -5145,6 +5445,10 @@ MonoBehaviour:
   connectedNodes:
   - {fileID: 2926409327756492121}
   - {fileID: 1883071420057269177}
+  - {fileID: 6980235028159328402}
+  - {fileID: 5857775880115928673}
+  - {fileID: 8631464907527264049}
+  - {fileID: 2125170143087219325}
   nodeType: 3
   occupyingObjects: []
   isOccupied: 0
@@ -5277,8 +5581,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  connectedNodes: []
-  nodeType: 0
+  connectedNodes:
+  - {fileID: 201127282485991003}
+  - {fileID: 8410188607854005949}
+  - {fileID: 527312265130256457}
+  - {fileID: 6380565666902940729}
+  - {fileID: 573755029209817455}
+  - {fileID: 2926409327756492121}
+  - {fileID: 7729256478177519762}
+  - {fileID: 8688645697722471494}
+  - {fileID: 8002231262397722365}
+  - {fileID: 3838791374908412845}
+  - {fileID: 766693660193916793}
+  - {fileID: 7468725269228305389}
+  - {fileID: 2440801268945969247}
+  - {fileID: 7383785121042431712}
+  - {fileID: 9116439139103470712}
+  nodeType: 5
   occupyingObjects: []
   isOccupied: 0
   hasCarcass: 0
@@ -5330,6 +5649,8 @@ MonoBehaviour:
   - {fileID: 6377169845942458062}
   - {fileID: 3775107194758269728}
   - {fileID: 5592945686805882254}
+  - {fileID: 7786218524161460090}
+  - {fileID: 7249479448434893031}
   nodeType: 1
   occupyingObjects: []
   isOccupied: 0
