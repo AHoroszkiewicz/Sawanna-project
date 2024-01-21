@@ -263,37 +263,6 @@ MonoBehaviour:
   occupyingObjects: []
   isOccupied: 0
   hasCarcass: 0
---- !u!1 &673421945451260132
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3578817798040376547}
-  m_Layer: 0
-  m_Name: LHSIntersection3
-  m_TagString: Untagged
-  m_Icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3578817798040376547
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 673421945451260132}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 824.99994, y: 118, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4435619688661679289}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &679476021746800133
 GameObject:
   m_ObjectHideFlags: 0
@@ -355,6 +324,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3235981425976275238}
+  - component: {fileID: 3478150742556637413}
   m_Layer: 0
   m_Name: SHIntersection2
   m_TagString: Untagged
@@ -377,6 +347,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7837262737850011880}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3478150742556637413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715146328447487934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes: []
+  nodeType: 0
+  occupyingObjects: []
+  isOccupied: 0
+  hasCarcass: 0
 --- !u!1 &820822165712200314
 GameObject:
   m_ObjectHideFlags: 0
@@ -386,6 +373,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 588338033976775598}
+  - component: {fileID: 5286017744388180245}
   m_Layer: 0
   m_Name: SHIntersection1
   m_TagString: Untagged
@@ -408,6 +396,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7837262737850011880}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5286017744388180245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 820822165712200314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes: []
+  nodeType: 0
+  occupyingObjects: []
+  isOccupied: 0
+  hasCarcass: 0
 --- !u!1 &825197370178181726
 GameObject:
   m_ObjectHideFlags: 0
@@ -469,6 +474,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8684323154031742482}
+  - component: {fileID: 5857775880115928673}
   m_Layer: 0
   m_Name: LHASIntersection1
   m_TagString: Untagged
@@ -491,6 +497,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 8821944399328458215}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5857775880115928673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 888942150584636546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes:
+  - {fileID: 4984964035284549573}
+  - {fileID: 5662356925215139558}
+  - {fileID: 6953321999375752226}
+  - {fileID: 3110602008813980085}
+  - {fileID: 1883071420057269177}
+  - {fileID: 884288562861516419}
+  nodeType: 5
+  occupyingObjects: []
+  isOccupied: 0
+  hasCarcass: 0
 --- !u!1 &969551319748025905
 GameObject:
   m_ObjectHideFlags: 0
@@ -602,37 +631,6 @@ MonoBehaviour:
   occupyingObjects: []
   isOccupied: 0
   hasCarcass: 0
---- !u!1 &1259411717502431550
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1027952991639364534}
-  m_Layer: 0
-  m_Name: HASBIntersection3
-  m_TagString: Untagged
-  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1027952991639364534
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1259411717502431550}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 462.99997, y: 446, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2405363510767454960}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1399969493181412413
 GameObject:
   m_ObjectHideFlags: 0
@@ -697,6 +695,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3710967487762794533}
+  - component: {fileID: 2125170143087219325}
   m_Layer: 0
   m_Name: LHSIntersection2
   m_TagString: Untagged
@@ -719,6 +718,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4435619688661679289}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2125170143087219325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1457918785427595502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes: []
+  nodeType: 0
+  occupyingObjects: []
+  isOccupied: 0
+  hasCarcass: 0
 --- !u!1 &1476769854293094312
 GameObject:
   m_ObjectHideFlags: 0
@@ -1102,6 +1118,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4879807519091600860}
+  - component: {fileID: 7249479448434893031}
   m_Layer: 0
   m_Name: LHSIntersection1
   m_TagString: Untagged
@@ -1124,6 +1141,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4435619688661679289}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7249479448434893031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1834036437299877807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes: []
+  nodeType: 0
+  occupyingObjects: []
+  isOccupied: 0
+  hasCarcass: 0
 --- !u!1 &1883110533198012082
 GameObject:
   m_ObjectHideFlags: 0
@@ -1207,70 +1241,7 @@ Transform:
   - {fileID: 9094988671698975716}
   - {fileID: 5054871125550505786}
   - {fileID: 5298351102479591556}
-  - {fileID: 5617199179262968214}
   m_Father: {fileID: 5415368451911343260}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1975195294662563404
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1438484346061961750}
-  m_Layer: 0
-  m_Name: LHASIntersection2
-  m_TagString: Untagged
-  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1438484346061961750
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1975195294662563404}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 735, y: 230.99998, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 8821944399328458215}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2025076718875855235
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1333865360818877751}
-  m_Layer: 0
-  m_Name: HASBIntersection5
-  m_TagString: Untagged
-  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1333865360818877751
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2025076718875855235}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 209.99998, y: 446.99997, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2405363510767454960}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2029580972811690133
 GameObject:
@@ -1478,6 +1449,8 @@ MonoBehaviour:
   - {fileID: 5662356925215139558}
   - {fileID: 6953321999375752226}
   - {fileID: 5592945686805882254}
+  - {fileID: 7718210909212021731}
+  - {fileID: 5857775880115928673}
   nodeType: 1
   occupyingObjects: []
   isOccupied: 0
@@ -1544,6 +1517,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9094988671698975716}
+  - component: {fileID: 7786218524161460090}
   m_Layer: 0
   m_Name: LHAIntersection1
   m_TagString: Untagged
@@ -1566,6 +1540,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4139502570068155870}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7786218524161460090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2395180674281035028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes: []
+  nodeType: 0
+  occupyingObjects: []
+  isOccupied: 0
+  hasCarcass: 0
 --- !u!1 &2539173565419429101
 GameObject:
   m_ObjectHideFlags: 0
@@ -1596,7 +1587,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8684323154031742482}
-  - {fileID: 1438484346061961750}
   - {fileID: 241100366215888630}
   - {fileID: 3258373708273843904}
   m_Father: {fileID: 5415368451911343260}
@@ -1799,6 +1789,8 @@ MonoBehaviour:
   - {fileID: 3110602008813980085}
   - {fileID: 1883071420057269177}
   - {fileID: 8075952591869861174}
+  - {fileID: 7718210909212021731}
+  - {fileID: 5857775880115928673}
   nodeType: 3
   occupyingObjects: []
   isOccupied: 0
@@ -1923,6 +1915,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9110516306379627109}
+  - component: {fileID: 666309346846320385}
   m_Layer: 0
   m_Name: SHIntersection3
   m_TagString: Untagged
@@ -1945,6 +1938,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7837262737850011880}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &666309346846320385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3440000669672589396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes: []
+  nodeType: 0
+  occupyingObjects: []
+  isOccupied: 0
+  hasCarcass: 0
 --- !u!1 &3528897524803499334
 GameObject:
   m_ObjectHideFlags: 0
@@ -2006,6 +2016,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1784088700621479537}
+  - component: {fileID: 870966531437373239}
   m_Layer: 0
   m_Name: HASIntersection2
   m_TagString: Untagged
@@ -2028,37 +2039,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5645680326234071985}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &3714249971689150062
-GameObject:
+--- !u!114 &870966531437373239
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8028030989679714422}
-  m_Layer: 0
-  m_Name: HSBIntersection2
-  m_TagString: Untagged
-  m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8028030989679714422
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3714249971689150062}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 86, y: 403, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 28538597960227638}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_GameObject: {fileID: 3646751627000862629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes: []
+  nodeType: 0
+  occupyingObjects: []
+  isOccupied: 0
+  hasCarcass: 0
 --- !u!1 &3825184154873218752
 GameObject:
   m_ObjectHideFlags: 0
@@ -2249,40 +2246,6 @@ MonoBehaviour:
   occupyingObjects: []
   isOccupied: 0
   hasCarcass: 0
---- !u!1 &3991239897210772887
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 28538597960227638}
-  m_Layer: 0
-  m_Name: HSBIntersection
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &28538597960227638
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3991239897210772887}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 6491253186228248123}
-  - {fileID: 8028030989679714422}
-  - {fileID: 101215484496411384}
-  m_Father: {fileID: 5415368451911343260}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4056516082889489810
 GameObject:
   m_ObjectHideFlags: 0
@@ -2292,6 +2255,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4420426649454173593}
+  - component: {fileID: 9099631256043923369}
   m_Layer: 0
   m_Name: SAIntersection4
   m_TagString: Untagged
@@ -2314,37 +2278,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7944153852314511301}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &4195332789491753005
-GameObject:
+--- !u!114 &9099631256043923369
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5617199179262968214}
-  m_Layer: 0
-  m_Name: LHAIntersection4
-  m_TagString: Untagged
-  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5617199179262968214
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4195332789491753005}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 126, y: 191, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4139502570068155870}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_GameObject: {fileID: 4056516082889489810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes: []
+  nodeType: 0
+  occupyingObjects: []
+  isOccupied: 0
+  hasCarcass: 0
 --- !u!1 &4203475430769587460
 GameObject:
   m_ObjectHideFlags: 0
@@ -2354,6 +2304,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4921272139715225417}
+  - component: {fileID: 2293588419548427833}
   m_Layer: 0
   m_Name: LHSIntersection4
   m_TagString: Untagged
@@ -2376,6 +2327,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4435619688661679289}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2293588419548427833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4203475430769587460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes: []
+  nodeType: 0
+  occupyingObjects: []
+  isOccupied: 0
+  hasCarcass: 0
 --- !u!1 &4222169239078549709
 GameObject:
   m_ObjectHideFlags: 0
@@ -2460,7 +2428,6 @@ Transform:
   m_Children:
   - {fileID: 4879807519091600860}
   - {fileID: 3710967487762794533}
-  - {fileID: 3578817798040376547}
   - {fileID: 4921272139715225417}
   m_Father: {fileID: 5415368451911343260}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2523,6 +2490,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5054871125550505786}
+  - component: {fileID: 6980235028159328402}
   m_Layer: 0
   m_Name: LHAIntersection2
   m_TagString: Untagged
@@ -2545,6 +2513,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4139502570068155870}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6980235028159328402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4469784321337618825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes: []
+  nodeType: 0
+  occupyingObjects: []
+  isOccupied: 0
+  hasCarcass: 0
 --- !u!1 &4525415233151899760
 GameObject:
   m_ObjectHideFlags: 0
@@ -2646,41 +2631,11 @@ MonoBehaviour:
   - {fileID: 3682257246884074698}
   - {fileID: 6580286303303089014}
   - {fileID: 5592945686805882254}
+  - {fileID: 5857775880115928673}
   nodeType: 1
   occupyingObjects: []
   isOccupied: 0
   hasCarcass: 0
---- !u!1 &4580363421447971320
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7810836450178671577}
-  m_Layer: 0
-  m_Name: HASBIntersection2
-  m_TagString: Untagged
-  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7810836450178671577
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4580363421447971320}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 363, y: 57, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2405363510767454960}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4593525888385497394
 GameObject:
   m_ObjectHideFlags: 0
@@ -2690,6 +2645,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5298351102479591556}
+  - component: {fileID: 7718210909212021731}
   m_Layer: 0
   m_Name: LHAIntersection3
   m_TagString: Untagged
@@ -2712,6 +2668,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4139502570068155870}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7718210909212021731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4593525888385497394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes: []
+  nodeType: 0
+  occupyingObjects: []
+  isOccupied: 0
+  hasCarcass: 0
 --- !u!1 &4599333799159659109
 GameObject:
   m_ObjectHideFlags: 0
@@ -3026,37 +2999,6 @@ MonoBehaviour:
   occupyingObjects: []
   isOccupied: 0
   hasCarcass: 0
---- !u!1 &5126223578924590806
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3079237658704986248}
-  m_Layer: 0
-  m_Name: SBIntersection2
-  m_TagString: Untagged
-  m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3079237658704986248
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5126223578924590806}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 281, y: 452.99997, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 7382369089038634064}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5220176851081162535
 GameObject:
   m_ObjectHideFlags: 0
@@ -3109,37 +3051,6 @@ MonoBehaviour:
   occupyingObjects: []
   isOccupied: 0
   hasCarcass: 0
---- !u!1 &5276045414196564396
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4052949742742504812}
-  m_Layer: 0
-  m_Name: SBIntersection1
-  m_TagString: Untagged
-  m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4052949742742504812
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5276045414196564396}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 145.99998, y: 255, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 7382369089038634064}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5285984818174843106
 GameObject:
   m_ObjectHideFlags: 0
@@ -3890,7 +3801,6 @@ Transform:
   m_Children:
   - {fileID: 8168303792631653177}
   - {fileID: 3676223898007125914}
-  - {fileID: 4333135289495647079}
   - {fileID: 4420426649454173593}
   m_Father: {fileID: 5415368451911343260}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3946,42 +3856,6 @@ MonoBehaviour:
   occupyingObjects: []
   isOccupied: 0
   hasCarcass: 0
---- !u!1 &6604315770581379066
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2405363510767454960}
-  m_Layer: 0
-  m_Name: HASBIntersection
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2405363510767454960
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6604315770581379066}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 4694743441627765807}
-  - {fileID: 7810836450178671577}
-  - {fileID: 1027952991639364534}
-  - {fileID: 130190416734760866}
-  - {fileID: 1333865360818877751}
-  m_Father: {fileID: 5415368451911343260}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6622700711158253427
 GameObject:
   m_ObjectHideFlags: 0
@@ -4035,71 +3909,6 @@ MonoBehaviour:
   occupyingObjects: []
   isOccupied: 0
   hasCarcass: 0
---- !u!1 &6669965957505882384
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7382369089038634064}
-  m_Layer: 0
-  m_Name: SBIntersection
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7382369089038634064
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6669965957505882384}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 4052949742742504812}
-  - {fileID: 3079237658704986248}
-  - {fileID: 4518137502624528576}
-  m_Father: {fileID: 5415368451911343260}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &6688666104597799654
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6491253186228248123}
-  m_Layer: 0
-  m_Name: HSBIntersection1
-  m_TagString: Untagged
-  m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6491253186228248123
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6688666104597799654}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 452.99997, y: 413.99997, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 28538597960227638}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6938676407944497419
 GameObject:
   m_ObjectHideFlags: 0
@@ -4148,6 +3957,8 @@ MonoBehaviour:
   - {fileID: 4984964035284549573}
   - {fileID: 3775107194758269728}
   - {fileID: 5592945686805882254}
+  - {fileID: 7718210909212021731}
+  - {fileID: 5857775880115928673}
   nodeType: 1
   occupyingObjects: []
   isOccupied: 0
@@ -4322,6 +4133,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8168303792631653177}
+  - component: {fileID: 1144796370732576114}
   m_Layer: 0
   m_Name: SAIntersection1
   m_TagString: Untagged
@@ -4344,6 +4156,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7944153852314511301}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1144796370732576114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7449523349874589908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes: []
+  nodeType: 0
+  occupyingObjects: []
+  isOccupied: 0
+  hasCarcass: 0
 --- !u!1 &7457606504959444046
 GameObject:
   m_ObjectHideFlags: 0
@@ -4664,6 +4493,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6893482063981935547}
+  - component: {fileID: 7963672418519616661}
   m_Layer: 0
   m_Name: HASIntersection3
   m_TagString: Untagged
@@ -4686,37 +4516,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5645680326234071985}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &7914959375055003751
-GameObject:
+--- !u!114 &7963672418519616661
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4518137502624528576}
-  m_Layer: 0
-  m_Name: SBIntersection3
-  m_TagString: Untagged
-  m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4518137502624528576
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7914959375055003751}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 606, y: 366, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 7382369089038634064}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_GameObject: {fileID: 7838834758564649837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes: []
+  nodeType: 0
+  occupyingObjects: []
+  isOccupied: 0
+  hasCarcass: 0
 --- !u!1 &7973525390019549319
 GameObject:
   m_ObjectHideFlags: 0
@@ -4769,37 +4585,6 @@ MonoBehaviour:
   occupyingObjects: []
   isOccupied: 0
   hasCarcass: 0
---- !u!1 &7981396726060342580
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4694743441627765807}
-  m_Layer: 0
-  m_Name: HASBIntersection1
-  m_TagString: Untagged
-  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4694743441627765807
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7981396726060342580}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 157, y: 191, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2405363510767454960}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7992838420749315931
 GameObject:
   m_ObjectHideFlags: 0
@@ -4809,6 +4594,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3676223898007125914}
+  - component: {fileID: 2973162118843368759}
   m_Layer: 0
   m_Name: SAIntersection2
   m_TagString: Untagged
@@ -4831,37 +4617,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7944153852314511301}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &8017860945502023944
-GameObject:
+--- !u!114 &2973162118843368759
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4333135289495647079}
-  m_Layer: 0
-  m_Name: SAIntersection3
-  m_TagString: Untagged
-  m_Icon: {fileID: 2800000, guid: 9cfa39010fe314547b3c17a05ff5f403, type: 3}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4333135289495647079
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8017860945502023944}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 65.999985, y: 36, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 7944153852314511301}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_GameObject: {fileID: 7992838420749315931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes: []
+  nodeType: 0
+  occupyingObjects: []
+  isOccupied: 0
+  hasCarcass: 0
 --- !u!1 &8069119303891781027
 GameObject:
   m_ObjectHideFlags: 0
@@ -5072,37 +4844,6 @@ MonoBehaviour:
   occupyingObjects: []
   isOccupied: 0
   hasCarcass: 0
---- !u!1 &8353396538202561830
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 130190416734760866}
-  m_Layer: 0
-  m_Name: HASBIntersection4
-  m_TagString: Untagged
-  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &130190416734760866
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8353396538202561830}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 738, y: 287, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2405363510767454960}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8407714386413229503
 GameObject:
   m_ObjectHideFlags: 0
@@ -5165,6 +4906,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2094550192464089161}
+  - component: {fileID: 4789053428234615721}
   m_Layer: 0
   m_Name: HASIntersection1
   m_TagString: Untagged
@@ -5187,6 +4929,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5645680326234071985}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4789053428234615721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8464433160945880290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes: []
+  nodeType: 0
+  occupyingObjects: []
+  isOccupied: 0
+  hasCarcass: 0
 --- !u!1 &8492962590534239561
 GameObject:
   m_ObjectHideFlags: 0
@@ -5238,37 +4997,6 @@ MonoBehaviour:
   occupyingObjects: []
   isOccupied: 0
   hasCarcass: 0
---- !u!1 &8583824718173756849
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 101215484496411384}
-  m_Layer: 0
-  m_Name: HSBIntersection3
-  m_TagString: Untagged
-  m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &101215484496411384
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8583824718173756849}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 785, y: 35, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 28538597960227638}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8641159557568031268
 GameObject:
   m_ObjectHideFlags: 0
@@ -5330,6 +5058,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3258373708273843904}
+  - component: {fileID: 8631464907527264049}
   m_Layer: 0
   m_Name: LHASIntersection4
   m_TagString: Untagged
@@ -5352,6 +5081,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 8821944399328458215}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8631464907527264049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8742749029812383698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes: []
+  nodeType: 0
+  occupyingObjects: []
+  isOccupied: 0
+  hasCarcass: 0
 --- !u!1 &8787297109505919017
 GameObject:
   m_ObjectHideFlags: 0
@@ -5496,6 +5242,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 241100366215888630}
+  - component: {fileID: 6486539520402208324}
   m_Layer: 0
   m_Name: LHASIntersection3
   m_TagString: Untagged
@@ -5518,6 +5265,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 8821944399328458215}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6486539520402208324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8984345337089419092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e4e9f54694f4c46bc7b3baae01e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedNodes: []
+  nodeType: 0
+  occupyingObjects: []
+  isOccupied: 0
+  hasCarcass: 0
 --- !u!1 &9100811985880141975
 GameObject:
   m_ObjectHideFlags: 0
@@ -5603,9 +5367,6 @@ Transform:
   - {fileID: 8821944399328458215}
   - {fileID: 4435619688661679289}
   - {fileID: 5645680326234071985}
-  - {fileID: 28538597960227638}
-  - {fileID: 2405363510767454960}
-  - {fileID: 7382369089038634064}
   - {fileID: 7837262737850011880}
   - {fileID: 7944153852314511301}
   - {fileID: 7618798252883777036}
