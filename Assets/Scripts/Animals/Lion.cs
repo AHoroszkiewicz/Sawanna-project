@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Lion : Mammal
 {
@@ -98,7 +99,7 @@ public class Lion : Mammal
 
         if (nextNode != null)
         {
-            if (!nextNode.isOccupied || (nextNode.nodeType == Node.NodeType.waterhole && isThirsty))
+            if (!nextNode.isOccupied || nextNode.nodeType == Node.NodeType.waterhole)
             {
                 Debug.Log("The Lion " + Id + " moves from " + currentNode + " to " + nextNode);
                 base.Move();

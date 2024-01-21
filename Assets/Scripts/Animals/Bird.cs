@@ -11,17 +11,18 @@ public class Bird : Animal, IEating
     [SerializeField] private int hungerTreshhold = 80; // treshhold for hunger 
     [SerializeField] private int feedingSpeed = 25; // hunger reduction per round
     [SerializeField] private int hungerLevel = 0; // 100 is max 0 is none
+    [SerializeField] private int hungerRate = 10; // hunger increase per round
 
-    public override void Respawn()
+    override public void Respawn()
     {
         base.Respawn();
         hungerLevel = 0;
     }
 
-    override public void HungerUp()
+    override public void AgeUp()
     {
-        base.HungerUp();
-        hungerLevel++;
+        base.AgeUp();
+        hungerLevel += hungerRate;
     }
 
     override public void Move()

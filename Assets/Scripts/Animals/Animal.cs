@@ -36,16 +36,6 @@ public abstract class Animal : MonoBehaviour, IAging, IMovement
         age++;
     }
 
-    virtual public void HungerUp()
-    {
-
-    }
-
-    virtual public void ThirstUp() 
-    { 
-
-    }
-
     public void Die()
     {
         isAlive = false;

@@ -8,11 +8,13 @@ public abstract class Mammal : Animal, IEating, IDrinking
     [SerializeField] private int hungerTreshhold = 80;
     [SerializeField] private int feedingSpeed = 50; // hunger reduction per round
     [SerializeField] private int hungerLevel = 0; // 100 is max 0 is none
+    [SerializeField] private int hungerRate = 10; // hunger increase per round
 
     [SerializeField] public bool isThirsty => thirstLevel > thirstThreshold;
     [SerializeField] private int thirstThreshold = 70; 
     [SerializeField] private int drinkingSpeed = 50; // thirst reduction per round
     [SerializeField] private int thirstLevel = 0; // 100 is max 0 is none
+    [SerializeField] private int thirstRate = 10; // thirst increase per round
     [SerializeField] private bool isDrinking = false;
 
     public bool IsDrinking => isDrinking;
@@ -20,25 +22,13 @@ public abstract class Mammal : Animal, IEating, IDrinking
     override public void AgeUp()
     {
         base.AgeUp();
-        hungerLevel += 10;
-        thirstLevel += 10;
+        hungerLevel += hungerRate;
+        thirstLevel += thirstRate;
     }
 
     override public void Move()
     {
         base.Move();
-    }
-
-    override public void HungerUp()
-    {
-        base.HungerUp();
-        hungerLevel++;
-    }
-
-    override public void ThirstUp()
-    {
-        base.ThirstUp();
-        thirstLevel++;
     }
 
     override public void Respawn()

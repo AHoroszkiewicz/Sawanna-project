@@ -96,8 +96,6 @@ public class GameController : MonoBehaviour
                     animal.Move();
                 }
                 animal.AgeUp();
-                animal.HungerUp();
-                animal.ThirstUp();
                 if (animal.Age >= animal.MaxAge) animal.Die();
                 yield return new WaitForSeconds(0.1f);  
             }

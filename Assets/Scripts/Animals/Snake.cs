@@ -12,6 +12,12 @@ public class Snake : Animal
     public int VenomPerBite => venomPerBite;
     public int VenomRegenRate { get => venomRegenRate; set => venomRegenRate = value;}
 
+    override public void Respawn()
+    {
+        base.Respawn();
+        venomLevel = 100;
+    }
+
     public override void AgeUp()
     {
         base.AgeUp();
