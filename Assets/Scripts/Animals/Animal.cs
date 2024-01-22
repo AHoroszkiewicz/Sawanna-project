@@ -31,6 +31,29 @@ public abstract class Animal : MonoBehaviour, IAging, IMovement
         spawningNode = currentNode;
     }
 
+    // Everything that happens in a round
+    virtual public void RoundAction()
+    {
+        if(isAlive)
+        {
+            AgeUp();
+            if (age > maxAge)
+            {
+                Die();
+                return;
+            }
+            for (int i = 0; i < movementSpeed; i++)
+            {
+                Move();
+            }
+        }
+        else
+        {
+            Respawn();
+        }
+
+    }
+
     virtual public void AgeUp()
     {
         age++;
@@ -41,8 +64,7 @@ public abstract class Animal : MonoBehaviour, IAging, IMovement
         isAlive = false;
         currentNode.isOccupied = false;
         currentNode.occupyingObjects.Remove(gameObject);
-        GameController.Instance.SpawnCarcass(currentNode);
-        //Destroy(this.gameObject);
+        //GameController.Instance.SpawnCarcass(currentNode);
         gameObject.SetActive(false);
     }
 

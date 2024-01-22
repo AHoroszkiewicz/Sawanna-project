@@ -5,7 +5,7 @@ using UnityEngine.Android;
 
 public class Bird : Animal, IEating
 {
-    [SerializeField] private int altitude = 10; // ???
+    [SerializeField] private int altitude = 10;// ???
 
     [SerializeField] public bool isHungry => hungerLevel > hungerTreshhold;
     [SerializeField] private int hungerTreshhold = 80; // treshhold for hunger 
@@ -68,6 +68,10 @@ public class Bird : Animal, IEating
         if (isHungry)
         {
             hungerLevel -= feedingSpeed;
+        }
+        else
+        {
+            GameController.Instance.SpawnCarcass(nextNode);
         }
     }
 

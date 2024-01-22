@@ -7,8 +7,9 @@ public class Node : MonoBehaviour
     [SerializeField] private List<Node> connectedNodes = new List<Node>();
     [SerializeField] public NodeType nodeType = NodeType.none;
     [SerializeField] public List<GameObject> occupyingObjects = new List<GameObject>();
+    [SerializeField] public List<Carcass> carcasses = new List<Carcass>();
     public bool isOccupied = false;
-    public bool hasCarcass = false;
+    public bool hasCarcass => carcasses.Count > 0;
 
     public List<Node> ConnectedNodes
     {
@@ -45,10 +46,9 @@ public class Node : MonoBehaviour
     {
         if (hasCarcass)
         {
-            var carcass = occupyingObjects.Find(x => x.GetComponent<Carcass>() != null);
-            hasCarcass = false;
-            occupyingObjects.Remove(carcass);
-            carcass.GetComponent<Carcass>().DestroyCarcass();
+            var carcass = carcasses[0];
+            carcasses.Remove(carcass);
+            carcass.DestroyCarcass();
         }
     }
 
@@ -89,7 +89,7 @@ public class Node : MonoBehaviour
         }
     }
 
-    public List<Node> GetPathToNearestWaterhole()
+    public List<Node> GetPathToNearest(NodeType nodeType)
     {
         Queue<Node> queue = new Queue<Node>();
         HashSet<Node> visited = new HashSet<Node>();
@@ -101,7 +101,7 @@ public class Node : MonoBehaviour
         while (queue.Count > 0)
         {
             Node currentNode = queue.Dequeue();
-            if (currentNode.nodeType == NodeType.waterhole && currentNode.name == "Waterhole")
+            if (currentNode.nodeType == nodeType)
             {
                 List<Node> path = new List<Node>();
                 Node node = currentNode;

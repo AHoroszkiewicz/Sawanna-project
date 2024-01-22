@@ -5,12 +5,14 @@ using UnityEngine;
 public class Hyena : Mammal
 {
     private List<Node> pathToWaterhole;
+    private List<Node> pathToHyenaNode;
     private bool isMovingToWaterhole = false;
+    private bool isMovingToHyenaNode = false;
 
     override public void Move()
     {
         // If at waterhole drink and do nothing.
-        if (IsDrinking)
+        if (IsDrinking && !isHungry)
         {
             Drink();
             return;
@@ -27,20 +29,31 @@ public class Hyena : Mammal
             return;
         }
 
-        if (isThirsty && !isMovingToWaterhole)
+        if (isThirsty && !isMovingToWaterhole && !isHungry)
         {
-            pathToWaterhole = currentNode.GetPathToNearestWaterhole();
+            pathToWaterhole = currentNode.GetPathToNearest(Node.NodeType.waterhole);
             if (pathToWaterhole == null)
             {
-                Debug.Log("Nie znaleziono w?z?a 'Waterhole'");
+                Debug.Log("Nie znaleziono wezla 'Waterhole'");
                 return;
             }
             isMovingToWaterhole = true;
         }
 
+        if (!isHungry && !isThirsty && !isMovingToHyenaNode)
+        {
+            pathToHyenaNode = currentNode.GetPathToNearest(Node.NodeType.hyena);
+            if (pathToHyenaNode == null)
+            {
+                Debug.Log("Nie znaleziono wez³a 'Hyena'");
+                return;
+            }
+            isMovingToHyenaNode = true;
+        }
+
         // Look through all connected nodes for a hyena or intersection node
         // TODO: Go outside the graveyard zone if hungry
-        if (isMovingToWaterhole)
+        if (isMovingToWaterhole && !isHungry)
         {
             if (pathToWaterhole.Count > 0)
             {
@@ -55,6 +68,18 @@ public class Hyena : Mammal
                 {
                     Drink(); // Drink at waterhole
                 }
+            }
+        }
+        else if (isMovingToHyenaNode && !isHungry && !isThirsty)
+        {
+            if (pathToHyenaNode.Count > 0)
+            {
+                nextNode = pathToHyenaNode[0];
+                pathToHyenaNode.RemoveAt(0);
+            }
+            if (pathToHyenaNode.Count == 0)
+            {
+                isMovingToHyenaNode = false;
             }
         }
         else
@@ -78,6 +103,11 @@ public class Hyena : Mammal
 
         if (nextNode != null)
         {
+            if (!isThirsty && !isHungry && !isMovingToHyenaNode)
+            {
+                Debug.Log("The Hyena " + Id + " rests at " + currentNode);
+                return;
+            }
             if (!nextNode.isOccupied || nextNode.nodeType == Node.NodeType.special || (nextNode.nodeType == Node.NodeType.waterhole && isThirsty))
             {
                 if (nextNode.hasCarcass)

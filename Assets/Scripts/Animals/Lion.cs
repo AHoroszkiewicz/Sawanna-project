@@ -6,7 +6,9 @@ using UnityEngine.UIElements;
 public class Lion : Mammal
 {
     private List<Node> pathToWaterhole;
+    private List<Node> pathToLionNode;
     private bool isMovingToWaterhole = false;
+    private bool isMovingToLionNode = false;    
 
     [SerializeField] private int huntingSuccessRate = 50; // 0-100
     public override AnimalTypes AnimalType => AnimalTypes.lion;
@@ -14,7 +16,7 @@ public class Lion : Mammal
     override public void Move()
     {
         // If at waterhole drink and do nothing.
-        if (IsDrinking)
+        if (IsDrinking && !isHungry)
         {
             Drink();
             return;
@@ -31,9 +33,9 @@ public class Lion : Mammal
             return;
         }
 
-        if (isThirsty && !isMovingToWaterhole)
+        if (isThirsty && !isMovingToWaterhole && !isHungry)
         {
-            pathToWaterhole = currentNode.GetPathToNearestWaterhole();
+            pathToWaterhole = currentNode.GetPathToNearest(Node.NodeType.waterhole);
             if (pathToWaterhole == null)
             {
                 Debug.Log("Nie znaleziono wez³a 'Waterhole'");
@@ -42,7 +44,18 @@ public class Lion : Mammal
             isMovingToWaterhole = true;
         }
 
-        if (isMovingToWaterhole)
+        if (!isHungry && !isThirsty && !isMovingToLionNode)
+        {
+            pathToLionNode = currentNode.GetPathToNearest(Node.NodeType.lion);
+            if (pathToLionNode == null)
+            {
+                Debug.Log("Nie znaleziono wez³a 'Lion'");
+                return;
+            }
+            isMovingToLionNode = true;
+        }
+
+        if (isMovingToWaterhole && !isHungry)
         {
             if (pathToWaterhole.Count > 0)
             {
@@ -59,6 +72,18 @@ public class Lion : Mammal
                 }
             }
         }
+        else if(isMovingToLionNode && !isHungry && !isThirsty)
+        {
+            if (pathToLionNode.Count > 0)
+            {
+                nextNode = pathToLionNode[0];
+                pathToLionNode.RemoveAt(0);
+            }
+            if (pathToLionNode.Count == 0)
+            {
+                isMovingToLionNode = false;
+            }
+        }   
         else
         {
             if (CurrentNode == null)
@@ -73,23 +98,22 @@ public class Lion : Mammal
             }
 
             // Stwórz now¹ listê wêz³ów, która nie zawiera wêz³ów "Waterhole"
-            List<Node> nonWaterholeNodes = new List<Node>();
-            foreach (Node node in currentNode.ConnectedNodes)
-            {
-                if (node.nodeType != Node.NodeType.waterhole)
-                {
-                    nonWaterholeNodes.Add(node);
-                }
-            }
+            //List<Node> nonWaterholeNodes = new List<Node>();
+            //foreach (Node node in currentNode.ConnectedNodes)
+            //{
+            //    if (node.nodeType != Node.NodeType.waterhole)
+            //    {
+            //        nonWaterholeNodes.Add(node);
+            //    }
+            //}
 
-            // Jeœli wszystkie po³¹czone wêz³y to wêz³y "Waterhole", u¿yj oryginalnej listy
-            if (nonWaterholeNodes.Count == 0)
-            {
-                nonWaterholeNodes = currentNode.ConnectedNodes;
-            }
+            //// Jeœli wszystkie po³¹czone wêz³y to wêz³y "Waterhole", u¿yj oryginalnej listy
+            //if (nonWaterholeNodes.Count == 0)
+            //{
+            //    nonWaterholeNodes = currentNode.ConnectedNodes;
+            //}
 
             // Look through all connected nodes for a lion or intersection node
-            // TODO: if thirsty go to waterhole
             while (nextNode == null || nextNode == previousNode || !(nextNode.nodeType == Node.NodeType.lion || nextNode.nodeType == Node.NodeType.intersection || nextNode.nodeType == Node.NodeType.special))
             {
                 nextNode = currentNode.ConnectedNodes[Random.Range(0, currentNode.ConnectedNodes.Count)];
@@ -99,6 +123,11 @@ public class Lion : Mammal
 
         if (nextNode != null)
         {
+            if (!isThirsty && !isHungry && !isMovingToLionNode)
+            {
+                Debug.Log("The Lion " + Id + " rests at " + currentNode);
+                return;
+            }
             if (!nextNode.isOccupied || nextNode.nodeType == Node.NodeType.waterhole)
             {
                 Debug.Log("The Lion " + Id + " moves from " + currentNode + " to " + nextNode);
@@ -137,5 +166,14 @@ public class Lion : Mammal
     public void Rest()
     {
         Debug.Log("The Lion " + Id + " rests");
+    }
+
+    override public void Eat()
+    {
+        base.Eat();
+        if (!isHungry)
+        {
+         GameController.Instance.SpawnCarcass(nextNode);
+        }
     }
 }
