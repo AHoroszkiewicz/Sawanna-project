@@ -43,14 +43,12 @@ public class Snake : Animal
             nextNode = currentNode.ConnectedNodes[Random.Range(0, currentNode.ConnectedNodes.Count)];
         }
 
-        if (nextNode.isOccupied && venomLevel > 5)
+        if (nextNode.isOccupied && venomLevel > 5 && nextNode.nodeType!=Node.NodeType.waterhole)
         {
             var mammal = nextNode.occupyingObjects.Find(x => x.GetComponent<Mammal>() != null);
             if (mammal != null)
             {
-                Debug.Log("The Snake " + Id + " bites a Mammal " + mammal + " at " + nextNode + ". Mammal " + mammal.GetComponent<Mammal>().Id + " dies.");
-                mammal.GetComponent<Mammal>().Die();
-                venomLevel -= venomPerBite;
+                Bite(mammal.GetComponent<Mammal>());
             }
         }
         else if (nextNode.isOccupied)
@@ -64,10 +62,10 @@ public class Snake : Animal
         }
     }
 
-
-    public void Bite()
+    private void Bite(Mammal mammal)
     {
-        Debug.Log("The snake bites");
+        Debug.Log("The Snake " + Id + " bites a Mammal " + mammal + " at " + nextNode + ". Mammal " + mammal.Id + " dies.");
+        mammal.Die();
         venomLevel -= venomPerBite;
     }
 }

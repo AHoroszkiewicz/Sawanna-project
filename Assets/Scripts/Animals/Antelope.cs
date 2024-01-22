@@ -11,7 +11,7 @@ public class Antelope : Mammal
     override public void Move()
     {
         // If at waterhole drink and do nothing.
-        if (IsDrinking)
+        if (IsDrinking && !isHungry)
         {
             Drink();
             return;
@@ -28,9 +28,9 @@ public class Antelope : Mammal
             return;
         }
 
-        if (isThirsty && !isMovingToWaterhole)
+        if (isThirsty && !isMovingToWaterhole && !isHungry)
         {
-            pathToWaterhole = currentNode.GetPathToNearestWaterhole();
+            pathToWaterhole = currentNode.GetPathToNearest(Node.NodeType.waterhole);
             if (pathToWaterhole == null)
             {
                 Debug.Log("Waterhole node not found");
@@ -39,7 +39,7 @@ public class Antelope : Mammal
             isMovingToWaterhole = true;
         }
 
-        if (isMovingToWaterhole)
+        if (isMovingToWaterhole && !isHungry)
         {
             if (pathToWaterhole.Count > 0)
             {
@@ -90,9 +90,12 @@ public class Antelope : Mammal
             }
         }
 
-        Eat(); // Graze at current node before moving
-
-        if (nextNode != null)
+        if (isHungry)
+        {
+            Eat(); // Eat instead of moving
+            Debug.Log("The Antelope " + Id + " eats at " + currentNode);
+        }
+        else if (nextNode != null)
         {
             if (!nextNode.isOccupied || (nextNode.nodeType == Node.NodeType.waterhole && isThirsty))
             {

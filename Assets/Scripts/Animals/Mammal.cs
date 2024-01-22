@@ -29,6 +29,7 @@ public abstract class Mammal : Animal, IEating, IDrinking
     override public void Move()
     {
         base.Move();
+        isDrinking = false;
     }
 
     override public void Respawn()
@@ -51,7 +52,7 @@ public abstract class Mammal : Animal, IEating, IDrinking
     }
     
     // Changes hunger level
-    public void Eat()
+    virtual public void Eat()
     {
         // Debug.Log("The " + AnimalType + " eats");
         if (isHungry)

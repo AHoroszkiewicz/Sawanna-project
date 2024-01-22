@@ -5,7 +5,7 @@ using UnityEngine.Android;
 
 public class Bird : Animal, IEating
 {
-    [SerializeField] private int altitude { get; set; } // ???
+    [SerializeField] private int altitude = 10;// ???
 
     [SerializeField] public bool isHungry => hungerLevel > hungerTreshhold;
     [SerializeField] private int hungerTreshhold = 80; // treshhold for hunger 
@@ -42,7 +42,7 @@ public class Bird : Animal, IEating
             nextNode = currentNode.ConnectedNodes[Random.Range(0, currentNode.ConnectedNodes.Count)];
         }
 
-        if (nextNode.isOccupied)
+        if (nextNode.isOccupied && nextNode.nodeType!=Node.NodeType.waterhole)
         {
             var snake = nextNode.occupyingObjects.Find(x => x.GetComponent<Snake>() != null);
             if (snake != null)
@@ -68,6 +68,10 @@ public class Bird : Animal, IEating
         if (isHungry)
         {
             hungerLevel -= feedingSpeed;
+        }
+        else
+        {
+            GameController.Instance.SpawnCarcass(nextNode);
         }
     }
 

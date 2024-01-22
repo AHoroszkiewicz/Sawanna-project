@@ -86,17 +86,18 @@ public class GameController : MonoBehaviour
             Debug.Log("Next Round");
             foreach (Animal animal in animals)
             {
-                for (int i = 0; i < animal.MovementSpeed; i++)
-                {
-                    if (!animal.IsAlive) 
-                    { 
-                        animal.Respawn();
-                        continue;
-                    } 
-                    animal.Move();
-                }
-                animal.AgeUp();
-                if (animal.Age >= animal.MaxAge) animal.Die();
+                //for (int i = 0; i < animal.MovementSpeed; i++)
+                //{
+                //    if (!animal.IsAlive) 
+                //    { 
+                //        animal.Respawn();
+                //        continue;
+                //    } 
+                //    animal.Move();
+                //}
+                //animal.AgeUp();
+                //if (animal.Age >= animal.MaxAge) animal.Die();
+                animal.RoundAction();
                 yield return new WaitForSeconds(0.1f);  
             }
 
@@ -122,8 +123,7 @@ public class GameController : MonoBehaviour
         Carcass carcass = Instantiate(carcassPrefab, node.transform.position, Quaternion.identity);
         carcass.transform.SetParent(node.transform);
         carcass.transform.localScale = carcassPrefab.transform.localScale;
-        node.occupyingObjects.Add(carcass.gameObject);
-        node.hasCarcass = true;
+        node.carcasses.Add(carcass);
     }
 
     #region Inspector
