@@ -125,7 +125,7 @@ public class Lion : Mammal
         {
             if (!isThirsty && !isHungry && !isMovingToLionNode)
             {
-                Debug.Log("The Lion " + Id + " rests at " + currentNode);
+                Rest();
                 return;
             }
             if (!nextNode.isOccupied || nextNode.nodeType == Node.NodeType.waterhole)
