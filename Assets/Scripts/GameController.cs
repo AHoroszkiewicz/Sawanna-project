@@ -120,10 +120,7 @@ public class GameController : MonoBehaviour
 
     public void SpawnCarcass(Node node)
     {
-        Carcass carcass = Instantiate(carcassPrefab, node.transform.position, Quaternion.identity);
-        carcass.transform.SetParent(node.transform);
-        carcass.transform.localScale = carcassPrefab.transform.localScale;
-        node.carcasses.Add(carcass);
+        node.SpawnCarcass(carcassPrefab);
     }
 
     #region Inspector
