@@ -98,7 +98,7 @@ public class GameController : MonoBehaviour
                 //animal.AgeUp();
                 //if (animal.Age >= animal.MaxAge) animal.Die();
                 animal.RoundAction();
-                yield return new WaitForSeconds(0.1f);  
+                yield return new WaitForSeconds(0.5f);  
             }
 
             yield return new WaitForSeconds(2f);
