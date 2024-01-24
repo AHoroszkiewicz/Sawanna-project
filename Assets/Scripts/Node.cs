@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class Node : MonoBehaviour
@@ -39,6 +40,17 @@ public class Node : MonoBehaviour
                     break;
             }
             Gizmos.DrawLine(transform.position, node.transform.position);
+        }
+    }
+
+    public void SpawnCarcass(Carcass carcassPrefab)
+    {
+        if (!hasCarcass)
+        {
+            Carcass carcass = Instantiate(carcassPrefab, transform.position, Quaternion.identity);
+            carcass.transform.SetParent(transform);
+            carcass.transform.localScale = carcassPrefab.transform.localScale;
+            carcasses.Add(carcass);
         }
     }
 
